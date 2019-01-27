@@ -1,4 +1,5 @@
 
 /log/
 /provision/vvv-nginx.conf
-/public_html
+/public_html/wp-content/uploads/
+/public_html/wp-config.php
