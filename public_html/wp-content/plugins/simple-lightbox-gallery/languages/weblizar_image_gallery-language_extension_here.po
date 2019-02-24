@@ -1,0 +1,3694 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: simple-lightbox-gallery\n"
+"POT-Creation-Date: 2018-10-24 18:04+0530\n"
+"PO-Revision-Date: 2018-10-24 18:04+0530\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.1.1\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: gettext;gettext_noop;_e;_;__\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../admin-custom-login-pro-v5.6/admin/WL_ACL_LM.php:64
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_LM.php:59
+msgid "Please provide a license key."
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/admin/WL_ACL_Menu.php:6
+#: ../admin-custom-login-pro-v5.6/admin/WL_ACL_Menu.php:12
+#: ../admin-custom-login-pro-v5.6/includes/content.php:29
+#: ../admin-custom-login-pro-v5.6/wacl-update-checker.php:160
+msgid "Admin Custom Login Pro"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/admin/inc/admin_menu.php:11
+msgid "Thank you for choosing Admin Custom Login Pro Plugin"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/admin/inc/admin_menu.php:12
+#: ../twitter-tweets-pro-v1.1/admin/inc/admin_menu.php:11
+msgid ""
+"Please activate this plugin with a license key. If you don’t have a license "
+"yet, you can purchase it from "
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/admin/inc/admin_menu.php:14
+#: ../twitter-tweets-pro-v1.1/admin/inc/admin_menu.php:12
+msgid "here"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/admin/inc/admin_menu.php:22
+#: ../twitter-tweets-pro-v1.1/admin/inc/admin_menu.php:20
+msgid "Let’s get some work done!"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/admin/inc/admin_menu.php:23
+#: ../twitter-tweets-pro-v1.1/admin/inc/admin_menu.php:21
+msgid "We have some useful links to get you started"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/admin/inc/admin_menu.php:35
+#: ../twitter-tweets-pro-v1.1/admin/inc/admin_menu.php:33
+msgid "Get Your License Key"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/admin/inc/admin_menu.php:35
+#: ../simple-lightbox-gallery/simple-lightbox-gallery.php:276
+#: ../twitter-tweets-pro-v1.1/admin/inc/admin_menu.php:33
+msgid "Click Here"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/admin/inc/admin_menu.php:45
+#: ../twitter-tweets-pro-v1.1/admin/inc/admin_menu.php:43
+msgid "License Key applied"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/admin/inc/admin_menu.php:46
+#: ../twitter-tweets-pro-v1.1/admin/inc/admin_menu.php:44
+msgid "Click here to navigate to dashboard"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/admin/inc/admin_menu.php:50
+#: ../admin-custom-login-pro-v5.6/admin/inc/admin_menu.php:71
+#: ../twitter-tweets-pro-v1.1/admin/inc/admin_menu.php:48
+#: ../twitter-tweets-pro-v1.1/admin/inc/admin_menu.php:67
+msgid "License Key"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/admin/inc/admin_menu.php:57
+msgid "Congratulation! Admin Custom Login Pro Plugin is activated."
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/admin/inc/admin_menu.php:60
+#: ../admin-custom-login/admin/inc/admin_menu.php:11
+#: ../twitter-tweets-pro-v1.1/admin/inc/admin_menu.php:56
+msgid "Plugin Configuration Click Here"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/admin/inc/admin_menu.php:83
+#: ../twitter-tweets-pro-v1.1/admin/inc/admin_menu.php:79
+msgid "Getting Started"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/admin/inc/admin_menu.php:85
+#: ../twitter-tweets-pro-v1.1/admin/inc/admin_menu.php:80
+msgid "Video Tutorial"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/admin/inc/admin_menu.php:88
+#: ../twitter-tweets-pro-v1.1/admin/inc/admin_menu.php:81
+msgid "More Products"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/admin/inc/admin_menu.php:91
+msgid "Customize your site"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/admin/inc/admin_menu.php:95
+#: ../twitter-tweets-pro-v1.1/admin/inc/admin_menu.php:85
+msgid "Guides & Support"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/admin/inc/admin_menu.php:97
+msgid "Plugin Demo"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/admin/inc/admin_menu.php:100
+#: ../twitter-tweets-pro-v1.1/admin/inc/admin_menu.php:87
+msgid "Documentation guide"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/admin/inc/admin_menu.php:103
+#: ../twitter-tweets-pro-v1.1/admin/inc/admin_menu.php:88
+msgid "Support forum"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/content.php:61
+msgid "Powered By"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/content.php:63
+msgid "Weblizar"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/content.php:67
+#: ../admin-custom-login/includes/content.php:63
+msgid "Show Us Some Love (Rate Us)"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/content.php:85
+#: ../admin-custom-login-pro-v5.6/includes/dashboard/dashboard.php:103
+#: ../admin-custom-login-pro-v5.6/includes/dashboard/dashboard.php:125
+#: ../admin-custom-login/includes/content.php:80
+#: ../admin-custom-login/includes/dashboard/dashboard.php:97
+#: ../admin-custom-login/includes/dashboard/dashboard.php:112
+msgid "Dashboard"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/content.php:86
+msgid "Application overview"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/content.php:95
+#: ../admin-custom-login/includes/content.php:90
+msgid "Background Design"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/content.php:96
+msgid "Modify Background design here"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/content.php:106
+#: ../admin-custom-login/includes/content.php:101
+msgid "Login form Setting"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/content.php:107
+msgid "Modify Login design here"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/content.php:117
+#: ../admin-custom-login-pro-v5.6/includes/login-attempt/attempt.php:27
+msgid "Login Retry Setting"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/content.php:118
+msgid "Set Login Retry Attempts"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/content.php:128
+#: ../admin-custom-login/includes/content.php:112
+msgid "Font Setting"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/content.php:129
+msgid "Modify Login Form Style here"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/content.php:139
+#: ../admin-custom-login-pro-v5.6/includes/settings/page-settings.php:61
+#: ../admin-custom-login/includes/content.php:123
+#: ../admin-custom-login/includes/settings/page-settings.php:50
+msgid "Logo Settings"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/content.php:140
+msgid "Customize Logo Settings here"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/content.php:153
+#: ../admin-custom-login-pro-v5.6/includes/login-token/login-token.php:27
+msgid "Login With Token"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/content.php:154
+msgid "Temproray Login Without Password"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/content.php:167
+msgid "Login Restrictions"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/content.php:168
+msgid "Restrict Users"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/content.php:180
+#: ../admin-custom-login-pro-v5.6/includes/social/social.php:27
+#: ../admin-custom-login/includes/content.php:135
+#: ../admin-custom-login/includes/social/social.php:21
+msgid "Social Settings"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/content.php:181
+msgid "Connect with your social profile"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/content.php:190
+#: ../admin-custom-login-pro-v5.6/includes/social/social-login.php:16
+#: ../admin-custom-login-pro-v5.6/includes/social/social-login.php:192
+#: ../admin-custom-login-pro-v5.6/includes/social/social-login.php:214
+msgid "Social Login"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/content.php:191
+msgid "Login with your social media accounts"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/content.php:201
+#: ../admin-custom-login-pro-v5.6/includes/googlecaptcha-settings/gcaptcha-settings.php:145
+#: ../admin-custom-login-pro-v5.6/includes/googlecaptcha-settings/gcaptcha-settings.php:167
+#: ../admin-custom-login/includes/content.php:146
+#: ../admin-custom-login/includes/googlecaptcha-settings/gcaptcha-settings.php:117
+#: ../admin-custom-login/includes/googlecaptcha-settings/gcaptcha-settings.php:131
+msgid "Google Captcha"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/content.php:202
+msgid "Explore captcha"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/content.php:212
+#: ../admin-custom-login/includes/content.php:157
+msgid "Export / Import"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/content.php:213
+msgid "Export / Import Your Data"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/content.php:222
+#: ../admin-custom-login/includes/content.php:167
+msgid "Recommendations"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/content.php:223
+msgid "Get More Free Useful Plugins"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/content.php:232
+#: ../admin-custom-login-pro-v5.6/includes/help/help.php:17
+#: ../admin-custom-login/includes/content.php:177
+#: ../admin-custom-login/includes/help/help.php:15
+msgid "Help And Support"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/content.php:233
+msgid "Ask your query"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/content.php:242
+#: ../admin-custom-login-pro-v5.6/includes/offers.php:11
+#: ../admin-custom-login/includes/content.php:187
+#: ../admin-custom-login/includes/offers.php:11
+msgid "Our Offers"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/content.php:252
+msgid "rate us"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/content.php:253
+msgid "If you like us"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/dashboard/dashboard.php:17
+#: ../admin-custom-login/includes/dashboard/dashboard.php:16
+msgid "Admin Custom Login Dashboard"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/dashboard/dashboard.php:29
+#: ../admin-custom-login/includes/dashboard/dashboard.php:31
+msgid "Admin Custom Login Status"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/dashboard/dashboard.php:38
+#: ../admin-custom-login-pro-v5.6/includes/googlecaptcha-settings/gcaptcha-settings.php:100
+#: ../admin-custom-login-pro-v5.6/includes/login-attempt/attempt.php:59
+#: ../admin-custom-login-pro-v5.6/includes/login-restriction/login_restrictions.php:69
+#: ../admin-custom-login-pro-v5.6/includes/login-restriction/login_restrictions.php:170
+#: ../admin-custom-login-pro-v5.6/includes/login-restriction/login_restrictions.php:290
+#: ../admin-custom-login-pro-v5.6/includes/login-restriction/login_restrictions.php:420
+#: ../admin-custom-login-pro-v5.6/includes/login-token/safegeneratetoken.php:399
+#: ../admin-custom-login-pro-v5.6/includes/social/social-login.php:52
+#: ../admin-custom-login-pro-v5.6/includes/social/social-login.php:102
+#: ../admin-custom-login-pro-v5.6/includes/social/social-login.php:146
+#: ../admin-custom-login/includes/dashboard/dashboard.php:37
+#: ../admin-custom-login/includes/googlecaptcha-settings/gcaptcha-settings.php:83
+msgid "Disable"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/dashboard/dashboard.php:44
+#: ../admin-custom-login-pro-v5.6/includes/googlecaptcha-settings/gcaptcha-settings.php:94
+#: ../admin-custom-login-pro-v5.6/includes/login-attempt/attempt.php:53
+#: ../admin-custom-login-pro-v5.6/includes/login-restriction/login_restrictions.php:62
+#: ../admin-custom-login-pro-v5.6/includes/login-restriction/login_restrictions.php:163
+#: ../admin-custom-login-pro-v5.6/includes/login-restriction/login_restrictions.php:283
+#: ../admin-custom-login-pro-v5.6/includes/login-restriction/login_restrictions.php:413
+#: ../admin-custom-login-pro-v5.6/includes/social/social-login.php:46
+#: ../admin-custom-login-pro-v5.6/includes/social/social-login.php:96
+#: ../admin-custom-login-pro-v5.6/includes/social/social-login.php:140
+#: ../admin-custom-login/includes/dashboard/dashboard.php:40
+#: ../admin-custom-login/includes/googlecaptcha-settings/gcaptcha-settings.php:80
+msgid "Enable"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/dashboard/dashboard.php:55
+#: ../admin-custom-login/includes/dashboard/dashboard.php:52
+msgid "View Login Page"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/dashboard/dashboard.php:60
+#: ../admin-custom-login/includes/dashboard/dashboard.php:57
+msgid "Copy below link and open in another browser where you are not logged in"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/dashboard/dashboard.php:73
+#: ../admin-custom-login-pro-v5.6/includes/help/rate.php:65
+#: ../admin-custom-login/includes/help/rate.php:62
+msgid "Donate Us"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/dashboard/dashboard.php:103
+#: ../admin-custom-login-pro-v5.6/includes/design/background.php:430
+#: ../admin-custom-login-pro-v5.6/includes/design/text_and_color.php:745
+#: ../admin-custom-login-pro-v5.6/includes/googlecaptcha-settings/gcaptcha-settings.php:145
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:942
+#: ../admin-custom-login-pro-v5.6/includes/settings/page-settings.php:198
+#: ../admin-custom-login-pro-v5.6/includes/social/social-login.php:192
+#: ../admin-custom-login-pro-v5.6/includes/social/social.php:284
+#: ../admin-custom-login/includes/dashboard/dashboard.php:97
+#: ../admin-custom-login/includes/design/background.php:368
+#: ../admin-custom-login/includes/design/text_and_color.php:583
+#: ../admin-custom-login/includes/googlecaptcha-settings/gcaptcha-settings.php:117
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:795
+#: ../admin-custom-login/includes/settings/page-settings.php:168
+#: ../admin-custom-login/includes/social/social.php:192
+msgid "Setting Save Successfully"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/dashboard/dashboard.php:107
+#: ../admin-custom-login-pro-v5.6/includes/dashboard/dashboard.php:129
+#: ../admin-custom-login-pro-v5.6/includes/design/background.php:220
+#: ../admin-custom-login-pro-v5.6/includes/design/background.php:434
+#: ../admin-custom-login-pro-v5.6/includes/design/background.php:457
+#: ../admin-custom-login-pro-v5.6/includes/design/text_and_color.php:749
+#: ../admin-custom-login-pro-v5.6/includes/design/text_and_color.php:772
+#: ../admin-custom-login-pro-v5.6/includes/googlecaptcha-settings/gcaptcha-settings.php:149
+#: ../admin-custom-login-pro-v5.6/includes/googlecaptcha-settings/gcaptcha-settings.php:171
+#: ../admin-custom-login-pro-v5.6/includes/login-attempt/attempt.php:132
+#: ../admin-custom-login-pro-v5.6/includes/login-attempt/attempt.php:152
+#: ../admin-custom-login-pro-v5.6/includes/login-attempt/attempt.php:173
+#: ../admin-custom-login-pro-v5.6/includes/login-attempt/attempt.php:194
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:444
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:946
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:968
+#: ../admin-custom-login-pro-v5.6/includes/login-restriction/login_restrictions.php:113
+#: ../admin-custom-login-pro-v5.6/includes/login-restriction/login_restrictions.php:133
+#: ../admin-custom-login-pro-v5.6/includes/login-restriction/login_restrictions.php:209
+#: ../admin-custom-login-pro-v5.6/includes/login-restriction/login_restrictions.php:230
+#: ../admin-custom-login-pro-v5.6/includes/login-restriction/login_restrictions.php:252
+#: ../admin-custom-login-pro-v5.6/includes/login-restriction/login_restrictions.php:338
+#: ../admin-custom-login-pro-v5.6/includes/login-restriction/login_restrictions.php:359
+#: ../admin-custom-login-pro-v5.6/includes/login-restriction/login_restrictions.php:381
+#: ../admin-custom-login-pro-v5.6/includes/login-restriction/login_restrictions.php:494
+#: ../admin-custom-login-pro-v5.6/includes/login-restriction/login_restrictions.php:516
+#: ../admin-custom-login-pro-v5.6/includes/login-token/login-token.php:158
+#: ../admin-custom-login-pro-v5.6/includes/login-token/login-token.php:179
+#: ../admin-custom-login-pro-v5.6/includes/login-token/login-token.php:231
+#: ../admin-custom-login-pro-v5.6/includes/settings/page-settings.php:105
+#: ../admin-custom-login-pro-v5.6/includes/settings/page-settings.php:202
+#: ../admin-custom-login-pro-v5.6/includes/settings/page-settings.php:224
+#: ../admin-custom-login-pro-v5.6/includes/social/social-login.php:196
+#: ../admin-custom-login-pro-v5.6/includes/social/social-login.php:218
+#: ../admin-custom-login-pro-v5.6/includes/social/social.php:288
+#: ../admin-custom-login-pro-v5.6/includes/social/social.php:310
+#: ../admin-custom-login/includes/dashboard/dashboard.php:97
+#: ../admin-custom-login/includes/dashboard/dashboard.php:112
+#: ../admin-custom-login/includes/design/background.php:180
+#: ../admin-custom-login/includes/design/background.php:368
+#: ../admin-custom-login/includes/design/background.php:383
+#: ../admin-custom-login/includes/design/text_and_color.php:583
+#: ../admin-custom-login/includes/design/text_and_color.php:598
+#: ../admin-custom-login/includes/googlecaptcha-settings/gcaptcha-settings.php:117
+#: ../admin-custom-login/includes/googlecaptcha-settings/gcaptcha-settings.php:131
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:363
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:795
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:809
+#: ../admin-custom-login/includes/settings/page-settings.php:84
+#: ../admin-custom-login/includes/settings/page-settings.php:168
+#: ../admin-custom-login/includes/settings/page-settings.php:182
+#: ../admin-custom-login/includes/social/social.php:192
+#: ../admin-custom-login/includes/social/social.php:206
+msgid "Close"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/dashboard/dashboard.php:125
+#: ../admin-custom-login-pro-v5.6/includes/design/background.php:453
+#: ../admin-custom-login-pro-v5.6/includes/design/text_and_color.php:768
+#: ../admin-custom-login-pro-v5.6/includes/googlecaptcha-settings/gcaptcha-settings.php:167
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:964
+#: ../admin-custom-login-pro-v5.6/includes/login-restriction/login_restrictions.php:356
+#: ../admin-custom-login-pro-v5.6/includes/settings/page-settings.php:220
+#: ../admin-custom-login-pro-v5.6/includes/social/social-login.php:214
+#: ../admin-custom-login-pro-v5.6/includes/social/social.php:306
+#: ../admin-custom-login/includes/dashboard/dashboard.php:112
+#: ../admin-custom-login/includes/design/background.php:383
+#: ../admin-custom-login/includes/design/text_and_color.php:598
+#: ../admin-custom-login/includes/googlecaptcha-settings/gcaptcha-settings.php:131
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:809
+#: ../admin-custom-login/includes/settings/page-settings.php:182
+#: ../admin-custom-login/includes/social/social.php:206
+msgid "Setting Reset Successfully"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/dashboard/dashboard.php:138
+#: ../admin-custom-login-pro-v5.6/includes/design/background.php:467
+#: ../admin-custom-login-pro-v5.6/includes/design/text_and_color.php:782
+#: ../admin-custom-login-pro-v5.6/includes/googlecaptcha-settings/gcaptcha-settings.php:180
+#: ../admin-custom-login-pro-v5.6/includes/login-attempt/attempt.php:202
+#: ../admin-custom-login-pro-v5.6/includes/login-attempt/attempt.php:204
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:977
+#: ../admin-custom-login-pro-v5.6/includes/login-restriction/login_restrictions.php:143
+#: ../admin-custom-login-pro-v5.6/includes/login-restriction/login_restrictions.php:262
+#: ../admin-custom-login-pro-v5.6/includes/login-restriction/login_restrictions.php:391
+#: ../admin-custom-login-pro-v5.6/includes/login-token/login-token.php:189
+#: ../admin-custom-login-pro-v5.6/includes/settings/page-settings.php:233
+#: ../admin-custom-login-pro-v5.6/includes/social/social-login.php:227
+#: ../admin-custom-login-pro-v5.6/includes/social/social.php:319
+#: ../admin-custom-login/includes/dashboard/dashboard.php:119
+#: ../admin-custom-login/includes/design/background.php:391
+#: ../admin-custom-login/includes/design/text_and_color.php:606
+#: ../admin-custom-login/includes/googlecaptcha-settings/gcaptcha-settings.php:138
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:816
+#: ../admin-custom-login/includes/settings/page-settings.php:189
+#: ../admin-custom-login/includes/social/social.php:213
+msgid "Save Changes"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/dashboard/dashboard.php:142
+#: ../admin-custom-login-pro-v5.6/includes/design/background.php:471
+#: ../admin-custom-login-pro-v5.6/includes/design/text_and_color.php:786
+#: ../admin-custom-login-pro-v5.6/includes/googlecaptcha-settings/gcaptcha-settings.php:184
+#: ../admin-custom-login-pro-v5.6/includes/login-attempt/attempt.php:208
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:981
+#: ../admin-custom-login-pro-v5.6/includes/login-restriction/login_restrictions.php:147
+#: ../admin-custom-login-pro-v5.6/includes/login-restriction/login_restrictions.php:266
+#: ../admin-custom-login-pro-v5.6/includes/login-restriction/login_restrictions.php:395
+#: ../admin-custom-login-pro-v5.6/includes/login-restriction/login_restrictions.php:531
+#: ../admin-custom-login-pro-v5.6/includes/login-token/login-token.php:194
+#: ../admin-custom-login-pro-v5.6/includes/settings/page-settings.php:237
+#: ../admin-custom-login-pro-v5.6/includes/social/social-login.php:231
+#: ../admin-custom-login-pro-v5.6/includes/social/social.php:323
+#: ../admin-custom-login/includes/dashboard/dashboard.php:122
+#: ../admin-custom-login/includes/design/background.php:394
+#: ../admin-custom-login/includes/design/text_and_color.php:609
+#: ../admin-custom-login/includes/googlecaptcha-settings/gcaptcha-settings.php:141
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:819
+#: ../admin-custom-login/includes/settings/page-settings.php:192
+#: ../admin-custom-login/includes/social/social.php:216
+msgid "Reset Default"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/design/background.php:115
+#: ../admin-custom-login/includes/design/background.php:91
+msgid "Background Settings"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/design/background.php:127
+#: ../admin-custom-login-pro-v5.6/includes/design/background.php:135
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:342
+#: ../admin-custom-login/includes/design/background.php:103
+#: ../admin-custom-login/includes/design/background.php:110
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:278
+msgid "Select Background"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/design/background.php:134
+#: ../admin-custom-login/includes/design/background.php:109
+msgid "No Background Selected"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/design/background.php:136
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:350
+#: ../admin-custom-login/includes/design/background.php:111
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:285
+msgid "Static Background Color"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/design/background.php:137
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:351
+#: ../admin-custom-login/includes/design/background.php:112
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:286
+msgid "Static Background Image"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/design/background.php:138
+#: ../admin-custom-login/includes/design/background.php:113
+msgid "Background SlideShow"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/design/background.php:157
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:368
+#: ../admin-custom-login/includes/design/background.php:131
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:302
+msgid "Background Color"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/design/background.php:182
+#: ../admin-custom-login-pro-v5.6/includes/design/background.php:210
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:410
+#: ../admin-custom-login/includes/design/background.php:153
+#: ../admin-custom-login/includes/design/background.php:172
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:339
+msgid "Background Image"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/design/background.php:188
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:416
+#: ../admin-custom-login-pro-v5.6/includes/settings/page-settings.php:79
+#: ../admin-custom-login/includes/design/background.php:158
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:344
+#: ../admin-custom-login/includes/settings/page-settings.php:67
+msgid "No media selected!"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/design/background.php:191
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:418
+#: ../admin-custom-login-pro-v5.6/includes/settings/page-settings.php:81
+#: ../admin-custom-login/includes/design/background.php:160
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:345
+#: ../admin-custom-login/includes/settings/page-settings.php:68
+msgid "Upload"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/design/background.php:194
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:421
+#: ../admin-custom-login-pro-v5.6/includes/settings/page-settings.php:84
+#: ../admin-custom-login/includes/design/background.php:162
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:347
+#: ../admin-custom-login/includes/settings/page-settings.php:70
+msgid "Preview"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/design/background.php:198
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:425
+#: ../admin-custom-login/includes/design/background.php:164
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:349
+msgid "Remove"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/design/background.php:236
+#: ../admin-custom-login/includes/design/background.php:196
+msgid "Cover or Strech"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/design/background.php:245
+#: ../admin-custom-login-pro-v5.6/includes/design/text_and_color.php:291
+#: ../admin-custom-login-pro-v5.6/includes/design/text_and_color.php:672
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:629
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:763
+#: ../admin-custom-login/includes/design/background.php:201
+#: ../admin-custom-login/includes/design/text_and_color.php:244
+#: ../admin-custom-login/includes/design/text_and_color.php:520
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:540
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:663
+msgid "Yes"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/design/background.php:257
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:459
+#: ../admin-custom-login/includes/design/background.php:213
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:378
+msgid "Background Repeat"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/design/background.php:263
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:465
+#: ../admin-custom-login/includes/design/background.php:219
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:384
+msgid "No Repeat"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/design/background.php:264
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:466
+#: ../admin-custom-login/includes/design/background.php:220
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:385
+msgid "Repeat"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/design/background.php:265
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:467
+#: ../admin-custom-login/includes/design/background.php:221
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:386
+msgid "Repeat Horizontally"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/design/background.php:266
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:468
+#: ../admin-custom-login/includes/design/background.php:222
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:387
+msgid "Repeat Vertically"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/design/background.php:278
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:479
+#: ../admin-custom-login/includes/design/background.php:234
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:398
+msgid "Background Position"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/design/background.php:284
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:485
+#: ../admin-custom-login/includes/design/background.php:240
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:404
+msgid "Left Top"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/design/background.php:285
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:486
+#: ../admin-custom-login/includes/design/background.php:241
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:405
+msgid "Left Center"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/design/background.php:286
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:487
+#: ../admin-custom-login/includes/design/background.php:242
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:406
+msgid "Left Bottom"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/design/background.php:287
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:488
+#: ../admin-custom-login/includes/design/background.php:243
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:407
+msgid "Right Top"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/design/background.php:288
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:489
+#: ../admin-custom-login/includes/design/background.php:244
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:408
+msgid "Right Center"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/design/background.php:289
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:490
+#: ../admin-custom-login/includes/design/background.php:245
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:409
+msgid "Right Bottom"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/design/background.php:290
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:491
+#: ../admin-custom-login/includes/design/background.php:246
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:410
+msgid "Center Top"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/design/background.php:291
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:492
+#: ../admin-custom-login/includes/design/background.php:247
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:411
+msgid "Center Center"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/design/background.php:292
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:493
+#: ../admin-custom-login/includes/design/background.php:248
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:412
+msgid "Center Bottom"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/design/background.php:304
+#: ../admin-custom-login/includes/design/background.php:260
+msgid "Background Attachment"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/design/background.php:310
+#: ../admin-custom-login/includes/design/background.php:266
+msgid "Fixed"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/design/background.php:311
+#: ../admin-custom-login/includes/design/background.php:267
+msgid "Scroll"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/design/background.php:312
+#: ../admin-custom-login/includes/design/background.php:268
+msgid "Inherit"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/design/background.php:332
+#: ../admin-custom-login-pro-v5.6/includes/design/background.php:355
+#: ../admin-custom-login/includes/design/background.php:287
+#: ../admin-custom-login/includes/design/background.php:309
+msgid "No. Of Background Slideshow"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/design/background.php:339
+#: ../admin-custom-login/includes/design/background.php:293
+msgid "Select Number of Slide Show"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/design/background.php:340
+#: ../admin-custom-login/includes/design/background.php:294
+msgid "2"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/design/background.php:341
+#: ../admin-custom-login/includes/design/background.php:295
+msgid "3"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/design/background.php:342
+#: ../admin-custom-login/includes/design/background.php:296
+msgid "4"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/design/background.php:343
+#: ../admin-custom-login/includes/design/background.php:297
+msgid "5"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/design/background.php:344
+#: ../admin-custom-login/includes/design/background.php:298
+msgid "6"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/design/background.php:397
+#: ../admin-custom-login/includes/design/background.php:339
+msgid "Slider Animation"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/design/background.php:405
+#: ../admin-custom-login/includes/design/background.php:346
+msgid "Slider Animation 1"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/design/background.php:406
+#: ../admin-custom-login/includes/design/background.php:347
+msgid "Slider Animation 2"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/design/background.php:407
+#: ../admin-custom-login/includes/design/background.php:348
+msgid "Slider Animation 3"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/design/background.php:408
+#: ../admin-custom-login/includes/design/background.php:349
+msgid "Slider Animation 4"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/design/background.php:430
+#: ../admin-custom-login-pro-v5.6/includes/design/background.php:453
+#: ../admin-custom-login/includes/design/background.php:368
+#: ../admin-custom-login/includes/design/background.php:383
+msgid "Top Background"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/design/text_and_color.php:123
+#: ../admin-custom-login/includes/design/text_and_color.php:89
+msgid "Text And Color Settings"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/design/text_and_color.php:136
+#: ../admin-custom-login/includes/design/text_and_color.php:102
+msgid "Headline Font Color"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/design/text_and_color.php:154
+#: ../admin-custom-login/includes/design/text_and_color.php:118
+msgid "Input Font Color"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/design/text_and_color.php:172
+#: ../admin-custom-login/includes/design/text_and_color.php:134
+msgid "Link Color"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/design/text_and_color.php:189
+#: ../admin-custom-login/includes/design/text_and_color.php:150
+msgid "Button Color"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/design/text_and_color.php:206
+#: ../admin-custom-login/includes/design/text_and_color.php:166
+msgid "Headline Font size"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/design/text_and_color.php:225
+#: ../admin-custom-login/includes/design/text_and_color.php:184
+msgid "Input Font Size"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/design/text_and_color.php:244
+#: ../admin-custom-login/includes/design/text_and_color.php:202
+msgid "Link Font Size"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/design/text_and_color.php:263
+#: ../admin-custom-login/includes/design/text_and_color.php:220
+msgid "Button Font Size"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/design/text_and_color.php:282
+#: ../admin-custom-login/includes/design/text_and_color.php:238
+msgid "Enable Link shadow?"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/design/text_and_color.php:297
+#: ../admin-custom-login-pro-v5.6/includes/design/text_and_color.php:678
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:635
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:764
+#: ../admin-custom-login/includes/design/text_and_color.php:247
+#: ../admin-custom-login/includes/design/text_and_color.php:523
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:543
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:664
+msgid "No"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/design/text_and_color.php:309
+#: ../admin-custom-login/includes/design/text_and_color.php:259
+msgid "Link Shadow Color"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/design/text_and_color.php:327
+msgid "Google Font Token"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/design/text_and_color.php:344
+#: ../admin-custom-login/includes/design/text_and_color.php:275
+msgid "Headline Font Style"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/design/text_and_color.php:425
+#: ../admin-custom-login/includes/design/text_and_color.php:336
+msgid "Input Font Style"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/design/text_and_color.php:504
+#: ../admin-custom-login/includes/design/text_and_color.php:395
+msgid "Link Font Style"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/design/text_and_color.php:584
+#: ../admin-custom-login/includes/design/text_and_color.php:455
+msgid "Button Font Style"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/design/text_and_color.php:663
+#: ../admin-custom-login/includes/design/text_and_color.php:514
+msgid "Enable Input Box Icon?"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/design/text_and_color.php:689
+#: ../admin-custom-login/includes/design/text_and_color.php:534
+msgid "Icon For user Input Box"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/design/text_and_color.php:712
+#: ../admin-custom-login/includes/design/text_and_color.php:555
+msgid "Icon For Password Input Box"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/design/text_and_color.php:745
+#: ../admin-custom-login-pro-v5.6/includes/design/text_and_color.php:768
+#: ../admin-custom-login/includes/design/text_and_color.php:583
+#: ../admin-custom-login/includes/design/text_and_color.php:598
+msgid "Text and Color"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/googlecaptcha-settings/gcaptcha-settings.php:16
+#: ../admin-custom-login-pro-v5.6/includes/googlecaptcha-settings/gcaptcha-settings.php:48
+#: ../admin-custom-login/includes/googlecaptcha-settings/gcaptcha-settings.php:14
+#: ../admin-custom-login/includes/googlecaptcha-settings/gcaptcha-settings.php:44
+msgid "Google Captcha Settings"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/googlecaptcha-settings/gcaptcha-settings.php:62
+#: ../admin-custom-login-pro-v5.6/includes/googlecaptcha-settings/gcaptcha-settings.php:68
+#: ../admin-custom-login/includes/googlecaptcha-settings/gcaptcha-settings.php:55
+#: ../admin-custom-login/includes/googlecaptcha-settings/gcaptcha-settings.php:60
+msgid "Site Key"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/googlecaptcha-settings/gcaptcha-settings.php:73
+#: ../admin-custom-login-pro-v5.6/includes/googlecaptcha-settings/gcaptcha-settings.php:79
+#: ../admin-custom-login/includes/googlecaptcha-settings/gcaptcha-settings.php:64
+#: ../admin-custom-login/includes/googlecaptcha-settings/gcaptcha-settings.php:69
+msgid "Secret Key"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/googlecaptcha-settings/gcaptcha-settings.php:85
+#: ../admin-custom-login/includes/googlecaptcha-settings/gcaptcha-settings.php:74
+msgid "Captcha Display"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/googlecaptcha-settings/gcaptcha-settings.php:109
+#: ../admin-custom-login/includes/googlecaptcha-settings/gcaptcha-settings.php:90
+msgid "Captcha Theme"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/googlecaptcha-settings/gcaptcha-settings.php:118
+#: ../admin-custom-login/includes/googlecaptcha-settings/gcaptcha-settings.php:96
+msgid "Light"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/googlecaptcha-settings/gcaptcha-settings.php:124
+#: ../admin-custom-login/includes/googlecaptcha-settings/gcaptcha-settings.php:99
+msgid "Dark"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/help/help.php:32
+#: ../admin-custom-login/includes/help/help.php:28
+msgid "View Support Docs or Open a Ticket"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/help/help.php:42
+#: ../admin-custom-login-pro-v5.6/includes/help/rate.php:17
+#: ../admin-custom-login-pro-v5.6/includes/help/rate.php:41
+#: ../admin-custom-login/includes/help/help.php:38
+#: ../admin-custom-login/includes/help/rate.php:39
+#: ../simple-lightbox-gallery/help_and_support.php:8
+#: ../simple-lightbox-gallery/simple-lightbox-gallery.php:379
+msgid "Rate Us"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/help/help.php:48
+#: ../admin-custom-login/includes/help/help.php:44
+msgid ""
+"If you are enjoying using our Admin Custom Login plugin and find it useful, "
+"then please consider writing a positive feedback. Your feedback will help us "
+"to encourage and support the plugins continued development and better user "
+"support."
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/help/help.php:67
+#: ../admin-custom-login/includes/help/help.php:62
+#: ../simple-lightbox-gallery/help_and_support.php:24
+msgid "Share Us Your Suggestion"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/help/help.php:73
+#: ../admin-custom-login/includes/help/help.php:68
+msgid ""
+"If you have any suggestion or features in your mind then please share us. We "
+"will try our best to add them in this plugin."
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/help/help.php:85
+#: ../admin-custom-login/includes/help/help.php:80
+#: ../simple-lightbox-gallery/help_and_support.php:28
+msgid "Language Contribution"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/help/help.php:90
+#: ../admin-custom-login/includes/help/help.php:85
+#: ../simple-lightbox-gallery/help_and_support.php:29
+msgid "Translate this plugin into your language"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/help/help.php:91
+#: ../admin-custom-login/includes/help/help.php:86
+msgid "Question : How to convert Plguin into My Language?"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/help/help.php:93
+msgid "here is solution"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/help/rate.php:31
+#: ../admin-custom-login/includes/help/rate.php:29
+msgid ""
+"We need your feedback for improve our plugin functionality on WordPress. So, "
+"if you like our plugin then please rate us"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/import-export-setting/import_export.php:15
+#: ../admin-custom-login/includes/import-export-setting/import_export.php:13
+msgid "Export Custom Login Data"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/import-export-setting/import_export.php:20
+#: ../admin-custom-login/includes/import-export-setting/import_export.php:18
+msgid ""
+"Export the plugin settings for this site as a .json file. This allows you to "
+"easily import the configuration into another site."
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/import-export-setting/import_export.php:26
+#: ../admin-custom-login/includes/import-export-setting/import_export.php:23
+msgid "Export"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/import-export-setting/import_export.php:40
+#: ../admin-custom-login/includes/import-export-setting/import_export.php:37
+msgid "Import Custom Login Data"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/import-export-setting/import_export.php:45
+#: ../admin-custom-login/includes/import-export-setting/import_export.php:42
+msgid ""
+"Import the plugin settings from a .json file. This file can be obtained by "
+"exporting the settings on another site using the form above."
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/import-export-setting/import_export.php:54
+#: ../admin-custom-login/includes/import-export-setting/import_export.php:50
+msgid "Import"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-attempt/attempt.php:40
+msgid ""
+"This Setting Prevents Unauthorized Users To invalid Login Attempts and "
+"Disable the login form for a while"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-attempt/attempt.php:64
+msgid "Maximum Login Attempts"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-attempt/attempt.php:70
+msgid "Maximum No Of Attempts"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-attempt/attempt.php:72
+msgid "Maximum Allowed login attempt by user with wrong credentials"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-attempt/attempt.php:78
+msgid "Time Duration "
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-attempt/attempt.php:85
+msgid "Time in minutes"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-attempt/attempt.php:87
+msgid "Halt user after maximum login attempts"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-attempt/attempt.php:88
+msgid "Time duration to halt user after maximum login attempts"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-attempt/attempt.php:90
+msgid "Enter numeric value e.g. 15"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-attempt/attempt.php:91
+msgid "Time duration 15 min"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-attempt/attempt.php:95
+msgid "Enable Login Form Key"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-attempt/attempt.php:102
+msgid ""
+"This key remove the halt occured due to entering wrong username and password"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-attempt/attempt.php:104
+msgid "For admin use only"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-attempt/attempt.php:129
+#: ../admin-custom-login-pro-v5.6/includes/login-restriction/login_restrictions.php:205
+#: ../admin-custom-login-pro-v5.6/includes/login-restriction/login_restrictions.php:491
+msgid "Login Attempts"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-attempt/attempt.php:129
+#: ../admin-custom-login-pro-v5.6/includes/login-restriction/login_restrictions.php:110
+#: ../admin-custom-login-pro-v5.6/includes/login-restriction/login_restrictions.php:206
+#: ../admin-custom-login-pro-v5.6/includes/login-restriction/login_restrictions.php:335
+#: ../admin-custom-login-pro-v5.6/includes/login-restriction/login_restrictions.php:491
+msgid "Setting Saved Successfully"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-attempt/attempt.php:149
+#: ../admin-custom-login-pro-v5.6/includes/login-restriction/login_restrictions.php:130
+#: ../admin-custom-login-pro-v5.6/includes/login-restriction/login_restrictions.php:227
+#: ../admin-custom-login-pro-v5.6/includes/login-restriction/login_restrictions.php:512
+msgid "Login Attempt"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-attempt/attempt.php:149
+#: ../admin-custom-login-pro-v5.6/includes/login-restriction/login_restrictions.php:130
+#: ../admin-custom-login-pro-v5.6/includes/login-restriction/login_restrictions.php:227
+#: ../admin-custom-login-pro-v5.6/includes/login-restriction/login_restrictions.php:513
+#: ../admin-custom-login-pro-v5.6/includes/login-token/login-token.php:176
+msgid "Reset Successfully"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-attempt/attempt.php:170
+msgid "Please Enter Valid Value"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-attempt/attempt.php:170
+#: ../admin-custom-login-pro-v5.6/includes/login-restriction/login_restrictions.php:249
+msgid "Example: 5"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-attempt/attempt.php:191
+msgid "Please Enter Valid Value of Time in Minutes"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-attempt/attempt.php:191
+msgid "Example: 15"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:240
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:193
+msgid "Login Settings"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:252
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:206
+msgid "Login Form Position"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:261
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:212
+msgid "Default"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:264
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:213
+msgid "Floating"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:267
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:214
+msgid "Floating With Customization"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:278
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:225
+msgid "Float Settings"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:287
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:231
+msgid "Left"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:293
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:234
+msgid "Center"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:299
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:237
+msgid "Right"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:309
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:247
+msgid "Floating With Customization Settings"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:332
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:268
+msgid "Note: This form position setting will be not responsive."
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:349
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:284
+msgid "Select background"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:385
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:317
+msgid "Login Form Opacity"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:437
+#: ../admin-custom-login-pro-v5.6/includes/settings/page-settings.php:97
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:357
+#: ../admin-custom-login/includes/settings/page-settings.php:78
+msgid "Login Background Image"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:505
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:424
+msgid "Background Effect"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:511
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:430
+msgid "Select overlay effect"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:512
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:431
+msgid "No Overlay Effect"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:513
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:432
+msgid "Overlay Effect 1"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:514
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:433
+msgid "Overlay Effect 2"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:515
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:434
+msgid "Overlay Effect 3"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:528
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:447
+msgid "Login Form Width"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:546
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:464
+msgid "Border Color"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:563
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:479
+msgid "Border Radius"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:581
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:496
+msgid "Border Style"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:587
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:502
+msgid "None"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:588
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:503
+msgid "Solid"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:589
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:504
+msgid "Dotted"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:590
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:505
+msgid "Dashed"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:591
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:506
+msgid "Double"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:602
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:517
+msgid "Border Thickness"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:620
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:534
+msgid "Enable Form Shadow?"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:646
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:555
+msgid "Form Shadow Color"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:664
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:572
+msgid "Username or Email Field Label Text"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:670
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:577
+msgid "Type username or email field label text"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:683
+msgid "Type Username and Placeholder Text"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:688
+msgid "Type Username or Email"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:702
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:606
+msgid "Password Field Label Text"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:708
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:611
+msgid "Type password field label text"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:721
+msgid "Password Label and Placeholder Text"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:726
+msgid "Type Password"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:739
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:640
+msgid "Log In Button Text"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:744
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:645
+msgid "Type log in button text"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:757
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:657
+msgid "Forcefully Redirect"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:778
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:671
+msgid "Redirect Force URL"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:780
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:672
+msgid ""
+"Enter the URL to user forcefully redirect to admin panel or another when if "
+"hit the site url."
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:791
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:683
+msgid "Redirect Users After Login (Not Work For Admin)"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:797
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:688
+msgid "Redirect URL"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:799
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:689
+msgid ""
+"Enter the URL to redirect users after login, Setting will not work for an "
+"administrator."
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:811
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:701
+msgid "Display Note To User Above Login Form"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:829
+msgid "Custom Error Message On Wrong Username & Password"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:847
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:718
+msgid "Message Font Size"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:867
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:736
+msgid "Message Font Color"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:886
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:753
+msgid "Tagline Message Display Below Login Form"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:909
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:915
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:770
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:775
+#: ../simple-lightbox-gallery/simple-lightbox-slider-setting-metabox.php:336
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:628
+msgid "Custom CSS"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:919
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:777
+msgid "Enter any custom css you want to apply on login panel."
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:921
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:778
+msgid "Note: Please Do Not Use"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:922
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:778
+#: ../simple-lightbox-gallery/simple-lightbox-slider-setting-metabox.php:348
+msgid "Tag With Custom CSS"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:942
+#: ../admin-custom-login-pro-v5.6/includes/login-form-setting/Login-form-background.php:964
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:795
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:809
+msgid "Login"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-restriction/login_restrictions.php:19
+#: ../admin-custom-login-pro-v5.6/includes/login-restriction/login_restrictions.php:109
+msgid "Login Restriction"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-restriction/login_restrictions.php:30
+msgid "Restriction Using Role"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-restriction/login_restrictions.php:32
+msgid "Restriction According to No of Users Login"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-restriction/login_restrictions.php:33
+msgid "Restriction According to IP"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-restriction/login_restrictions.php:36
+msgid "Restriction According to Users"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-restriction/login_restrictions.php:45
+msgid "Restriction Settings"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-restriction/login_restrictions.php:50
+msgid ""
+"Restrict the users to login by user role. Select a role, e.g. Editor, and "
+"save it. Now, users with role Editor, will not able to login to wp-admin"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-restriction/login_restrictions.php:74
+msgid "Select The Role"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-restriction/login_restrictions.php:175
+msgid "Max No Of Users"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-restriction/login_restrictions.php:179
+msgid ""
+"Restrict limited no of users to login wp admin panel. E.g. 4, can login the "
+"admin panel, please enter 4 and save. Now only 4 users can login to "
+"wordpress admin panel."
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-restriction/login_restrictions.php:183
+msgid "Enter No Of Users"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-restriction/login_restrictions.php:248
+msgid "Please Enter Valid Number Of Users"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-restriction/login_restrictions.php:297
+msgid "Restrict Users To Access WP Admin Dashboard By IP Address"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-restriction/login_restrictions.php:307
+msgid "IP Address"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-restriction/login_restrictions.php:308
+msgid "Setting work on ip range"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-restriction/login_restrictions.php:311
+msgid "Allowed IP address to access WP Admin dashboard"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-restriction/login_restrictions.php:335
+#: ../admin-custom-login-pro-v5.6/includes/login-restriction/login_restrictions.php:356
+msgid "IP Restriction"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-restriction/login_restrictions.php:377
+msgid "Please Enter Valid IP Address"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-restriction/login_restrictions.php:378
+msgid "Example: 16.24.17.29"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-restriction/login_restrictions.php:427
+msgid "All WordPress Users"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-restriction/login_restrictions.php:432
+msgid ""
+"You can check users to ban for accessing WP admin dashboard. Only checked "
+"users will not be allowed for accessing WP dashboard"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-restriction/login_restrictions.php:526
+msgid "Ban Users"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-token/generatetoken.php:211
+#: ../admin-custom-login-pro-v5.6/includes/login-token/generatetoken.php:248
+#: ../admin-custom-login-pro-v5.6/includes/login-token/safegeneratetoken.php:248
+#: ../admin-custom-login-pro-v5.6/includes/login-token/safegeneratetoken.php:285
+msgid "Expired"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-token/login-token.php:38
+msgid "Token List"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-token/login-token.php:50
+msgid ""
+"Setting Provide A Feature to Non Existing Users To Gain Access Of Current "
+"Website With A Time Boundation"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-token/login-token.php:57
+msgid "Email Id *"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-token/login-token.php:63
+msgid "Email ID"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-token/login-token.php:65
+msgid "Example"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-token/login-token.php:69
+#: ../admin-custom-login-pro-v5.6/includes/login-token/login-token.php:75
+msgid "First Name"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-token/login-token.php:81
+#: ../admin-custom-login-pro-v5.6/includes/login-token/login-token.php:87
+msgid "Last Name"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-token/login-token.php:94
+msgid "Role"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-token/login-token.php:113
+msgid "Expiry Time"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-token/login-token.php:132
+msgid "Custom Date"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-token/login-token.php:155
+#: ../admin-custom-login-pro-v5.6/includes/login-token/login-token.php:228
+msgid "Token"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-token/login-token.php:155
+msgid "Generated Successfully"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-token/login-token.php:176
+msgid "Login Token"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-token/login-token.php:228
+msgid "Deleted Successfully"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-token/login-token.php:245
+msgid "Edit Token"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-token/safegeneratetoken.php:307
+msgid "Not yet logged in"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-token/safegeneratetoken.php:318
+msgid "Super Admin"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-token/safegeneratetoken.php:401
+msgid "Reactivate for one day"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-token/safegeneratetoken.php:404
+msgid "Delete"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-token/safegeneratetoken.php:405
+msgid "Edit"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-token/safegeneratetoken.php:409
+msgid "Email login link"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/login-token/safegeneratetoken.php:410
+msgid "Copy login link"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/recommendations/recommendations.php:77
+#: ../admin-custom-login/includes/recommendations/recommendations.php:75
+#: ../simple-lightbox-gallery/recommendations.php:56
+#, php-format
+msgid "%s rating"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/settings/page-settings.php:73
+#: ../admin-custom-login/includes/settings/page-settings.php:62
+msgid "Logo Image"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/settings/page-settings.php:119
+#: ../admin-custom-login/includes/settings/page-settings.php:98
+msgid "Logo Image Width"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/settings/page-settings.php:137
+#: ../admin-custom-login/includes/settings/page-settings.php:115
+msgid "Logo Image Height"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/settings/page-settings.php:155
+#: ../admin-custom-login/includes/settings/page-settings.php:132
+#: ../admin-custom-login/includes/settings/page-settings.php:137
+msgid "Logo Link URL"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/settings/page-settings.php:161
+msgid "Logo URL"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/settings/page-settings.php:172
+#: ../admin-custom-login/includes/settings/page-settings.php:147
+#: ../admin-custom-login/includes/settings/page-settings.php:152
+msgid "Logo Image Title"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/settings/page-settings.php:178
+msgid "Logo URL Title"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/settings/page-settings.php:198
+#: ../admin-custom-login-pro-v5.6/includes/settings/page-settings.php:220
+#: ../admin-custom-login/includes/settings/page-settings.php:168
+#: ../admin-custom-login/includes/settings/page-settings.php:182
+msgid "Logo"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/social/social-login.php:29
+#: ../simple-lightbox-gallery/help_and_support.php:44
+#: ../simple-lightbox-gallery/simple-lightbox-slider-setting-metabox.php:346
+msgid "Note"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/social/social-login.php:30
+msgid "Social Login will only work on top level domain(s)"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/social/social-login.php:37
+msgid "Login with Facebook"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/social/social-login.php:62
+msgid "Facebook Login needs HTTPS. You currently do not have SSL installed."
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/social/social-login.php:66
+#: ../admin-custom-login-pro-v5.6/includes/social/social-login.php:68
+msgid "Facebook App ID"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/social/social-login.php:71
+#: ../admin-custom-login-pro-v5.6/includes/social/social-login.php:73
+msgid "Facebook App Secret"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/social/social-login.php:76
+#: ../admin-custom-login-pro-v5.6/includes/social/social-login.php:79
+msgid "Facebook Redirect URL"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/social/social-login.php:82
+msgid "Register your website with Facebook to get required Appid & Secret key"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/social/social-login.php:83
+msgid "Get the facebook Appid & Secret key"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/social/social-login.php:87
+msgid "Login with Google"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/social/social-login.php:110
+#: ../admin-custom-login-pro-v5.6/includes/social/social-login.php:112
+msgid "Google Client ID"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/social/social-login.php:115
+#: ../admin-custom-login-pro-v5.6/includes/social/social-login.php:118
+msgid "Google Client Secret"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/social/social-login.php:121
+#: ../admin-custom-login-pro-v5.6/includes/social/social-login.php:123
+msgid "Google Redirect URL"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/social/social-login.php:126
+msgid "Register your website with Google to get required Appid & Secret key"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/social/social-login.php:127
+msgid "Get the Google Appid & Secret key"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/social/social-login.php:131
+msgid "Login with Twitter"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/social/social-login.php:154
+#: ../admin-custom-login-pro-v5.6/includes/social/social-login.php:157
+msgid "Twitter Consumer Key"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/social/social-login.php:160
+#: ../admin-custom-login-pro-v5.6/includes/social/social-login.php:163
+msgid "Twitter Consumer Secret"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/social/social-login.php:166
+#: ../admin-custom-login-pro-v5.6/includes/social/social-login.php:169
+msgid "Twitter OAUTH Callback Url"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/social/social-login.php:172
+msgid ""
+"Register your website with Twitter to get required Consumer Key & Consumer "
+"Secret"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/social/social-login.php:173
+msgid "Get the Consumer Key & Consumer Secret"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/social/social.php:39
+#: ../admin-custom-login/includes/social/social.php:33
+msgid "Enable Social Icons"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/social/social.php:45
+#: ../admin-custom-login/includes/social/social.php:39
+msgid "No Icon"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/social/social.php:46
+#: ../admin-custom-login/includes/social/social.php:40
+msgid "Inner"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/social/social.php:47
+#: ../admin-custom-login/includes/social/social.php:41
+msgid "Outer"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/social/social.php:48
+#: ../admin-custom-login/includes/social/social.php:42
+msgid "Both"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/social/social.php:59
+#: ../admin-custom-login/includes/social/social.php:53
+msgid "Social Media Icon Size"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/social/social.php:68
+#: ../admin-custom-login/includes/social/social.php:59
+msgid "Small"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/social/social.php:74
+#: ../admin-custom-login/includes/social/social.php:62
+msgid "Medium"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/social/social.php:80
+#: ../admin-custom-login/includes/social/social.php:65
+msgid "Large"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/social/social.php:91
+#: ../admin-custom-login/includes/social/social.php:76
+msgid "Social Media Icon Layout"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/social/social.php:100
+#: ../admin-custom-login/includes/social/social.php:82
+msgid "Rectangle"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/social/social.php:106
+#: ../admin-custom-login/includes/social/social.php:85
+msgid "Circle"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/social/social.php:117
+#: ../admin-custom-login/includes/social/social.php:96
+msgid "Social Media Icon Color"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/social/social.php:134
+#: ../admin-custom-login/includes/social/social.php:111
+msgid "Social Media Icon Color On Hover"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/social/social.php:151
+#: ../admin-custom-login/includes/social/social.php:126
+msgid "Social Media Icon Background Color"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/social/social.php:168
+#: ../admin-custom-login/includes/social/social.php:141
+msgid "Social Media Background Color On Hover"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/social/social.php:185
+#: ../admin-custom-login/includes/social/social.php:156
+msgid "Social Profiles"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/social/social.php:190
+#: ../admin-custom-login/includes/social/social.php:161
+msgid "Enter your social profiles complete url here"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/social/social.php:194
+#: ../admin-custom-login/includes/social/social.php:163
+msgid "Facebook"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/social/social.php:200
+#: ../admin-custom-login/includes/social/social.php:164
+msgid "Twitter"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/social/social.php:205
+#: ../admin-custom-login/includes/social/social.php:165
+msgid "Linkedin"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/social/social.php:211
+#: ../admin-custom-login/includes/social/social.php:166
+msgid "Google Plus"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/social/social.php:217
+#: ../admin-custom-login/includes/social/social.php:167
+msgid "Pinterest"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/social/social.php:223
+#: ../admin-custom-login/includes/social/social.php:168
+msgid "Digg"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/social/social.php:228
+#: ../admin-custom-login/includes/social/social.php:169
+msgid "Youtube"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/social/social.php:234
+#: ../admin-custom-login/includes/social/social.php:170
+msgid "Flickr"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/social/social.php:239
+#: ../admin-custom-login/includes/social/social.php:171
+msgid "Tumblr"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/social/social.php:244
+#: ../admin-custom-login/includes/social/social.php:172
+msgid "Skype"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/social/social.php:249
+#: ../admin-custom-login/includes/social/social.php:173
+msgid "Instagram"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/social/social.php:255
+#: ../admin-custom-login/includes/social/social.php:174
+msgid "Telegram"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/social/social.php:261
+#: ../admin-custom-login/includes/social/social.php:175
+msgid "Whatsapp"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/includes/social/social.php:284
+#: ../admin-custom-login-pro-v5.6/includes/social/social.php:306
+#: ../admin-custom-login/includes/social/social.php:192
+#: ../admin-custom-login/includes/social/social.php:206
+msgid "Social"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/init.php:231
+msgid "You Are Blocked By Admin"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/init.php:268
+#: ../admin-custom-login/init.php:83 ../akismet/class.akismet-admin.php:104
+#: ../akismet/class.akismet-admin.php:236
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:10
+msgid "Settings"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/init.php:439
+#: ../admin-custom-login/init.php:229
+msgid "Find Us On Social Media"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/init.php:842
+#: ../admin-custom-login/init.php:526
+msgid "Please upload a valid .json file"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/init.php:848
+#: ../admin-custom-login/init.php:532
+msgid "Please upload a file to import"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/limit-login-attempts.php:40
+#, php-format
+msgid ""
+"<strong>ERROR</strong>: You have reached authentification limit, you will be "
+"able to try again in %1$s."
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/login-form-screen.php:448
+msgid "Oops, we ran into an issue! "
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/wacl-update-checker.php:115
+#: ../twitter-tweets-pro-v1.1/wlwtp-update-checker.php:113
+#, php-format
+msgid "Weblizar WordPress Plugin ( %s ) "
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/wacl-update-checker.php:132
+#: ../twitter-tweets-pro-v1.1/wlwtp-update-checker.php:125
+msgid " - "
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/wacl-update-checker.php:136
+#: ../twitter-tweets-pro-v1.1/wlwtp-update-checker.php:129
+msgid "Weblizar Plugin Update Process"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/wacl-update-checker.php:137
+#: ../twitter-tweets-pro-v1.1/wlwtp-update-checker.php:130
+msgid "You can see the manual Update steps at our weblizar site"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/wacl-update-checker.php:138
+#: ../twitter-tweets-pro-v1.1/wlwtp-update-checker.php:131
+msgid ": <a target=\"_blank\" href=\""
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/wacl-update-checker.php:139
+#: ../twitter-tweets-pro-v1.1/wlwtp-update-checker.php:132
+msgid "Weblizar WordPress Plugin "
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/wacl-update-checker.php:142
+#: ../twitter-tweets-pro-v1.1/wlwtp-update-checker.php:135
+msgid ""
+"1. First, Please download the new version of Weblizar Premium Plugin Package "
+"from your weblizar account. Then Login with your user name and Password."
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/wacl-update-checker.php:145
+#: ../twitter-tweets-pro-v1.1/wlwtp-update-checker.php:138
+msgid "Login For Download New Version"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/wacl-update-checker.php:148
+#: ../twitter-tweets-pro-v1.1/wlwtp-update-checker.php:141
+msgid "After Login you find this page"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/wacl-update-checker.php:152
+#: ../twitter-tweets-pro-v1.1/wlwtp-update-checker.php:143
+msgid ""
+"2. Upload the downloaded Plugin package in your site ( server ) using "
+"wordpress Plugin Uploader ( Go to Admin Dashboard =&gt; Plugins=&gt; Add New "
+"=&gt; Upload Plugin =&gt; Choose File and click on install button )."
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/wacl-update-checker.php:153
+msgid ""
+"Otherwise you can use any FTP ( filezilla or bitwise ) and upload the Plugin "
+"zip package or unzip the Plugin package. After that go to Admin Dashboard "
+"=&gt; Plugins and click on active."
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/wacl-update-checker.php:157
+#: ../twitter-tweets-pro-v1.1/wlwtp-update-checker.php:146
+msgid "Your Weblizar pro Plugin Activated Now"
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/wacl-update-checker.php:158
+msgid "For more details to follow the Plugin documentation link "
+msgstr ""
+
+#: ../admin-custom-login-pro-v5.6/wacl-update-checker.php:162
+#: ../twitter-tweets-pro-v1.1/wlwtp-update-checker.php:148
+msgid "Thanks for purchasing our Premium Plugin"
+msgstr ""
+
+#: ../admin-custom-login/admin/inc/admin_menu.php:12
+msgid "Buy Pro"
+msgstr ""
+
+#: ../admin-custom-login/admin/inc/admin_menu.php:13
+msgid "Admin Demo"
+msgstr ""
+
+#: ../admin-custom-login/includes/content.php:28
+#: ../admin-custom-login/init.php:77
+msgid "Admin Custom Login"
+msgstr ""
+
+#: ../admin-custom-login/includes/content.php:81
+msgid "application overview"
+msgstr ""
+
+#: ../admin-custom-login/includes/content.php:91
+msgid "modify background design here"
+msgstr ""
+
+#: ../admin-custom-login/includes/content.php:102
+msgid "modify login design here"
+msgstr ""
+
+#: ../admin-custom-login/includes/content.php:113
+msgid "modify login form style here"
+msgstr ""
+
+#: ../admin-custom-login/includes/content.php:124
+msgid "customize logo settings here"
+msgstr ""
+
+#: ../admin-custom-login/includes/content.php:136
+msgid "connect with your social profile"
+msgstr ""
+
+#: ../admin-custom-login/includes/content.php:147
+msgid "configure captcha settings"
+msgstr ""
+
+#: ../admin-custom-login/includes/content.php:158
+msgid "import / export plugin settings"
+msgstr ""
+
+#: ../admin-custom-login/includes/content.php:168
+msgid "get more free plugins"
+msgstr ""
+
+#: ../admin-custom-login/includes/content.php:178
+msgid "ask your queries"
+msgstr ""
+
+#: ../admin-custom-login/includes/content.php:188
+msgid "weblizar premium products"
+msgstr ""
+
+#: ../admin-custom-login/includes/content.php:197
+msgid "Rate & Donate Us"
+msgstr ""
+
+#: ../admin-custom-login/includes/content.php:198
+msgid "if you like us"
+msgstr ""
+
+#: ../admin-custom-login/includes/help/help.php:87
+msgid "Here is solution"
+msgstr ""
+
+#: ../admin-custom-login/includes/help/rate.php:15
+msgid "Rate & Donate  Us"
+msgstr ""
+
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:252
+msgid "Left Margin"
+msgstr ""
+
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:260
+msgid "Top Margin"
+msgstr ""
+
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:589
+msgid "Username or Email Field Placeholder Text"
+msgstr ""
+
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:594
+msgid "Type username or email placeholder text"
+msgstr ""
+
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:623
+msgid "Password Field Placeholder Text"
+msgstr ""
+
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:628
+msgid "Type password field placeholder text"
+msgstr ""
+
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:706
+#: ../admin-custom-login/includes/login-form-setting/login-form-background.php:758
+msgid "Type Message"
+msgstr ""
+
+#: ../admin-custom-login/init.php:77
+msgid "AC Login"
+msgstr ""
+
+#: ../admin-custom-login/init.php:86
+msgid "Get Pro"
+msgstr ""
+
+#: ../akismet/class.akismet-admin.php:81
+msgid "Comment History"
+msgstr ""
+
+#: ../akismet/class.akismet-admin.php:85
+msgid "Akismet"
+msgstr ""
+
+#: ../akismet/class.akismet-admin.php:86
+msgid ""
+"We collect information about visitors who comment on Sites that use our "
+"Akismet anti-spam service. The information we collect depends on how the "
+"User sets up Akismet for the Site, but typically includes the commenter's IP "
+"address, user agent, referrer, and Site URL (along with other information "
+"directly provided by the commenter such as their name, username, email "
+"address, and the comment itself)."
+msgstr ""
+
+#: ../akismet/class.akismet-admin.php:111
+#: ../akismet/class.akismet-admin.php:114
+msgid "Akismet Anti-Spam"
+msgstr ""
+
+#: ../akismet/class.akismet-admin.php:143
+msgid "Remove this URL"
+msgstr ""
+
+#: ../akismet/class.akismet-admin.php:144
+msgid "Removing..."
+msgstr ""
+
+#: ../akismet/class.akismet-admin.php:145
+msgid "URL removed"
+msgstr ""
+
+#: ../akismet/class.akismet-admin.php:146
+msgid "(undo)"
+msgstr ""
+
+#: ../akismet/class.akismet-admin.php:147
+msgid "Re-adding..."
+msgstr ""
+
+#: ../akismet/class.akismet-admin.php:174
+#: ../akismet/class.akismet-admin.php:212
+#: ../akismet/class.akismet-admin.php:225
+msgid "Overview"
+msgstr ""
+
+#: ../akismet/class.akismet-admin.php:185
+msgid "New to Akismet"
+msgstr ""
+
+#: ../akismet/class.akismet-admin.php:189
+#, php-format
+msgid "Sign up for an account on %s to get an API Key."
+msgstr ""
+
+#: ../akismet/class.akismet-admin.php:196
+msgid "Enter an API Key"
+msgstr ""
+
+#: ../akismet/class.akismet-admin.php:249
+msgid "Account"
+msgstr ""
+
+#: ../akismet/class.akismet-admin.php:270
+msgid "Cheatin&#8217; uh?"
+msgstr ""
+
+#: ../akismet/class.akismet-admin.php:358
+#, php-format
+msgid "<a href=\"%s\">Akismet</a> blocks spam from getting to your blog. "
+msgstr ""
+
+#: ../akismet/class.akismet-admin.php:370
+#, php-format
+msgid ""
+"There&#8217;s nothing in your <a href='%s'>spam queue</a> at the moment."
+msgstr ""
+
+#: ../akismet/class.akismet-admin.php:394
+msgid "Checking for Spam"
+msgstr ""
+
+#: ../akismet/class.akismet-admin.php:395
+msgid "(%1$s%)"
+msgstr ""
+
+#: ../akismet/class.akismet-admin.php:502
+msgid "Awaiting spam check"
+msgstr ""
+
+#: ../akismet/class.akismet-admin.php:506
+msgid "Flagged as spam by Akismet"
+msgstr ""
+
+#: ../akismet/class.akismet-admin.php:508
+msgid "Cleared by Akismet"
+msgstr ""
+
+#: ../akismet/class.akismet-admin.php:512
+#, php-format
+msgid "Flagged as spam by %s"
+msgstr ""
+
+#: ../akismet/class.akismet-admin.php:514
+#, php-format
+msgid "Un-spammed by %s"
+msgstr ""
+
+#: ../akismet/class.akismet-admin.php:578
+msgid "Akismet re-checked and caught this comment as spam."
+msgstr ""
+
+#: ../akismet/class.akismet-admin.php:581
+msgid "Akismet caught this comment as spam."
+msgstr ""
+
+#: ../akismet/class.akismet-admin.php:584
+msgid "Akismet re-checked and cleared this comment."
+msgstr ""
+
+#: ../akismet/class.akismet-admin.php:587
+msgid "Akismet cleared this comment."
+msgstr ""
+
+#: ../akismet/class.akismet-admin.php:590
+msgid "Comment was caught by wp_blacklist_check."
+msgstr ""
+
+#: ../akismet/class.akismet-admin.php:594
+#, php-format
+msgid "%s reported this comment as spam."
+msgstr ""
+
+#: ../akismet/class.akismet-admin.php:597
+msgid "This comment was reported as spam."
+msgstr ""
+
+#: ../akismet/class.akismet-admin.php:602
+#, php-format
+msgid "%s reported this comment as not spam."
+msgstr ""
+
+#: ../akismet/class.akismet-admin.php:605
+msgid "This comment was reported as not spam."
+msgstr ""
+
+#: ../akismet/class.akismet-admin.php:609
+msgid "Akismet caught this comment as spam during an automatic retry."
+msgstr ""
+
+#: ../akismet/class.akismet-admin.php:612
+msgid "Akismet cleared this comment during an automatic retry."
+msgstr ""
+
+#: ../akismet/class.akismet-admin.php:616
+#, php-format
+msgid ""
+"Akismet was unable to check this comment (response: %s) but will "
+"automatically retry later."
+msgstr ""
+
+#: ../akismet/class.akismet-admin.php:621
+#, php-format
+msgid "Akismet was unable to recheck this comment (response: %s)."
+msgstr ""
+
+#: ../akismet/class.akismet-admin.php:629
+#, php-format
+msgid "Comment status was changed to %s"
+msgstr ""
+
+#: ../akismet/class.akismet-admin.php:635
+#, php-format
+msgid "%1$s changed the comment status to %2$s."
+msgstr ""
+
+#: ../akismet/class.akismet-admin.php:862
+#, php-format
+msgid ""
+"Please check your <a href=\"%s\">Akismet configuration</a> and contact your "
+"web host if problems persist."
+msgstr ""
+
+#: ../akismet/class.akismet-admin.php:969
+msgid "Cleaning up spam takes time."
+msgstr ""
+
+#: ../akismet/class.akismet-admin.php:1045
+msgid ""
+"There were no comments to check. Akismet will only check comments in the "
+"Pending queue."
+msgstr ""
+
+#: ../akismet/class.akismet-admin.php:1052
+msgid "No comments were caught as spam."
+msgstr ""
+
+#: ../akismet/class.akismet-admin.php:1164
+msgid ""
+"Used by millions, Akismet is quite possibly the best way in the world to "
+"<strong>protect your blog from spam</strong>. Your site is fully configured "
+"and being protected, even while you sleep."
+msgstr ""
+
+#: ../akismet/class.akismet-admin.php:1167
+msgid ""
+"Used by millions, Akismet is quite possibly the best way in the world to "
+"<strong>protect your blog from spam</strong>. It keeps your site protected "
+"even while you sleep. To get started, just go to <a href=\"admin.php?"
+"page=akismet-key-config\">your Akismet Settings page</a> to set up your API "
+"key."
+msgstr ""
+
+#: ../akismet/class.akismet-cli.php:36
+#, php-format
+msgid "Comment #%d is spam."
+msgstr ""
+
+#: ../akismet/class.akismet-cli.php:39
+#, php-format
+msgid "Comment #%d is not spam."
+msgstr ""
+
+#: ../akismet/class.akismet-cli.php:43
+msgid "Failed to connect to Akismet."
+msgstr ""
+
+#: ../akismet/class.akismet-cli.php:46
+#, php-format
+msgid "Comment #%d could not be checked."
+msgstr ""
+
+#: ../akismet/class.akismet-rest-api.php:27
+msgid "A 12-character Akismet API key. Available at akismet.com/get/"
+msgstr ""
+
+#: ../akismet/class.akismet-rest-api.php:51
+msgid ""
+"If true, Akismet will automatically discard the worst spam automatically "
+"rather than putting it in the spam folder."
+msgstr ""
+
+#: ../akismet/class.akismet-rest-api.php:56
+msgid ""
+"If true, show the number of approved comments beside each comment author in "
+"the comments list page."
+msgstr ""
+
+#: ../akismet/class.akismet-rest-api.php:71
+#: ../akismet/class.akismet-rest-api.php:80
+msgid ""
+"The time period for which to retrieve stats. Options: 60-days, 6-months, all"
+msgstr ""
+
+#: ../akismet/class.akismet-rest-api.php:110
+msgid "This site's API key is hardcoded and cannot be changed via the API."
+msgstr ""
+
+#: ../akismet/class.akismet-rest-api.php:116
+msgid "The value provided is not a valid and registered API key."
+msgstr ""
+
+#: ../akismet/class.akismet-rest-api.php:132
+msgid "This site's API key is hardcoded and cannot be deleted."
+msgstr ""
+
+#: ../akismet/class.akismet-widget.php:12
+msgid "Akismet Widget"
+msgstr ""
+
+#: ../akismet/class.akismet-widget.php:13
+msgid "Display the number of spam comments Akismet has caught"
+msgstr ""
+
+#: ../akismet/class.akismet-widget.php:69
+#: ../akismet/class.akismet-widget.php:90
+msgid "Spam Blocked"
+msgstr ""
+
+#: ../akismet/class.akismet.php:226
+msgid "Comment discarded."
+msgstr ""
+
+#: ../akismet/class.akismet.php:507
+msgid "Comment not found."
+msgstr ""
+
+#: ../akismet/class.akismet.php:1264
+#, php-format
+msgid ""
+"Please <a href=\"%1$s\">upgrade WordPress</a> to a current version, or <a "
+"href=\"%2$s\">downgrade to version 2.4 of the Akismet plugin</a>."
+msgstr ""
+
+#: ../akismet/class.akismet.php:1419
+#, php-format
+msgid ""
+"This site uses Akismet to reduce spam. <a href=\"%s\" target=\"_blank\" rel="
+"\"nofollow noopener\">Learn how your comment data is processed</a>."
+msgstr ""
+
+#: ../akismet/views/config.php:233
+msgid "Upgrade"
+msgstr ""
+
+#: ../akismet/views/config.php:233
+msgid "Change"
+msgstr ""
+
+#: ../akismet/views/notice.php:11
+msgid ""
+"<strong>Almost done</strong> - configure Akismet and say goodbye to spam"
+msgstr ""
+
+#: ../akismet/views/notice.php:45
+#, php-format
+msgid ""
+"Your web host or server administrator has disabled PHP&#8217;s "
+"<code>gethostbynamel</code> function.  <strong>Akismet cannot work correctly "
+"until this is fixed.</strong>  Please contact your web host or firewall "
+"administrator and give them <a href=\"%s\" target=\"_blank\">this "
+"information about Akismet&#8217;s system requirements</a>."
+msgstr ""
+
+#: ../akismet/views/notice.php:50
+#, php-format
+msgid ""
+"Your firewall may be blocking Akismet from connecting to its API. Please "
+"contact your host and refer to <a href=\"%s\" target=\"_blank\">our guide "
+"about firewalls</a>."
+msgstr ""
+
+#: ../akismet/views/notice.php:55
+#, php-format
+msgid ""
+"We cannot process your payment. Please <a href=\"%s\" target=\"_blank"
+"\">update your payment details</a>."
+msgstr ""
+
+#: ../akismet/views/notice.php:60
+#, php-format
+msgid ""
+"Please visit your <a href=\"%s\" target=\"_blank\">Akismet account page</a> "
+"to reactivate your subscription."
+msgstr ""
+
+#: ../akismet/views/notice.php:65 ../akismet/views/notice.php:75
+#, php-format
+msgid ""
+"Please contact <a href=\"%s\" target=\"_blank\">Akismet support</a> for "
+"assistance."
+msgstr ""
+
+#: ../akismet/views/notice.php:70
+#, php-format
+msgid ""
+"You can help us fight spam and upgrade your account by <a href=\"%s\" target="
+"\"_blank\">contributing a token amount</a>."
+msgstr ""
+
+#: ../akismet/views/notice.php:81
+#, php-format
+msgid ""
+"In 2012, Akismet began using subscription plans for all accounts (even free "
+"ones). A plan has not been assigned to your account, and we&#8217;d "
+"appreciate it if you&#8217;d <a href=\"%s\" target=\"_blank\">sign into your "
+"account</a> and choose one."
+msgstr ""
+
+#: ../akismet/views/notice.php:83 ../akismet/views/notice.php:124
+#: ../akismet/views/notice.php:131
+#, php-format
+msgid ""
+"Please <a href=\"%s\" target=\"_blank\">contact our support team</a> with "
+"any questions."
+msgstr ""
+
+#: ../akismet/views/notice.php:101
+#, php-format
+msgid "Would you like to <a href=\"%s\">check pending comments</a>?"
+msgstr ""
+
+#: ../akismet/views/notice.php:115
+#, php-format
+msgid ""
+"The connection to akismet.com could not be established. Please refer to <a "
+"href=\"%s\" target=\"_blank\">our guide about firewalls</a> and check your "
+"server configuration."
+msgstr ""
+
+#: ../akismet/views/notice.php:122
+#, php-format
+msgid ""
+"Your Pro subscription allows the use of Akismet on only one site. Please <a "
+"href=\"%s\" target=\"_blank\">purchase additional Pro subscriptions</a> or "
+"upgrade to an Enterprise subscription that allows the use of Akismet on "
+"unlimited sites."
+msgstr ""
+
+#: ../akismet/views/notice.php:129
+#, php-format
+msgid ""
+"To continue your service, <a href=\"%s\" target=\"_blank\">upgrade to an "
+"Enterprise subscription</a>, which covers an unlimited number of sites."
+msgstr ""
+
+#: ../akismet/views/notice.php:139
+#, php-format
+msgid ""
+" Please <a href=\"%s\">enable</a> or <a href=\"%s\">disable</a> this "
+"feature. <a href=\"%s\" id=\"akismet-privacy-notice-control-notice-info-link"
+"\" target=\"_blank\">More information</a>."
+msgstr ""
+
+#: ../akismet/views/start.php:31 ../akismet/views/start.php:63
+#, php-format
+msgid "You are connected as %s."
+msgstr ""
+
+#: ../akismet/views/start.php:43
+#, php-format
+msgid "Your subscription for %s is cancelled."
+msgstr ""
+
+#: ../akismet/views/start.php:48
+#, php-format
+msgid "Your subscription for %s is suspended."
+msgstr ""
+
+#: ../akismet/views/start.php:69
+msgid "Sign up with a different email address"
+msgstr ""
+
+#: ../akismet/views/start.php:77
+msgid "Get your API key"
+msgstr ""
+
+#: ../simple-lightbox-gallery/get-lightbox-slider-pro.php:6
+#: ../simple-lightbox-gallery/get-lightbox-slider-pro.php:38
+#: ../simple-lightbox-gallery/slg-banner.php:32
+msgid "View Demo"
+msgstr ""
+
+#: ../simple-lightbox-gallery/get-lightbox-slider-pro.php:8
+#: ../simple-lightbox-gallery/get-lightbox-slider-pro.php:40
+msgid "Try Before Buy"
+msgstr ""
+
+#: ../simple-lightbox-gallery/get-lightbox-slider-pro.php:10
+#: ../simple-lightbox-gallery/get-lightbox-slider-pro.php:42
+msgid "Upgrade To Pro"
+msgstr ""
+
+#: ../simple-lightbox-gallery/get-lightbox-slider-pro.php:18
+msgid "Lightbox  Pro Screenshots"
+msgstr ""
+
+#: ../simple-lightbox-gallery/get-lightbox-slider-pro.php:22
+msgid "Get All Lighbox in Lightbox Slider Pro only in"
+msgstr ""
+
+#: ../simple-lightbox-gallery/get-lightbox-slider-pro.php:49
+msgid "Lightbox  Pro And Free Comparison Table"
+msgstr ""
+
+#: ../simple-lightbox-gallery/get-lightbox-slider-pro.php:55
+msgid "Lightbox"
+msgstr ""
+
+#: ../simple-lightbox-gallery/get-lightbox-slider-pro.php:56
+msgid "Feature Set"
+msgstr ""
+
+#: ../simple-lightbox-gallery/get-lightbox-slider-pro.php:59
+#: ../simple-lightbox-gallery/simple-lightbox-slider-setting-metabox.php:119
+msgid "Image Hover Animation"
+msgstr ""
+
+#: ../simple-lightbox-gallery/get-lightbox-slider-pro.php:60
+#: ../simple-lightbox-gallery/simple-lightbox-slider-setting-metabox.php:139
+#: ../simple-lightbox-gallery/slg-banner.php:17
+msgid "Gallery Layout"
+msgstr ""
+
+#: ../simple-lightbox-gallery/get-lightbox-slider-pro.php:61
+#: ../simple-lightbox-gallery/simple-lightbox-slider-setting-metabox.php:190
+msgid "Hover Color"
+msgstr ""
+
+#: ../simple-lightbox-gallery/get-lightbox-slider-pro.php:62
+#: ../simple-lightbox-gallery/simple-lightbox-slider-setting-metabox.php:255
+msgid "Hover Color Opacity"
+msgstr ""
+
+#: ../simple-lightbox-gallery/get-lightbox-slider-pro.php:63
+#: ../simple-lightbox-gallery/simple-lightbox-slider-setting-metabox.php:274
+msgid "Caption Font Style"
+msgstr ""
+
+#: ../simple-lightbox-gallery/get-lightbox-slider-pro.php:64
+msgid "Light Box"
+msgstr ""
+
+#: ../simple-lightbox-gallery/get-lightbox-slider-pro.php:65
+msgid "All Gallery Shortcode"
+msgstr ""
+
+#: ../simple-lightbox-gallery/get-lightbox-slider-pro.php:66
+msgid "Single Gallery Shortcode"
+msgstr ""
+
+#: ../simple-lightbox-gallery/get-lightbox-slider-pro.php:67
+msgid "Number of Hover Animation"
+msgstr ""
+
+#: ../simple-lightbox-gallery/get-lightbox-slider-pro.php:68
+msgid "Number of Gallery Layout"
+msgstr ""
+
+#: ../simple-lightbox-gallery/get-lightbox-slider-pro.php:69
+msgid "Number of Hover Color"
+msgstr ""
+
+#: ../simple-lightbox-gallery/get-lightbox-slider-pro.php:70
+msgid "Number of Font Style"
+msgstr ""
+
+#: ../simple-lightbox-gallery/get-lightbox-slider-pro.php:71
+msgid "Number of Lightbox Styles"
+msgstr ""
+
+#: ../simple-lightbox-gallery/get-lightbox-slider-pro.php:72
+#: ../simple-lightbox-gallery/slg-banner.php:25
+msgid "Drag and Drop image Position"
+msgstr ""
+
+#: ../simple-lightbox-gallery/get-lightbox-slider-pro.php:73
+#: ../simple-lightbox-gallery/slg-banner.php:23
+msgid "Multiple Image uploader"
+msgstr ""
+
+#: ../simple-lightbox-gallery/get-lightbox-slider-pro.php:74
+#: ../simple-lightbox-gallery/slg-banner.php:26
+msgid "Shortcode Button on post or page"
+msgstr ""
+
+#: ../simple-lightbox-gallery/get-lightbox-slider-pro.php:75
+msgid "Unique settings for each gallery"
+msgstr ""
+
+#: ../simple-lightbox-gallery/get-lightbox-slider-pro.php:76
+msgid "Hide/Show gallery Title and label"
+msgstr ""
+
+#: ../simple-lightbox-gallery/get-lightbox-slider-pro.php:77
+msgid "Font icon Customization"
+msgstr ""
+
+#: ../simple-lightbox-gallery/get-lightbox-slider-pro.php:78
+#: ../simple-lightbox-gallery/simple-lightbox-slider-setting-metabox.php:312
+msgid "Google Fonts"
+msgstr ""
+
+#: ../simple-lightbox-gallery/get-lightbox-slider-pro.php:79
+msgid "Isotope Effects"
+msgstr ""
+
+#: ../simple-lightbox-gallery/get-lightbox-slider-pro.php:86
+msgid "Free"
+msgstr ""
+
+#: ../simple-lightbox-gallery/get-lightbox-slider-pro.php:114
+msgid "Enjoy Plugin"
+msgstr ""
+
+#: ../simple-lightbox-gallery/get-lightbox-slider-pro.php:124
+msgid "Pro"
+msgstr ""
+
+#: ../simple-lightbox-gallery/get-lightbox-slider-pro.php:138
+msgid "Unlimited"
+msgstr ""
+
+#: ../simple-lightbox-gallery/get-lightbox-slider-pro.php:152
+#: ../twitter-tweets-pro-v1.1/admin/inc/admin_menu.php:86
+msgid "Demo"
+msgstr ""
+
+#: ../simple-lightbox-gallery/get-lightbox-slider-pro.php:156
+msgid "Buy"
+msgstr ""
+
+#: ../simple-lightbox-gallery/help_and_support.php:2
+msgid "Simple Lightbox Gallery"
+msgstr ""
+
+#: ../simple-lightbox-gallery/help_and_support.php:4
+msgid "plugin is allow users to view larger versions of images"
+msgstr ""
+
+#: ../simple-lightbox-gallery/help_and_support.php:4
+msgid "simple slide shows and Gallery view with grid layout"
+msgstr ""
+
+#: ../simple-lightbox-gallery/help_and_support.php:9
+msgid "If you are enjoying using our"
+msgstr ""
+
+#: ../simple-lightbox-gallery/help_and_support.php:10
+msgid "plugin and find it useful"
+msgstr ""
+
+#: ../simple-lightbox-gallery/help_and_support.php:11
+msgid "then please consider writing a positive feedback"
+msgstr ""
+
+#: ../simple-lightbox-gallery/help_and_support.php:12
+msgid ""
+"Your feedback will help us to encourage and support the plugin continued "
+"development and better user support"
+msgstr ""
+
+#: ../simple-lightbox-gallery/help_and_support.php:25
+msgid ""
+"If you have any suggestion or features in your mind then please share us"
+msgstr ""
+
+#: ../simple-lightbox-gallery/help_and_support.php:26
+msgid "We will try our best to add them in this plugin"
+msgstr ""
+
+#: ../simple-lightbox-gallery/help_and_support.php:30
+msgid "Question"
+msgstr ""
+
+#: ../simple-lightbox-gallery/help_and_support.php:31
+msgid "How to convert Plguin into My Language "
+msgstr ""
+
+#: ../simple-lightbox-gallery/help_and_support.php:32
+msgid "Answer"
+msgstr ""
+
+#: ../simple-lightbox-gallery/help_and_support.php:33
+msgid "Contact as to"
+msgstr ""
+
+#: ../simple-lightbox-gallery/help_and_support.php:34
+msgid "for translate this plugin into your language"
+msgstr ""
+
+#: ../simple-lightbox-gallery/help_and_support.php:37
+msgid "Change Old Server Image URL"
+msgstr ""
+
+#: ../simple-lightbox-gallery/help_and_support.php:45
+msgid "Use this option after import"
+msgstr ""
+
+#: ../simple-lightbox-gallery/help_and_support.php:46
+msgid "to change old server image url to new server image url"
+msgstr ""
+
+#: ../simple-lightbox-gallery/recommendations.php:129
+msgid "More Details"
+msgstr ""
+
+#: ../simple-lightbox-gallery/recommendations.php:137
+msgid "Install Now"
+msgstr ""
+
+#: ../simple-lightbox-gallery/recommendations.php:143
+msgid "Update Now"
+msgstr ""
+
+#: ../simple-lightbox-gallery/recommendations.php:192
+#: ../simple-lightbox-gallery/recommendations.php:206
+#: ../simple-lightbox-gallery/recommendations.php:220
+#: ../simple-lightbox-gallery/recommendations.php:234
+#: ../simple-lightbox-gallery/recommendations.php:248
+#: ../simple-lightbox-gallery/recommendations.php:262
+msgid "Premium Editions"
+msgstr ""
+
+#: ../simple-lightbox-gallery/recommendations.php:197
+#: ../simple-lightbox-gallery/recommendations.php:211
+#: ../simple-lightbox-gallery/recommendations.php:225
+#: ../simple-lightbox-gallery/recommendations.php:239
+#: ../simple-lightbox-gallery/recommendations.php:253
+#: ../simple-lightbox-gallery/recommendations.php:267
+msgid "Visit Website"
+msgstr ""
+
+#: ../simple-lightbox-gallery/recommendations.php:290
+msgid "Last Updated:"
+msgstr ""
+
+#: ../simple-lightbox-gallery/recommendations.php:301
+msgid "<strong>Untested</strong> with your version of WordPress"
+msgstr ""
+
+#: ../simple-lightbox-gallery/recommendations.php:303
+msgid "Incompatible with your version of WordPress"
+msgstr ""
+
+#: ../simple-lightbox-gallery/recommendations.php:305
+msgid "Compatible with your version of WordPress"
+msgstr ""
+
+#: ../simple-lightbox-gallery/simple-lightbox-gallery.php:28
+msgid "Help and Support"
+msgstr ""
+
+#: ../simple-lightbox-gallery/simple-lightbox-gallery.php:29
+msgid "Pro Screenshots"
+msgstr ""
+
+#: ../simple-lightbox-gallery/simple-lightbox-gallery.php:30
+msgid "Recommendation"
+msgstr ""
+
+#: ../simple-lightbox-gallery/simple-lightbox-gallery.php:103
+msgid "No Title"
+msgstr ""
+
+#: ../simple-lightbox-gallery/simple-lightbox-gallery.php:174
+msgid "Lightbox Gallery"
+msgstr ""
+
+#: ../simple-lightbox-gallery/simple-lightbox-gallery.php:175
+msgid "Parent Item:"
+msgstr ""
+
+#: ../simple-lightbox-gallery/simple-lightbox-gallery.php:176
+msgid "All Galleries"
+msgstr ""
+
+#: ../simple-lightbox-gallery/simple-lightbox-gallery.php:177
+msgid "View Gallery"
+msgstr ""
+
+#: ../simple-lightbox-gallery/simple-lightbox-gallery.php:178
+msgid "Add New Lightbox Gallery"
+msgstr ""
+
+#: ../simple-lightbox-gallery/simple-lightbox-gallery.php:179
+msgid "Add Lightbox Gallery"
+msgstr ""
+
+#: ../simple-lightbox-gallery/simple-lightbox-gallery.php:180
+msgid "Edit Lightbox Gallery"
+msgstr ""
+
+#: ../simple-lightbox-gallery/simple-lightbox-gallery.php:181
+msgid "New Gallery"
+msgstr ""
+
+#: ../simple-lightbox-gallery/simple-lightbox-gallery.php:182
+msgid "Update Lightbox Gallery"
+msgstr ""
+
+#: ../simple-lightbox-gallery/simple-lightbox-gallery.php:183
+msgid "Search Gallery"
+msgstr ""
+
+#: ../simple-lightbox-gallery/simple-lightbox-gallery.php:184
+msgid "No Lightbox Gallery Found"
+msgstr ""
+
+#: ../simple-lightbox-gallery/simple-lightbox-gallery.php:185
+msgid "No Lightbox Gallery found in Trash"
+msgstr ""
+
+#: ../simple-lightbox-gallery/simple-lightbox-gallery.php:189
+msgid "slgf_slider"
+msgstr ""
+
+#: ../simple-lightbox-gallery/simple-lightbox-gallery.php:190
+msgid "Free Lightbox Gallery"
+msgstr ""
+
+#: ../simple-lightbox-gallery/simple-lightbox-gallery.php:216
+msgid "Gallery"
+msgstr ""
+
+#: ../simple-lightbox-gallery/simple-lightbox-gallery.php:217
+msgid "Gallery Shortcode"
+msgstr ""
+
+#: ../simple-lightbox-gallery/simple-lightbox-gallery.php:218
+msgid "Date"
+msgstr ""
+
+#: ../simple-lightbox-gallery/simple-lightbox-gallery.php:238
+msgid "Add Images"
+msgstr ""
+
+#: ../simple-lightbox-gallery/simple-lightbox-gallery.php:242
+msgid "Apply Setting On Lightbox Gallery"
+msgstr ""
+
+#: ../simple-lightbox-gallery/simple-lightbox-gallery.php:246
+msgid "Lightbox Gallery Shortcode"
+msgstr ""
+
+#: ../simple-lightbox-gallery/simple-lightbox-gallery.php:250
+msgid "Lightbox Slider Pro"
+msgstr ""
+
+#: ../simple-lightbox-gallery/simple-lightbox-gallery.php:254
+msgid "Rate us on WordPress"
+msgstr ""
+
+#: ../simple-lightbox-gallery/simple-lightbox-gallery.php:265
+msgid "If you like our plugin then please show us some love"
+msgstr ""
+
+#: ../simple-lightbox-gallery/simple-lightbox-gallery.php:288
+#: ../simple-lightbox-gallery/simple-lightbox-gallery.php:295
+msgid "Buy Now $12"
+msgstr ""
+
+#: ../simple-lightbox-gallery/simple-lightbox-gallery.php:360
+msgid "Add New Images"
+msgstr ""
+
+#: ../simple-lightbox-gallery/simple-lightbox-gallery.php:367
+msgid "Delete All"
+msgstr ""
+
+#: ../simple-lightbox-gallery/simple-lightbox-gallery.php:374
+msgid "Tips"
+msgstr ""
+
+#: ../simple-lightbox-gallery/simple-lightbox-gallery.php:375
+msgid "Plugin crop images with same size thumbnails"
+msgstr ""
+
+#: ../simple-lightbox-gallery/simple-lightbox-gallery.php:376
+msgid "So please upload all gallery images using Add New Image button"
+msgstr ""
+
+#: ../simple-lightbox-gallery/simple-lightbox-gallery.php:377
+msgid ""
+"Do not use or add pre uploaded images which are uploaded previously using "
+"Media or Post or Page"
+msgstr ""
+
+#: ../simple-lightbox-gallery/simple-lightbox-gallery.php:378
+msgid "Show Us Some Love"
+msgstr ""
+
+#: ../simple-lightbox-gallery/simple-lightbox-gallery.php:400
+msgid "Use below shortcode in any Page/Post to publish your photo gallery"
+msgstr ""
+
+#: ../simple-lightbox-gallery/simple-lightbox-gallery.php:571
+msgid "Select Lightbox Gallery To Insert Into Post"
+msgstr ""
+
+#: ../simple-lightbox-gallery/simple-lightbox-gallery.php:587
+msgid "Insert Gallery Shortcode"
+msgstr ""
+
+#: ../simple-lightbox-gallery/simple-lightbox-gallery.php:590
+msgid "No Gallery Found"
+msgstr ""
+
+#: ../simple-lightbox-gallery/simple-lightbox-slider-setting-metabox.php:75
+msgid "Lightbox Slider Settings"
+msgstr ""
+
+#: ../simple-lightbox-gallery/simple-lightbox-slider-setting-metabox.php:81
+msgid "Show Gallery Title"
+msgstr ""
+
+#: ../simple-lightbox-gallery/simple-lightbox-slider-setting-metabox.php:94
+msgid "Select Yes/No option to hide or show gallery title"
+msgstr ""
+
+#: ../simple-lightbox-gallery/simple-lightbox-slider-setting-metabox.php:100
+msgid "Show Image Label"
+msgstr ""
+
+#: ../simple-lightbox-gallery/simple-lightbox-slider-setting-metabox.php:113
+msgid "Select Yes/No option to hide or show label on image"
+msgstr ""
+
+#: ../simple-lightbox-gallery/simple-lightbox-slider-setting-metabox.php:132
+msgid "Choose an animation effect apply on images after mouse hover."
+msgstr ""
+
+#: ../simple-lightbox-gallery/simple-lightbox-slider-setting-metabox.php:134
+msgid "Get More Hover Animation"
+msgstr ""
+
+#: ../simple-lightbox-gallery/simple-lightbox-slider-setting-metabox.php:148
+msgid "Two Column"
+msgstr ""
+
+#: ../simple-lightbox-gallery/simple-lightbox-slider-setting-metabox.php:151
+msgid "Three Column"
+msgstr ""
+
+#: ../simple-lightbox-gallery/simple-lightbox-slider-setting-metabox.php:154
+msgid "Choose a column layout for image gallery"
+msgstr ""
+
+#: ../simple-lightbox-gallery/simple-lightbox-slider-setting-metabox.php:156
+msgid "Get More Gallery Layout"
+msgstr ""
+
+#: ../simple-lightbox-gallery/simple-lightbox-slider-setting-metabox.php:161
+msgid "Thumbnail Layout"
+msgstr ""
+
+#: ../simple-lightbox-gallery/simple-lightbox-slider-setting-metabox.php:177
+msgid "Show Original Image As Thumbnails"
+msgstr ""
+
+#: ../simple-lightbox-gallery/simple-lightbox-slider-setting-metabox.php:178
+msgid "Select an option for thumbnail layout setting"
+msgstr ""
+
+#: ../simple-lightbox-gallery/simple-lightbox-slider-setting-metabox.php:180
+msgid ""
+"If Same Size Thumbnail option selected than minimum image size required in "
+"following layouts"
+msgstr ""
+
+#: ../simple-lightbox-gallery/simple-lightbox-slider-setting-metabox.php:182
+msgid "Minimum image size required in 2 Column Gallery Layout"
+msgstr ""
+
+#: ../simple-lightbox-gallery/simple-lightbox-slider-setting-metabox.php:184
+msgid "Minimum image size required in 3 Column Gallery Layout"
+msgstr ""
+
+#: ../simple-lightbox-gallery/simple-lightbox-slider-setting-metabox.php:198
+#: ../simple-lightbox-gallery/simple-lightbox-slider-setting-metabox.php:223
+#: ../simple-lightbox-gallery/simple-lightbox-slider-setting-metabox.php:245
+msgid "Color 1"
+msgstr ""
+
+#: ../simple-lightbox-gallery/simple-lightbox-slider-setting-metabox.php:202
+#: ../simple-lightbox-gallery/simple-lightbox-slider-setting-metabox.php:206
+#: ../simple-lightbox-gallery/simple-lightbox-slider-setting-metabox.php:227
+#: ../simple-lightbox-gallery/simple-lightbox-slider-setting-metabox.php:249
+msgid "Color 2"
+msgstr ""
+
+#: ../simple-lightbox-gallery/simple-lightbox-slider-setting-metabox.php:207
+msgid "Select Image Hover Color"
+msgstr ""
+
+#: ../simple-lightbox-gallery/simple-lightbox-slider-setting-metabox.php:209
+msgid "Get Unlimited Hover Colour Scheme"
+msgstr ""
+
+#: ../simple-lightbox-gallery/simple-lightbox-slider-setting-metabox.php:215
+msgid "Text Background Color"
+msgstr ""
+
+#: ../simple-lightbox-gallery/simple-lightbox-slider-setting-metabox.php:231
+msgid "Color 3"
+msgstr ""
+
+#: ../simple-lightbox-gallery/simple-lightbox-slider-setting-metabox.php:232
+msgid "Select Text Background Color"
+msgstr ""
+
+#: ../simple-lightbox-gallery/simple-lightbox-slider-setting-metabox.php:237
+msgid "Text Color"
+msgstr ""
+
+#: ../simple-lightbox-gallery/simple-lightbox-slider-setting-metabox.php:250
+msgid "Select Text Color"
+msgstr ""
+
+#: ../simple-lightbox-gallery/simple-lightbox-slider-setting-metabox.php:268
+msgid "Select Yes/No option for hover color opacity on images"
+msgstr ""
+
+#: ../simple-lightbox-gallery/simple-lightbox-slider-setting-metabox.php:309
+msgid "Choose a caption font style"
+msgstr ""
+
+#: ../simple-lightbox-gallery/simple-lightbox-slider-setting-metabox.php:311
+msgid "Get"
+msgstr ""
+
+#: ../simple-lightbox-gallery/simple-lightbox-slider-setting-metabox.php:317
+msgid "Image Box Shadow"
+msgstr ""
+
+#: ../simple-lightbox-gallery/simple-lightbox-slider-setting-metabox.php:330
+msgid "Select Yes/No option to hide or show Image Box Shadow"
+msgstr ""
+
+#: ../simple-lightbox-gallery/simple-lightbox-slider-setting-metabox.php:344
+msgid "Enter any custom css you want to apply on this gallery."
+msgstr ""
+
+#: ../simple-lightbox-gallery/simple-lightbox-slider-setting-metabox.php:347
+msgid "Please Do Not Use"
+msgstr ""
+
+#: ../simple-lightbox-gallery/simple-lightbox-slider-setting-metabox.php:348
+msgid "Style"
+msgstr ""
+
+#: ../simple-lightbox-gallery/simple-lightbox-slider-shortcode.php:216
+msgid "No Photo Found In Photo Gallery"
+msgstr ""
+
+#: ../simple-lightbox-gallery/slg-banner.php:15
+msgid "Lightbox Slider Pro Features"
+msgstr ""
+
+#: ../simple-lightbox-gallery/slg-banner.php:18
+msgid "Unlimited Hover Color"
+msgstr ""
+
+#: ../simple-lightbox-gallery/slg-banner.php:19
+msgid "500 plus Font Style"
+msgstr ""
+
+#: ../simple-lightbox-gallery/slg-banner.php:20
+msgid "Isotope or Masonary Effects"
+msgstr ""
+
+#: ../simple-lightbox-gallery/slg-banner.php:21
+msgid "10 Types Hover Color Opacity"
+msgstr ""
+
+#: ../simple-lightbox-gallery/slg-banner.php:22
+msgid "8 Type of Hover Animations"
+msgstr ""
+
+#: ../simple-lightbox-gallery/slg-banner.php:24
+msgid "8 Types of Lightbox Integrated"
+msgstr ""
+
+#: ../simple-lightbox-gallery/slg-banner.php:27
+msgid "Font Icon Customization & Many More"
+msgstr ""
+
+#: ../simple-lightbox-gallery/slg-banner.php:28
+msgid "Hide or Show Gallery Title and Label"
+msgstr ""
+
+#: ../simple-lightbox-gallery/slg-banner.php:34
+msgid "Buy Now"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Custom_Post.php:8
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Custom_Post.php:9
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Custom_Post.php:10
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Menu.php:12
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Menu.php:23
+#: ../twitter-tweets-pro-v1.1/public/widgets/WL_WTP_Twitter_Widget.php:10
+msgid "Twitter Tweets Pro"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Custom_Post.php:11
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Menu.php:17
+msgid "Add New"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Custom_Post.php:12
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Menu.php:14
+msgid "All Feeds"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Menu.php:20
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Menu.php:26
+msgid "License"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:10
+msgid "add_settings"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:14
+msgid "feed_settings"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:14
+msgid "Feed Settings"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:18
+msgid "style_settings"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:18
+msgid "Style Settings"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:22
+msgid "layout_settings"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:22
+msgid "Layout Settings"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:26
+msgid "copy_shortcode"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:26
+msgid "Copy shortcode"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:30
+msgid "wp_to_twitter"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:30
+msgid "Update Twitter Status"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:34
+msgid "mute_unmute_users"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:34
+msgid "Mute/Unmute The User"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:38
+msgid "wl_wtp_profile_details"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:38
+msgid "Profile Details"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:64
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:67
+msgid "Consumer Key"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:75
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:78
+msgid "Consumer Secret"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:86
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:89
+msgid "Access Token"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:98
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:101
+msgid "Access Token Secret"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:150
+msgid "Home Timeline"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:161
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:198
+msgid "Include replies"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:171
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:207
+msgid "Include retweets"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:183
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:188
+msgid "User Timeline"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:219
+msgid "HashTag Timeline"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:234
+msgid "Search Timeline"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:239
+msgid "Search timeline text"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:250
+msgid "Mentions Timeline"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:254
+msgid "Show images"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:262
+msgid "Show Video/Gifs/Images"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:271
+msgid "How many tweets to display"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:285
+msgid "Show/Hide Social sharing"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:290
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:313
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:336
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:359
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:707
+msgid "Select A Value"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:308
+msgid "Enable/Disable Retweet"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:331
+msgid "Enable/Disable Like"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:354
+msgid "Enable/Disable Reply"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:407
+msgid "Feed background Color"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:415
+msgid "Tweet background Color"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:423
+msgid "Tweet Font Color"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:431
+msgid "Link color"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:439
+msgid "Social link color"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:449
+msgid "Social link background color"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:459
+msgid "Tweet Font Size"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:469
+msgid "Date: Time Zone"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:477
+msgid "Date: Text Size"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:487
+msgid "Tweet: Font Weight"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:490
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:505
+#: ../twitter-tweets-pro-v1.1/public/widgets/WL_WTP_Twitter_Widget.php:74
+msgid "Select"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:493
+msgid "Bold"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:496
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:508
+msgid "Normal"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:502
+msgid "Tweet: Font Style"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:511
+msgid "Italic"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:514
+msgid "Oblique"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:526
+msgid "Tweet: Font Family"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:618
+msgid "Link Font size"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:648
+msgid "Image Size"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:674
+msgid "Layout"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:680
+msgid "Select Layout"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:697
+msgid "Carousel Layout Settings"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:701
+msgid "Enable Carousel"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:724
+msgid "Layout in carousel"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:730
+msgid "Select Layout For Carousel"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:747
+msgid "Enable Auto play"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:755
+msgid "Carousel autoplay time"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:760
+msgid "eg"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:760
+msgid "seconds"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:773
+msgid "Shortcode"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:808
+msgid "Post your tweet from here"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:825
+msgid "Enter screen name of user"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:826
+msgid "Please enter the screen name ( screen name = @ndtv ), use ndtv"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:835
+msgid "Mute"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:842
+msgid "Unmute"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:849
+msgid "Muted User List"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:862
+msgid "S.No"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:863
+msgid "Screen Name"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:864
+msgid "Location"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:865
+msgid "Followers Count"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:866
+msgid "Friends Count"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:867
+msgid "Description"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:913
+msgid "Followers"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:917
+msgid "No of followers"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:926
+msgid "Friends List"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:930
+msgid "No of Friends"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/admin/WL_WTP_Meta_Box.php:1095
+#: ../twitter-tweets-pro-v1.1/admin/inc/helper/WL_WTP_Helper.php:83
+#: ../twitter-tweets-pro-v1.1/public/inc/helper/WL_WTP_Helper_Front.php:128
+msgid "Connection Error"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/admin/inc/admin_menu.php:10
+msgid "Thank you for choosing Twitter Tweets Pro Plugin"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/admin/inc/admin_menu.php:54
+msgid "Congratulation! Twitter Tweets Pro Plugin is activated."
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/admin/inc/admin_menu.php:82
+msgid "Help Center"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/admin/inc/admin_menu.php:93
+msgid "Change Log"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/public/inc/controller/WL_WTP_Load_More.php:189
+#: ../twitter-tweets-pro-v1.1/public/inc/wl_wtp_dis_shortcode.php:311
+#: ../twitter-tweets-pro-v1.1/public/inc/wl_wtp_dis_shortcode.php:448
+msgid "Retweet"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/public/inc/controller/WL_WTP_Load_More.php:195
+#: ../twitter-tweets-pro-v1.1/public/inc/wl_wtp_dis_shortcode.php:317
+#: ../twitter-tweets-pro-v1.1/public/inc/wl_wtp_dis_shortcode.php:454
+msgid "Like"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/public/inc/controller/WL_WTP_Load_More.php:201
+#: ../twitter-tweets-pro-v1.1/public/inc/wl_wtp_dis_shortcode.php:323
+#: ../twitter-tweets-pro-v1.1/public/inc/wl_wtp_dis_shortcode.php:460
+msgid "Reply"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/public/inc/controller/WL_WTP_Load_More.php:217
+#: ../twitter-tweets-pro-v1.1/public/inc/wl_wtp_dis_shortcode.php:339
+#: ../twitter-tweets-pro-v1.1/public/inc/wl_wtp_dis_shortcode.php:478
+msgid "ago"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/public/inc/controller/WL_WTP_Load_More.php:265
+#: ../twitter-tweets-pro-v1.1/public/inc/wl_wtp_dis_shortcode.php:350
+msgid "Load More"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/public/inc/controller/WL_WTP_Load_More.php:302
+msgid "Error"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/public/inc/wl_wtp_dis_shortcode.php:560
+msgid "Posted on"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/public/inc/wl_wtp_dis_shortcode.php:568
+msgid "Nothing found"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/public/widgets/WL_WTP_Twitter_Widget.php:12
+msgid "Twitter Tweets Pro Widget"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/public/widgets/WL_WTP_Twitter_Widget.php:59
+msgid "Title:"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/public/widgets/WL_WTP_Twitter_Widget.php:63
+msgid "Height:"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/public/widgets/WL_WTP_Twitter_Widget.php:67
+msgid "Select Twitter Post:"
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/public/widgets/WL_WTP_Twitter_Widget.php:87
+msgid "There is no twitter feed. Please create atleast one twitter feed."
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/wlwtp-update-checker.php:144
+msgid ""
+"Otherwise you can use any FTP ( filezilla or bitwise ) and upload the Plugin "
+"zip package or unzip the Plugin package. After that go to Admin Dashboard "
+"=&gt; Plugins and click on activate."
+msgstr ""
+
+#: ../twitter-tweets-pro-v1.1/wlwtp-update-checker.php:147
+msgid ""
+"For more details to follow the Plugin documentation link : <a target=\"_blank"
+"\" href="
+msgstr ""
