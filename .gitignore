@@ -1,12 +1,11 @@
 
 /log/
 /provision/vvv-nginx.conf
+/public_html/wp-content/themes/twentynineteen/node_modules
+/public_html/wp-content/package-lock.json
+/public_html/wp-content/package.json
 /public_html/wp-content/uploads/
+/public_html/wp-content/wflogs
 /public_html/wp-config.php
 /public_html/README.md
-/public_html/.DS_Store
-wp-content/package-lock.json
-wp-content/package.json
-wp-content/package-lock.json
-wp-content/uploads
-.DS_Store/
+../.DS_Store
