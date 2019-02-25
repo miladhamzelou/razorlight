@@ -43,12 +43,12 @@ a.button {
 	text-align: center;
 	box-sizing: border-box;
 	word-break: break-all;
-	color: #fff;
+	color: #000;
 	text-decoration: none !important;
 
 	&:hover,
 	&:visited {
-		color: #fff;
+		color: #333;
 	}
 }
 
@@ -87,6 +87,7 @@ a.button {
 		font-weight: 700;
 		letter-spacing: -0.02em;
 		line-height: 1.2;
+		color: yellow;
 	}
 
 	span.page-numbers,
@@ -1233,7 +1234,7 @@ table.variations {
  .woocommerce {
 	.content-area {
 		.site-main {
-			margin: calc(2 * 1rem) 1rem;
+			// margin: calc(2 * 1rem) 1rem;
 		}
 	}
 }
@@ -1364,7 +1365,7 @@ table.variations {
 	.woocommerce {
 		.content-area {
 			.site-main {
-				max-width: calc(6 * (100vw / 12) - 28px);
+				// max-width: calc(6 * (100vw / 12) - 28px);
 			}
 		}
 	}

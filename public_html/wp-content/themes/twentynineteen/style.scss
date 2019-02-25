@@ -107,3 +107,9 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /* Media */
 
 @import "sass/media/media";
+
+/* Child Theme */
+@import "../twentyninteen-child.style.css";
+
+/* Commerce */
+@import "../../plugins/woocommerce/assets/css/twenty-nineteen.css";

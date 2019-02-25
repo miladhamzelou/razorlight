@@ -1,0 +1,73 @@
+/*
+ Theme Name:   Light Razor Design
+ Theme URI:    http://lereiver.com/lightrazordesign/
+ Description:  Twenty Fifteen Child Theme
+ Author:       LeReiver
+ Author URI:   http://example.com
+ Template:     twentynineteen
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+ Text Domain:  twenty-nineteen-child
+*/
+
+.main-navigation .main-menu > li > a {
+  color: #333;
+}
+
+.woocommerce-breadcrumb a {
+  color: #333;
+}
+
+.woocommerce-breadcrumb a {
+  color: #777;
+}
+
+ul.products li.product .button {
+  background-color: gainsboro;
+  width: 100%;
+}
+
+ul.products li.product a.button {
+  color: #000;
+  font-size: 60%;
+}
+
+ul.products li.product a.button:hover,
+ul.products li.product a.button:visited {
+  color: gainsboro;
+}
+
+
+ul.products li.product .button:hover {
+  background-color: #333
+}
+
+.woocommerce-pagination a.page-numbers {
+  color: #333;
+}
+
+.page-numbers.current {
+  color: #777;
+  border-bottom: 1px solid #333;
+  border-width: 1px;
+}
+
+#tribe-events-content {
+  width: 150%;
+}
+
+@media only screen and (min-width: 1168px) {
+  .woocommerce .content-area 	.site-main {
+     max-width: 100%;
+  }
+  
+}
+
+@media only screen and (max-width: 768px) {
+  .woocommerce ul.products[class*=columns-] li.product, .woocommerce-page ul.products[class*=columns-] li.product {
+      width: 95%;
+      margin: 2em 0;
+  }
+}
