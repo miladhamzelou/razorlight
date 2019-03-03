@@ -36,7 +36,8 @@ $discussion = ! is_page() && twentynineteen_can_show_post_thumbnail() ? twentyni
 						),
 					)
 				),
-				get_the_title()
+				get_the_title(),
+				the_field( 'call_to_action' )
 			),
 			'<span class="edit-link">' . twentynineteen_get_icon_svg( 'edit', 16 ),
 			'</span>'
