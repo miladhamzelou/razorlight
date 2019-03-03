@@ -2,6 +2,7 @@
 /log/
 /provision/vvv-nginx.conf
 /public_html/wp-content/themes/twentynineteen/node_modules
+/public_html/wp-content/themes/twentyninteen-child/node_modules
 /public_html/wp-content/package-lock.json
 /public_html/wp-content/package.json
 /public_html/wp-content/uploads/

@@ -3,7 +3,7 @@ Contributors: iqcomputing
 Tags: contact-form-7, contact-form-7-recaptcha, recaptcha, spam
 Requires at least: 4.9
 Tested up to: 5.1
-Stable tag: 1.1.4
+Stable tag: 1.1.5
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -21,6 +21,7 @@ Once installed and configured it should be the same reCaptcha functionality you 
 
 * Like us on [Facebook](https://www.facebook.com/iqcomputing/ "IQComputing on Facebook")
 * Follow us on [Twitter](https://twitter.com/iqcomputing/ "IQComputing on Twitter")
+* Fork on [Github](https://github.com/IQComputing/wpcf7-recaptcha "IQComputing on Github")
 
 == Installation ==
 
@@ -59,6 +60,11 @@ Should the above be correct, at this point it's time to open a support thread fo
 
 == Changelog ==
 
+= 1.1.5 (2019-02-25) =
+
+* Added link to github in description
+* Updated version number to fix json checksum (Thanks @willpresleyev)!
+
 = 1.1.4 (2019-02-21) =
 * We need your help translating this plugin! Interested parties may contribute at: https://translate.wordpress.org/projects/wp-plugins/wpcf7-recaptcha
 *
@@ -73,8 +79,3 @@ Should the above be correct, at this point it's time to open a support thread fo
 * Combined a few redundant translation functions into a single translation function.
 * Made wording and references more consistent.
 * Added a margin-bottom: 0 style to the reCaptcha iframe in an attempt to prevent CSS overlapping.
-
-= 1.1.2 (2019-01-14) =
-* Renamed Text Domain to match the plugin slug which should help translations.
-* Added Portable Object Template (.pot) file to /languages/ folder.
-* Added call to action on settings page which encourages users to like IQComputing on Facebook to receive the latest news and updates.
