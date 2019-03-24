@@ -40,7 +40,7 @@ body {
     z-index: 10;
     width: 100%;
     margin-bottom: 50px;
-    background: gainsboro;
+    background: #fff;
     margin-top: -50px;
     color: #0F120F;
     padding-bottom: 50px;
@@ -52,7 +52,7 @@ body {
       .site-title a {
         font-size: 2em;
         font-weight: lighter;
-        margin-left: 100px;
+        margin-left: 60px;
         padding: 10px 0;
         font-stretch: expanded;
         color: #0F120F;
@@ -66,7 +66,7 @@ body {
         display: flex;
         flex-direction: column;
         color: #0F120F;
-        margin-left: 100px;
+        margin-left: 62px;
         padding-bottom: 10px;
         font-stretch: extra-expanded;
         letter-spacing: 0.50em;
@@ -80,7 +80,7 @@ body {
         margin-top: -3px;
         margin-right: 400px;
         overflow: visible;
-        background: gainsboro;
+        background: #fff;
         border-radius: 0;
         -webkit-border-radius: 0;
         -moz-border-radius: 0;
@@ -147,18 +147,29 @@ ul.main-menu > li,
 }
 
 .site-header.featured-image .site-title a,
+.main-navigation ul.main-menu > li,
 .site-header.featured-image .main-navigation a,
 .site-header.featured-image .social-navigation svg {
   font-family: Giorgio, Sans-serif;;
   color: #0F120F;
+  font-weight: lighter;
+
   &:active {
     text-decoration: none;
+    color: #777;
+  }
+  &:hover {
+    color: #777;
   }
 }
 
-body.page .main-navigation {
+.main-navigation {
   border-top: solid 1px #000;
   margin-right: 20%;
+
+  .main-menu {
+    margin-left: 20px;
+  }
 }
 
 .menu-header-container {

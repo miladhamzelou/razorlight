@@ -38,7 +38,7 @@ body {
   z-index: 10;
   width: 100%;
   margin-bottom: 50px;
-  background: gainsboro;
+  background: #fff;
   margin-top: -50px;
   color: #0F120F;
   padding-bottom: 50px;
@@ -52,7 +52,7 @@ body {
 .site-header .site-branding-container .site-branding .site-title a {
   font-size: 2em;
   font-weight: lighter;
-  margin-right: 100px;
+  margin-right: 60px;
   padding: 10px 0;
   font-stretch: expanded;
   color: #0F120F;
@@ -67,10 +67,10 @@ body {
   display: flex;
   flex-direction: column;
   color: #0F120F;
-  margin-right: 100px;
+  margin-right: 62px;
   padding-bottom: 10px;
   font-stretch: extra-expanded;
-  letter-spacing: 0.50em;
+  letter-spacing: 0.52em;
 }
 
 .site-header .site-branding-container .site-branding p.site-description:before {
@@ -81,7 +81,7 @@ body {
   margin-top: -3px;
   margin-left: 400px;
   overflow: visible;
-  background: gainsboro;
+  background: #fff;
   border-radius: 0;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -100,12 +100,17 @@ body {
 
 @media only screen and (min-width: 768px) {
   .site-header .site-branding-container .site-branding .site-logo {
-    display: block;
     margin-bottom: 0;
     position: absolute;
     right: calc(80% + (.25 * 1rem));
     left: 200px;
     top: 0;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .site-header .site-branding-container .site-branding .site-logo {
+    display: none;
   }
 }
 
@@ -139,21 +144,36 @@ ul.main-menu > li,
 }
 
 .site-header.featured-image .site-title a,
+.main-navigation ul.main-menu > li,
 .site-header.featured-image .main-navigation a,
 .site-header.featured-image .social-navigation svg {
   font-family: Giorgio, Sans-serif;
   color: #0F120F;
+  font-weight: lighter;
 }
 
 .site-header.featured-image .site-title a:active,
+.main-navigation ul.main-menu > li:active,
 .site-header.featured-image .main-navigation a:active,
 .site-header.featured-image .social-navigation svg:active {
   text-decoration: none;
+  color: #777;
 }
 
-body.page .main-navigation {
+.site-header.featured-image .site-title a:hover,
+.main-navigation ul.main-menu > li:hover,
+.site-header.featured-image .main-navigation a:hover,
+.site-header.featured-image .social-navigation svg:hover {
+  color: #777;
+}
+
+.main-navigation {
   border-top: solid 1px #000;
   margin-left: 20%;
+}
+
+.main-navigation .main-menu {
+  margin-right: 20px;
 }
 
 .menu-header-container {
