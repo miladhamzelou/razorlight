@@ -18,44 +18,117 @@
 }
 
 body {
-  font-family: Giorgio;
+  font-family: Giorgio, Sans-serif;
 }
 
 /**
  * Header ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 */
-.site-header.featured-image .main-navigation a {
-  line-height: 3;
+.site-header {
+  padding: 0;
+}
+
+.site-header .main-navigation a {
   color: #0F120F;
   font-family: Giorgio;
 }
 
-.site-header.featured-image .site-branding-container {
+.site-header .site-branding-container {
   position: fixed;
   z-index: 10;
   width: 100%;
-  height: 200px;
   margin-bottom: 50px;
-  background: #999;
-  margin-top: -68px;
+  background: gainsboro;
+  margin-top: -50px;
   color: #0F120F;
+  padding-bottom: 50px;
 }
 
-.site-header.featured-image .site-branding-container .site-branding {
-  margin-top: 30px;
+.site-header .site-branding-container .site-branding {
+  margin-top: 4rem;
+  line-height: 1rem;
 }
 
-.site-header.featured-image .site-featured-image:before {
+.site-header .site-branding-container .site-branding .site-title a {
+  font-size: 2em;
+  font-weight: lighter;
+  margin-left: 100px;
+  padding: 10px 0;
+  font-stretch: expanded;
+  color: #0F120F;
+  transition: opacity 110ms ease-in-out;
+}
+
+.site-header .site-branding-container .site-branding .site-title a:active {
+  text-decoration: none;
+}
+
+.site-header .site-branding-container .site-branding p.site-description {
+  display: flex;
+  flex-direction: column;
+  color: #0F120F;
+  margin-left: 100px;
+  padding-bottom: 10px;
+  font-stretch: extra-expanded;
+  letter-spacing: 0.50em;
+}
+
+.site-header .site-branding-container .site-branding p.site-description:before {
+  display: none;
+}
+
+.site-header .site-branding-container .site-branding .site-logo .custom-logo-link {
+  margin-top: -3px;
+  margin-right: 400px;
+  overflow: visible;
+  background: gainsboro;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+}
+
+.site-header .site-branding-container .site-branding .site-logo .custom-logo-link img.custom-logo {
+  height: 200px;
+  width: 200px;
+}
+
+.site-header .site-branding-container .site-branding .site-logo .custom-logo-link img {
+  max-width: inherit;
+}
+
+@media only screen and (min-width: 768px) {
+  .site-header .site-branding-container .site-branding .site-logo {
+    margin-bottom: 0;
+    position: absolute;
+    left: calc(80% + (.25 * 1rem));
+    right: 200px;
+    top: 0;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .site-header .site-branding-container .site-branding .site-logo {
+    display: none;
+  }
+}
+
+.site-header .feature-image .custom-logo-link {
+  background: gainsboro;
+}
+
+.site-header .site-featured-image:before {
   background: none;
 }
 
-.site-header.featured-image .site-featured-image .entry-header {
+.site-header .site-featured-image .entry-header {
   position: relative;
   z-index: 9;
   top: 0;
-  margin-top: -599px;
+  margin-top: -450px;
   width: 40%;
-  font-family: Giorgio;
+  font-family: Giorgio, Sans-serif;
 }
 
 .site-branding,
@@ -65,81 +138,69 @@ ul.main-menu > li,
 .author-description
 .author-bio,
 .nav-links {
-  line-height: 3;
+  line-height: 2;
   font-weight: lighter;
   color: #0F120F;
 }
 
-.site-title a {
-  font-family: Giorgio;
-  font-size: 2em;
-  font-weight: lighter;
-  padding-bottom: 10px;
-  font-stretch: expanded;
-  color: #0F120F;
-  transition: opacity 110ms ease-in-out;
-}
-
-.site-title a:active {
-  text-decoration: none;
-}
-
-.site-header.featured-image .site-title a {
-  font-family: Giorgio;
+.site-header.featured-image .site-title a,
+.site-header.featured-image .main-navigation a,
+.site-header.featured-image .social-navigation svg {
+  font-family: Giorgio, Sans-serif;
   color: #0F120F;
 }
 
-.site-header.featured-image .site-title a:active {
+.site-header.featured-image .site-title a:active,
+.site-header.featured-image .main-navigation a:active,
+.site-header.featured-image .social-navigation svg:active {
   text-decoration: none;
 }
 
 body.page .main-navigation {
-  display: block;
-  border-top: solid 1px white;
-  padding-top: 10px;
-  margin-right: 100px;
+  border-top: solid 1px #000;
+  margin-right: 20%;
 }
 
 .menu-header-container {
   margin-top: -85px;
-  margin-right: 100px;
+  margin-right: 20%;
   text-align: end;
   margin-bottom: 30px;
 }
 
-.social-navigation ul.social-links-menu li {
+.social-navigation ul.social-links-menu {
   padding-right: 20px;
+  color: #0F120F;
+  margin-top: 20px;
 }
 
-.site-header.featured-image .social-navigation a {
-  font-family: Giorgio;
+.site-header .social-navigation a {
+  font-family: Giorgio, Sans-serif;
   color: #0F120F;
 }
 
-.site-logo {
-  margin-bottom: 0;
-  position: absolute;
-  left: calc(100% + (1.25 * 1rem));
-  top: 4px;
-  z-index: -1;
-}
-
-.site-logo .custom-logo-link .custom-logo {
-  height: 200px;
-  width: 200px;
-}
-
-.site-header.featured-image .site-featured-image .entry-header .entry-title:before {
+.site-header .site-featured-image .entry-header .entry-title:before {
   display: none;
 }
 
 .main-navigation .main-menu > li > a {
-  color: #333;
+  color: #0F120F;
+  margin-top: -20px;
 }
 
 .image-filters-enabled .site-header.featured-image .site-featured-image:after {
   opacity: .8;
   z-index: 3;
+}
+
+.elementor-button .elementor-button-text {
+  display: inline-block;
+  margin-top: -200px;
+}
+
+.elementor-209 .elementor-element.elementor-element-0661c13 a.elementor-button, .elementor-209 .elementor-element.elementor-element-0661c13 .elementor-button {
+  font-family: Giorgio, Sans-serif;
+  margin-top: -460px;
 }
 
 .entry .entry-content > * > *:last-child, .entry .entry-summary > * > *:last-child {
@@ -149,7 +210,7 @@ body.page .main-navigation {
 }
 
 .entry .entry-title {
-  font-family: Giorgio;
+  font-family: Giorgio, Sans-serif;
 }
 
 .gallery1 .slgf_home_portfolio_caption h3 {
@@ -162,20 +223,20 @@ h1:not(.site-title):before, h2:before {
 }
 
 .woocommerce-breadcrumb a {
-  font-family: Giorgio;
+  font-family: Giorgio, Sans-serif;
   color: #333;
 }
 
 ul.products li.product .button {
   background-color: gainsboro;
-  font-family: Giorgio;
+  font-family: Giorgio, Sans-serif;
   width: 100%;
 }
 
 ul.products li.product a.button {
   color: #000;
   font-size: 60%;
-  font-family: Giorgio;
+  font-family: Giorgio, Sans-serif;
 }
 
 ul.products li.product a.button:hover,
@@ -195,7 +256,7 @@ ul.products li.product .button:hover {
   color: #777;
   border-bottom: 1px solid #333;
   border-width: 1px;
-  font-family: Giorgio;
+  font-family: Giorgio, Sans-serif;
 }
 
 #tribe-events-content {
