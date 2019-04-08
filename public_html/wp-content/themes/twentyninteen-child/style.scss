@@ -22,6 +22,52 @@ body {
   font-family: Giorgio, Sans-serif;
 }
 
+
+/* Color Theme Swatches in Hex */
+$patter-geometric-textile-fashion-1-hex: #9BBC9B;
+$patter-geometric-textile-fashion-2-hex: #7D949A;
+$patter-geometric-textile-fashion-3-hex: #3A4A52;
+$patter-geometric-textile-fashion-4-hex: #F2E4BB;
+$patter-geometric-textile-fashion-5-hex: #F7966D;
+
+/* Color Theme Swatches in RGBA */
+$patter-geometric-textile-fashion-1-rgba: rgba(154,188,154, 1);
+$patter-geometric-textile-fashion-2-rgba: rgba(124,147,154, 1);
+$patter-geometric-textile-fashion-3-rgba: rgba(58,73,82, 1);
+$patter-geometric-textile-fashion-4-rgba: rgba(242,228,186, 1);
+$patter-geometric-textile-fashion-5-rgba: rgba(246,149,109, 1);
+
+/* Color Theme Swatches in HSLA */
+$patter-geometric-textile-fashion-2-hsla: hsla(120, 19, 67, 1);
+$patter-geometric-textile-fashion-2-hsla: hsla(192, 12, 54, 1);
+$patter-geometric-textile-fashion-3-hsla: hsla(200, 17, 27, 1);
+$patter-geometric-textile-fashion-4-hsla: hsla(44, 67, 84, 1);
+$patter-geometric-textile-fashion-5-hsla: hsla(17, 89, 69, 1);
+
+
+/* Color Theme Swatches in Hex */
+$Hearing-The-Spirit-1-hex: #6FBFBF;
+$Hearing-The-Spirit-2-hex: #B0D9D1;
+$Hearing-The-Spirit-3-hex: #038C5A;
+$Hearing-The-Spirit-4-hex: #8C593B;
+$Hearing-The-Spirit-5-hex: #260101;
+
+/* Color Theme Swatches in RGBA */
+$Hearing-The-Spirit-1-rgba: rgba(110,191,191, 1);
+$Hearing-The-Spirit-2-rgba: rgba(175,216,209, 1);
+$Hearing-The-Spirit-3-rgba: rgba(2,140,89, 1);
+$Hearing-The-Spirit-4-rgba: rgba(140,88,58, 1);
+$Hearing-The-Spirit-5-rgba: rgba(38,0,0, 1);
+
+/* Color Theme Swatches in HSLA */
+$Hearing-The-Spirit-1-hsla: hsla(180, 38, 59, 1);
+$Hearing-The-Spirit-2-hsla: hsla(168, 34, 76, 1);
+$Hearing-The-Spirit-3-hsla: hsla(157, 96, 28, 1);
+$Hearing-The-Spirit-4-hsla: hsla(22, 40, 39, 1);
+$Hearing-The-Spirit-5-hsla: hsla(0, 96, 7, 1);
+
+
+
 /**
  * Header ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 */
@@ -29,25 +75,39 @@ body {
 
 .site-header {
   padding: 0;
+  background-color: $Hearing-The-Spirit-4-hsla;
 
-  .main-navigation a {
-    color: #0F120F;
-    font-family: Giorgio;
+  .site-title {
+    // letter-spacing: 5.90px;
   }
+
+  .main-navigation a:active {
+    border: none;
+    text-decoration: none;
+  }
+
+    a {
+      color: #0F120F;
+      font-family: Giorgio;
+    }
+  
 
   .site-branding-container {
     position: fixed;
     z-index: 10;
     width: 100%;
-    margin-bottom: 50px;
+    // margin-bottom: 50px;
     background: #fff;
-    margin-top: -50px;
+    // margin-top: -50px;
     color: #0F120F;
-    padding-bottom: 50px;
+    padding-bottom: 25px;
+    background-color: $Hearing-The-Spirit-4-hsla;
 
     .site-branding {
-      margin-top: 4rem;
+      margin-top: 2rem;
       line-height: 1rem;
+      background-color: $Hearing-The-Spirit-4-hsla;
+      padding-bottom: 3%;
 
       .site-title a {
         font-size: 2em;
@@ -57,9 +117,24 @@ body {
         font-stretch: expanded;
         color: #0F120F;
         transition: opacity 110ms ease-in-out;
+
         &:active {
           text-decoration: none;
         }
+
+
+        @media only screen and (max-width: 768px) {
+          margin-left: 10px;
+          font-size: 40px;
+        }
+      }
+
+      .social-navigation {
+        text-align: right;
+        position: relative;
+        right: 280px;
+        margin-top: -75px;
+        float: right;
       }
 
       p.site-description {
@@ -80,7 +155,7 @@ body {
         margin-top: -3px;
         margin-right: 400px;
         overflow: visible;
-        background: #fff;
+        background: $Hearing-The-Spirit-4-hsla;
         border-radius: 0;
         -webkit-border-radius: 0;
         -moz-border-radius: 0;
@@ -90,6 +165,10 @@ body {
         img.custom-logo {
           height: 200px;
           width: 200px;
+
+          &:hover, &active {
+            border: none;
+          }
         }
 
         img {
@@ -115,7 +194,11 @@ body {
   }
 
   .feature-image .custom-logo-link {
-    background: gainsboro;
+    background: $patter-geometric-textile-fashion-2-hsla;
+  }
+
+  .featured-image:after {
+    background: $patter-geometric-textile-fashion-2-hsla;
   }
 
   .site-featured-image:before {
@@ -131,6 +214,13 @@ body {
     font-family: Giorgio, Sans-serif;
   }
 
+  .feature-image .custom-logo-link {
+    background: $patter-geometric-textile-fashion-2-hsla;
+  }
+
+  .featured-image:after {
+    background: $patter-geometric-textile-fashion-2-hsla;
+  }
 }
 
 
@@ -159,7 +249,7 @@ ul.main-menu > li,
     color: #777;
   }
   &:hover {
-    color: #777;
+    color: $Hearing-The-Spirit-2-hex;
   }
 }
 
@@ -190,18 +280,89 @@ ul.main-menu > li,
   color: #0F120F;
 }
 
-.site-header .site-featured-image .entry-header .entry-title:before {
-  display: none;
+.site-header .site-featured-image {
+
+  &::before {
+    display: none;
+  }
+
+  .entry-header .entry-title:before {
+    display: none;
+  }
+
+  .post-thumbnail img {
+    height: auto;
+    left: 50%;
+    max-width: 0;
+    min-height: 100%;
+    min-width: 100vw;
+    position: inherit;
+    top: 0;
+    transform: translateX(-50%) translateY(-50%);
+    width: auto;
+    z-index: -001;
+  }
+
+}
+
+.site-header.featured-image .site-featured-image .post-thumbnail img {
+  left: 50%;
+  height: auto;
 }
 
 .main-navigation .main-menu > li > a {
   color: #0F120F;
-  margin-top: -20px;
+  margin-top: -25px;
+  font-size: 15px;
 }
 
 .image-filters-enabled .site-header.featured-image .site-featured-image:after {
   opacity: .8;
   z-index: 3;
+}
+
+// +++++++++++++++++++++++++++++++++++ Site Content ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ //
+
+.site-content {
+  margin-top: 15%;
+}
+
+.entry .entry-content > * > *:last-child, .entry .entry-summary > * > *:last-child {
+  margin-bottom: 0;
+  margin-top: 100px;
+  text-decoration: none;
+}
+
+h1.entry-title {
+  font-family: Giorgio, Sans-serif;
+  font-size: 1.6rem;
+  margin: -150px;
+  width: 90%;
+  position: absolute;
+  top: 120px;
+  right: 270px;
+}
+
+.site-header.featured-image:after {
+  background-color: $patter-geometric-textile-fashion-2-hsla!important;
+}
+
+.site-header.featured-image:after {
+  /* background: #000; */
+  transition: opacity 1200ms ease-in-out;
+  opacity: 0.2;
+  z-index: 5;
+}
+
+.ysm-search-widget-1 .search-field[type="search"] {
+  color: $Hearing-The-Spirit-1-hsla;
+  margin-left: -110px;
+  margin-top: -420px;
+  z-index: 8;
+}
+
+.site-header.featured-image .site-featured-image .entry-header {
+  margin-top: -300px;
 }
 
 .elementor-button .elementor-button-text {
@@ -213,15 +374,6 @@ ul.main-menu > li,
   font-family: Giorgio, Sans-serif;
   margin-top: -460px;
 }
-.entry .entry-content > * > *:last-child, .entry .entry-summary > * > *:last-child {
-  margin-bottom: 0;
-  margin-top: 100px;
-  text-decoration: none;
-}
-
-.entry .entry-title {
-  font-family: Giorgio, Sans-serif;;
-}
 
 .gallery1 .slgf_home_portfolio_caption h3 {
   text-decoration: none;
@@ -232,9 +384,19 @@ h1:not(.site-title):before, h2:before {
   display: none;
 }
 
+// ++++++++++++++++++ Products +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.woocommerce .content-area {
+  margin: 4% calc(10% + 60px);
+}
+
 .woocommerce-breadcrumb a {
   font-family: Giorgio, Sans-serif;;
   color: #333;
+}
+
+.woocommerce-products-header__title.page-title {
+  display: none;
 }
 
 
@@ -275,9 +437,52 @@ ul.products li.product .button:hover {
   width: 150%;
 }
 
+// ++++++++++++++++++++++++ Footer +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+footer.site-footer {
+  font-size: 55%;
+  background: $patter-geometric-textile-fashion-3-hex;
+  color: white;
+
+  .site-footer .widget .product_list_widget a, .widget .product_list_widget a,
+  #woocommerce_product_tag_cloud-2 > div > a.tag-cloud-link {
+    color: $Hearing-The-Spirit-1-hsla;
+  }
+  .site-footer .widget .product_list_widget a, .widget .product_list_widget a,
+  #woocommerce_product_tag_cloud-2 > div > a.tag-cloud-link:hover {
+    color: $Hearing-The-Spirit-2-hsla;
+  }
+}
+
+.widget_product_search .search-field {
+  padding-right: 0;
+  margin-right: 0;
+}
+
+.tagcloud {
+  font-size: 50%;
+}
+
+.product_list_widget {
+  .star-rating {
+    color: gold;
+  }
+}
+
+// ++++++++++++++++++++++++ Media Queries +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 @media only screen and (min-width: 1168px) {
   .woocommerce .content-area 	.site-main {
      max-width: 100%;
+  }
+  #colophon .widget-column {
+    flex-wrap: nowrap;
+
+    .widget {
+      margin-right: 1%;
+      width: calc(50% - (3 * 1rem));
+    }
   }
   
 }

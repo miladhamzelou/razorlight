@@ -21,11 +21,22 @@ body {
   font-family: Giorgio, Sans-serif;
 }
 
+/* Color Theme Swatches in Hex */
+/* Color Theme Swatches in RGBA */
+/* Color Theme Swatches in HSLA */
+/* Color Theme Swatches in Hex */
+/* Color Theme Swatches in RGBA */
+/* Color Theme Swatches in HSLA */
 /**
  * Header ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 */
 .site-header {
   padding: 0;
+  background-color: #7c9298;
+}
+
+.site-header .main-navigation {
+  letter-spacing: .24em;
 }
 
 .site-header .main-navigation a {
@@ -37,16 +48,17 @@ body {
   position: fixed;
   z-index: 10;
   width: 100%;
-  margin-bottom: 50px;
   background: #fff;
-  margin-top: -50px;
   color: #0F120F;
-  padding-bottom: 50px;
+  padding-bottom: 25px;
+  background-color: #7c9298;
 }
 
 .site-header .site-branding-container .site-branding {
-  margin-top: 4rem;
+  margin-top: 2rem;
   line-height: 1rem;
+  background-color: #7c9298;
+  padding-bottom: 3%;
 }
 
 .site-header .site-branding-container .site-branding .site-title a {
@@ -61,6 +73,21 @@ body {
 
 .site-header .site-branding-container .site-branding .site-title a:active {
   text-decoration: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .site-header .site-branding-container .site-branding .site-title a {
+    margin-left: 10px;
+    font-size: 40px;
+  }
+}
+
+.site-header .site-branding-container .site-branding .social-navigation {
+  text-align: right;
+  position: relative;
+  right: 280px;
+  margin-top: -75px;
+  float: right;
 }
 
 .site-header .site-branding-container .site-branding p.site-description {
@@ -81,7 +108,7 @@ body {
   margin-top: -3px;
   margin-right: 400px;
   overflow: visible;
-  background: #fff;
+  background: #7c9298;
   border-radius: 0;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -92,6 +119,10 @@ body {
 .site-header .site-branding-container .site-branding .site-logo .custom-logo-link img.custom-logo {
   height: 200px;
   width: 200px;
+}
+
+.site-header .site-branding-container .site-branding .site-logo .custom-logo-link img.custom-logo:hover, .site-header .site-branding-container .site-branding .site-logo .custom-logo-link img.custom-logoactive {
+  border: none;
 }
 
 .site-header .site-branding-container .site-branding .site-logo .custom-logo-link img {
@@ -115,7 +146,11 @@ body {
 }
 
 .site-header .feature-image .custom-logo-link {
-  background: gainsboro;
+  background: #7c9298;
+}
+
+.site-header .featured-image:after {
+  background: #7c9298;
 }
 
 .site-header .site-featured-image:before {
@@ -129,6 +164,14 @@ body {
   margin-top: -450px;
   width: 40%;
   font-family: Giorgio, Sans-serif;
+}
+
+.site-header .feature-image .custom-logo-link {
+  background: #7c9298;
+}
+
+.site-header .featured-image:after {
+  background: #7c9298;
 }
 
 .site-branding,
@@ -164,7 +207,7 @@ ul.main-menu > li,
 .main-navigation ul.main-menu > li:hover,
 .site-header.featured-image .main-navigation a:hover,
 .site-header.featured-image .social-navigation svg:hover {
-  color: #777;
+  color: #B0D9D1;
 }
 
 .main-navigation {
@@ -194,18 +237,83 @@ ul.main-menu > li,
   color: #0F120F;
 }
 
+.site-header .site-featured-image::before {
+  display: none;
+}
+
 .site-header .site-featured-image .entry-header .entry-title:before {
   display: none;
 }
 
+.site-header .site-featured-image .post-thumbnail img {
+  height: auto;
+  left: 50%;
+  max-width: 0;
+  min-height: 100%;
+  min-width: 100vw;
+  position: inherit;
+  top: 0;
+  transform: translateX(-50%) translateY(-50%);
+  width: auto;
+  z-index: -001;
+}
+
+.site-header.featured-image .site-featured-image .post-thumbnail img {
+  left: 50%;
+  height: auto;
+}
+
 .main-navigation .main-menu > li > a {
   color: #0F120F;
-  margin-top: -20px;
+  margin-top: -25px;
+  font-size: 15px;
 }
 
 .image-filters-enabled .site-header.featured-image .site-featured-image:after {
   opacity: .8;
   z-index: 3;
+}
+
+.site-content {
+  margin-top: 15%;
+}
+
+.entry .entry-content > * > *:last-child, .entry .entry-summary > * > *:last-child {
+  margin-bottom: 0;
+  margin-top: 100px;
+  text-decoration: none;
+}
+
+h1.entry-title {
+  font-family: Giorgio, Sans-serif;
+  font-size: 1.6rem;
+  margin: -150px;
+  width: 90%;
+  position: absolute;
+  top: 120px;
+  right: 270px;
+}
+
+.site-header.featured-image:after {
+  background-color: #7c9298 !important;
+}
+
+.site-header.featured-image:after {
+  /* background: #000; */
+  transition: opacity 1200ms ease-in-out;
+  opacity: 0.2;
+  z-index: 5;
+}
+
+.ysm-search-widget-1 .search-field[type="search"] {
+  color: #6fbebe;
+  margin-left: -110px;
+  margin-top: -420px;
+  z-index: 8;
+}
+
+.site-header.featured-image .site-featured-image .entry-header {
+  margin-top: -300px;
 }
 
 .elementor-button .elementor-button-text {
@@ -218,16 +326,6 @@ ul.main-menu > li,
   margin-top: -460px;
 }
 
-.entry .entry-content > * > *:last-child, .entry .entry-summary > * > *:last-child {
-  margin-bottom: 0;
-  margin-top: 100px;
-  text-decoration: none;
-}
-
-.entry .entry-title {
-  font-family: Giorgio, Sans-serif;
-}
-
 .gallery1 .slgf_home_portfolio_caption h3 {
   text-decoration: none;
   font-family: Giorgio !important;
@@ -237,9 +335,17 @@ h1:not(.site-title):before, h2:before {
   display: none;
 }
 
+.woocommerce .content-area {
+  margin: 4% calc(10% + 60px);
+}
+
 .woocommerce-breadcrumb a {
   font-family: Giorgio, Sans-serif;
   color: #333;
+}
+
+.woocommerce-products-header__title.page-title {
+  display: none;
 }
 
 ul.products li.product .button {
@@ -278,9 +384,45 @@ ul.products li.product .button:hover {
   width: 150%;
 }
 
+footer.site-footer {
+  font-size: 55%;
+  background: #3A4A52;
+  color: white;
+}
+
+footer.site-footer .site-footer .widget .product_list_widget a, footer.site-footer .widget .product_list_widget a,
+footer.site-footer #woocommerce_product_tag_cloud-2 > div > a.tag-cloud-link {
+  color: #6fbebe;
+}
+
+footer.site-footer .site-footer .widget .product_list_widget a, footer.site-footer .widget .product_list_widget a,
+footer.site-footer #woocommerce_product_tag_cloud-2 > div > a.tag-cloud-link:hover {
+  color: #add7ce;
+}
+
+.widget_product_search .search-field {
+  padding-right: 0;
+  margin-right: 0;
+}
+
+.tagcloud {
+  font-size: 50%;
+}
+
+.product_list_widget .star-rating {
+  color: gold;
+}
+
 @media only screen and (min-width: 1168px) {
   .woocommerce .content-area .site-main {
     max-width: 100%;
+  }
+  #colophon .widget-column {
+    flex-wrap: nowrap;
+  }
+  #colophon .widget-column .widget {
+    margin-right: 1%;
+    width: calc(50% - (3 * 1rem));
   }
 }
 
