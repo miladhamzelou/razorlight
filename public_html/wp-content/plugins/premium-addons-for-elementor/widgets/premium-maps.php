@@ -1,9 +1,11 @@
 <?php
+
 namespace Elementor;
 
 if ( ! defined( 'ABSPATH' ) ) exit; // If this file is called directly, abort.
 
 class Premium_Maps extends Widget_Base {
+    
     public function get_name() {
         return 'premium-addon-maps';
     }

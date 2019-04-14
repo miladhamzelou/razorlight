@@ -74,7 +74,7 @@ msgstr "サンプルデモ (新しいタブで開く)"
 #. translators: %s: Hyperlink
 #: admin/cf7-material-design-admin.php:239
 msgid "%s Customize %s the colors and fonts."
-msgstr "色とフォントを%s カスタマイズ。"
+msgstr "%s 色とフォントを  カスタマイズ %s。"
 
 #: admin/cf7-material-design-admin.php:243
 msgid "Try it for free"

@@ -1,11 +1,11 @@
-﻿=== Premium Addons for Elementor ===
+=== Premium Addons for Elementor ===
 Contributors: leap13
-Tags: Elementor, Elementor Page Builder, Elements, Elementor Addons, Add-ons, page builder
+Tags: Elementor, Elementor Page Builder, Elements, Elementor Addons, Add-ons, page builder, widgets, Elementor widgets
 Donate link: http://premiumaddons.com
 Requires at least: 4.5
-Tested up to: 5.0.3
+Tested up to: 5.1.1
 Requires PHP: 5.4
-Stable tag: 3.1.2
+Stable tag: 3.2.6
 License: GPL v3.0
 License URI: https://opensource.org/licenses/GPL-3.0
 
@@ -23,7 +23,7 @@ Premium Addons for Elementor can be used only as a complement of Elementor page 
 
 ### Features
 
-* 21+ Fully Customizable Elementor add-on widgets.
+* 22+ Fully Customizable Elementor add-on widgets.
 * Options panel for enabling desired widgets only for faster performance.
 * Free Support through online forums and our Facebook group.
 * Fully Responsive and Cross Browser Compatible, Tested By [Browserstack](https://www.browserstack.com)
@@ -33,27 +33,28 @@ Premium Addons for Elementor can be used only as a complement of Elementor page 
 
 ### Available Elements
 
-1. [Vertical Scroll Elementor Widget](https://premiumaddons.com/vertical-scroll-widget-for-elementor-page-builder/) Allows you to create beautiful vertical scroll pages using Elementor.
-2. [Grid Elementor Widget](https://premiumaddons.com/grid-widget-for-elementor-page-builder/) Highly customizable grid widget that can be used for creating attractive looking image galleries and portfolios.
-3. [Carousel Elementor Widget](https://premiumaddons.com/carousel-widget-for-elementor-page-builder/) The best all purpose carousel widget for Elementor, It can be used to create testimonials carousel, client logos carousel, or any kind of content. 
-4. [Banner Elementor Widget](https://premiumaddons.com/banner-widget-for-elementor-page-builder/) Animated and interactive banner widget with multiple styles.
-5. [Google Maps Elementor Widget](https://premiumaddons.com/google-maps-widget-for-elementor-page-builder/) Advanced Google Maps widget with multiple markers, custom styling and much more options.
-6. [Pricing Table Elementor Widget](https://premiumaddons.com/pricing-table-widget-for-elementor-page-builder/) The most customizable Elementor Pricing Table Widget with tons of customization options.
-7. [Image Separator Elementor Widget](https://premiumaddons.com/image-separator-widget-elementor-page-builder/) This element adds image separator between sections.
-8. [Fancy Text Elementor Widget](https://premiumaddons.com/fancy-text-widget-for-elementor-page-builder/) Animated fancy text with many animation styles.
-9. [Heading Elementor Widget](https://premiumaddons.com/heading-widget-for-elementor-page-builder/) This widget has many customizable ready made styles for headings.
-10. [Dual Header Elementor Widget](https://premiumaddons.com/dual-header-widget-for-elementor-page-builder/) Create a header with 2 styles with numerous customization options.
-11. [Testimonials Elementor Widget](https://premiumaddons.com/testimonials-widget-for-elementor-page-builder/) Modern testimonials widget with many customization options.
-12. [Persons Elementor Widget](https://premiumaddons.com/persons-widget-for-elementor-page-builder/) Very good element for listing team members.
-13. [Countdown Elementor Widget](https://premiumaddons.com/countdown-widget-for-elementor-page-builder/) Advanced countdown addon for elementor.
-14. [Blog Elementor Widget](https://premiumaddons.com/blog-widget-for-elementor-page-builder/) Blog posts widget with modern style.
-15. [Counter Elementor Widget](https://premiumaddons.com/counter-widget-for-elementor-page-builder/) Advanced counter elements with lots of options.
-16. [Video Box Elementor Widget](https://premiumaddons.com/video-box-widget-for-elementor-page-builder/) Video box element with many customization features.
-17. [Modal Box Elementor Widget](https://premiumaddons.com/modal-box-widget-for-elementor-page-builder/) All purpose Elementor modal box with many options.
-18. [Progress Bar Elementor Widget](https://premiumaddons.com/progress-bar-widget-for-elementor-page-builder/) The most advanced progress bar available for Elementor.
-19. [Button Elementor Widget](https://premiumaddons.com/button-widget-for-elementor-page-builder/) Advanced button with lots of interactive animation and styling options and onClick event option.
-20. [Contact Form 7 Elementor Widget](https://premiumaddons.com/contact-form-7-widget-for-elementor-page-builder/) Elementor contact form 7 add-on with 2 readymade styles. 
-21. [Image Button Elementor Widget](https://premiumaddons.com/image-button-widget-for-elementor-page-builder/) A unique element that can be used for innovative call to action ideas.
+1. [Image Scroll Elementor Widget](https://premiumaddons.com/elementor-image-scroll-widget/) Allows you to represent your images in a brand new yet attractive way
+2. [Vertical Scroll Elementor Widget](https://premiumaddons.com/vertical-scroll-widget-for-elementor-page-builder/) Allows you to create beautiful vertical scroll pages using Elementor.
+3. [Grid Elementor Widget](https://premiumaddons.com/grid-widget-for-elementor-page-builder/) Highly customizable grid widget that can be used for creating attractive looking image galleries and portfolios.
+4. [Carousel Elementor Widget](https://premiumaddons.com/carousel-widget-for-elementor-page-builder/) The best all purpose carousel widget for Elementor, It can be used to create testimonials carousel, client logos carousel, or any kind of content. 
+5. [Banner Elementor Widget](https://premiumaddons.com/banner-widget-for-elementor-page-builder/) Animated and interactive banner widget with multiple styles.
+6. [Google Maps Elementor Widget](https://premiumaddons.com/google-maps-widget-for-elementor-page-builder/) Advanced Google Maps widget with multiple markers, custom styling and much more options.
+7. [Pricing Table Elementor Widget](https://premiumaddons.com/pricing-table-widget-for-elementor-page-builder/) The most customizable Elementor Pricing Table Widget with tons of customization options.
+8. [Image Separator Elementor Widget](https://premiumaddons.com/image-separator-widget-elementor-page-builder/) This element adds image separator between sections.
+9. [Fancy Text Elementor Widget](https://premiumaddons.com/fancy-text-widget-for-elementor-page-builder/) Animated fancy text with many animation styles.
+10. [Heading Elementor Widget](https://premiumaddons.com/heading-widget-for-elementor-page-builder/) This widget has many customizable ready made styles for headings.
+11. [Dual Header Elementor Widget](https://premiumaddons.com/dual-header-widget-for-elementor-page-builder/) Create a header with 2 styles with numerous customization options.
+12. [Testimonials Elementor Widget](https://premiumaddons.com/testimonials-widget-for-elementor-page-builder/) Modern testimonials widget with many customization options.
+13. [Persons Elementor Widget](https://premiumaddons.com/persons-widget-for-elementor-page-builder/) Very good element for listing team members.
+14. [Countdown Elementor Widget](https://premiumaddons.com/countdown-widget-for-elementor-page-builder/) Advanced countdown addon for elementor.
+15. [Blog Elementor Widget](https://premiumaddons.com/blog-widget-for-elementor-page-builder/) Blog posts widget with modern style.
+16. [Counter Elementor Widget](https://premiumaddons.com/counter-widget-for-elementor-page-builder/) Advanced counter elements with lots of options.
+17. [Video Box Elementor Widget](https://premiumaddons.com/video-box-widget-for-elementor-page-builder/) Video box element with many customization features.
+18. [Modal Box Elementor Widget](https://premiumaddons.com/modal-box-widget-for-elementor-page-builder/) All purpose Elementor modal box with many options.
+19. [Progress Bar Elementor Widget](https://premiumaddons.com/progress-bar-widget-for-elementor-page-builder/) The most advanced progress bar available for Elementor.
+20. [Button Elementor Widget](https://premiumaddons.com/button-widget-for-elementor-page-builder/) Advanced button with lots of interactive animation and styling options and onClick event option.
+21. [Contact Form 7 Elementor Widget](https://premiumaddons.com/contact-form-7-widget-for-elementor-page-builder/) Elementor contact form 7 add-on with 2 readymade styles. 
+22. [Image Button Elementor Widget](https://premiumaddons.com/image-button-widget-for-elementor-page-builder/) A unique element that can be used for innovative call to action ideas.
 
 ### PRO addons & widgets [Click here](https://premiumaddons.com/pro/)
 
@@ -137,6 +138,84 @@ Premium Addons for Elementor is 100% Ads Free, Ads can only be detected from You
 14. Premium Progress Bar Widget for Elementor
 
 == Changelog ==
+
+= 3.2.6 =
+
+- Tweak: `_content_template()` method added for Carousel widget to enhance rendering speed.
+- Fixed: Description container is rendered even if text editor is empty in Banner widget.
+
+= 3.2.5 =
+
+- Fixed: Vimeo video thumbnail issue with `Overlay` option disabled.
+
+= 3.2.4 =
+
+- Tweak: Added `Portuguese` translation.
+- Tweak: `WPML Compatibility` for Carousel widget.
+- Tweak: Use `transform` instead of `absolute` position to enhance Carousel widget transitions.
+- Fixed: Grid widget images don't fill container height for some themes.
+
+= 3.2.3 =
+
+- Tweak: Added `Dynamic Content` support for Progress Bar value.
+- Tweak: Added `Background Color` option for units in Countdown widget.
+
+= 3.2.2 =
+
+- Tweak: Load Google maps API Key only when needed.
+- Tweak: Added `Text Shadow` option for fancy strings in Fancy Text widget.
+- Tweak: Added `Text Align` option for slide-up fancy strings in Fancy Text widget.
+
+= 3.2.1 =
+
+- Tweak: Added `Minimum Number of Images` option for load more button in Grid widget.
+- Tweak: Added `Images to Show` option for load more button in Grid widget.
+
+= 3.2.0 =
+
+- Fixed: `Fatal error: call to undefined function` in v3.1.9
+
+= 3.1.9 =
+
+- Tweak: `WPML Compatibility` for all widgets.
+- Tweak: Added `Dynamic Content` support for all `URL` fields.
+- Fixed: Title and description container rendered even title and description are empty.
+
+= 3.1.8 =
+
+- Tweak: Added `Tablet/Mobile Breakpoint` options in Carousel widget.
+- Fixed: `Overlay Gallery Images` option not working with multiple Grid widgets.
+- Fixed: Duplicated Grid widget images in lightbox when `Whole Image Lightbox` option is enabled.
+
+= 3.1.7 =
+
+- Tweak: Added `Load More` button option in Grid widget.
+- Tweak: Wait images to load before triggering `Masonry` layout in Grid widget.
+
+= 3.1.6 =
+
+- Tweak: `Metro` layout improved in Grid widget.
+- Tweak: Get Modal Box images` `Alt` attribute from media library to enhance SEO.
+- Fixed: Animation issues with multiple Carousel widgets used.
+
+= 3.1.5 =
+
+- Tweak: Added `2/3 Column` option for `Metro Layout Image Width` in Grid widget.
+- Fixed: Grid widget images don't appear while editing on Google Chrome.
+- Fixed: Slides dissappear when animation option is set in Carousel widget.
+
+= 3.1.4 =
+
+- Tweak: Added `Skype` social link for Persons widget.
+- Tweak: Removed Auto redirection to settings page after plugin activation.
+- Tweak: Added `Settings` to plugin action links on `Plugins` page.
+- Fixed: Animations occur after slides transition in Carousel widget.
+
+= 3.1.3 =
+
+- New: Added Image Scroll widget.
+- Tweak: Added `CSS Filters` options group for posts` featured image in Blog widget.
+- Tweak: Added `Text Shadow` option for title in Counter widget.
 
 = 3.1.2 =
 

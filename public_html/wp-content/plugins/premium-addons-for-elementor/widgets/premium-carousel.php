@@ -290,6 +290,7 @@ class Premium_Carousel extends Widget_Base {
             [
                 'label'         => __('Animations', 'premium-addons-for-elementor'),
                 'type'          => Controls_Manager::ANIMATION,
+                'render_type'   => 'template'
             ]
             );
 
@@ -302,6 +303,94 @@ class Premium_Carousel extends Widget_Base {
 		);
 
 		$this->end_controls_section();
+        
+        $this->start_controls_section('premium-carousel-advance-settings',
+			[
+				'label'         => __( 'Additional Settings' , 'premium-addons-for-elementor' ),
+			]
+		);
+
+		$this->add_control('premium_carousel_draggable_effect',
+			[
+				'label' 		=> __( 'Draggable Effect', 'premium-addons-for-elementor' ),
+				'description'	=> __( 'Allow the slides to be dragged by mouse click', 'premium-addons-for-elementor' ),
+				'type'			=> Controls_Manager::SWITCHER,
+				'default'		=> 'yes'
+			]
+		);
+
+		$this->add_control('premium_carousel_touch_move',
+			[
+				'label' 		=> __( 'Touch Move', 'premium-addons-for-elementor' ),
+				'description'	=> __( 'Enable slide moving with touch', 'premium-addons-for-elementor' ),
+				'type'			=> Controls_Manager::SWITCHER,
+				'default'		=> 'yes'
+			]
+		);
+
+		$this->add_control('premium_carousel_RTL_Mode',
+			[
+				'label' 		=> __( 'RTL Mode', 'premium-addons-for-elementor' ),
+				'description'	=> __( 'Turn on RTL mode if your language starts from right to left', 'premium-addons-for-elementor' ),
+				'type'			=> Controls_Manager::SWITCHER,
+				'condition'		=> [
+					'premium_carousel_slider_type!' => 'vertical'
+				]
+			]
+		);
+
+		$this->add_control('premium_carousel_adaptive_height',
+			[
+				'label' 		=> __( 'Adaptive Height', 'premium-addons-for-elementor' ),
+				'description'	=> __( 'Adaptive height setting gives each slide a fixed height to avoid huge white space gaps', 'premium-addons-for-elementor' ),
+				'type'			=> Controls_Manager::SWITCHER,
+			]
+		);
+
+		$this->add_control('premium_carousel_pausehover',
+			[
+				'label' 		=> __( 'Pause on Hover', 'premium-addons-for-elementor' ),
+				'description'	=> __( 'Pause the slider when mouse hover', 'premium-addons-for-elementor' ),
+				'type'			=> Controls_Manager::SWITCHER,
+			]
+		);
+
+		$this->add_control('premium_carousel_center_mode',
+			[
+				'label' 		=> __( 'Center Mode', 'premium-addons-for-elementor' ),
+				'description'	=> __( 'Center mode enables a centered view with partial next/previous slides. Animations and all visible scroll type doesn\'t work with this mode', 'premium-addons-for-elementor' ),
+				'type'			=> Controls_Manager::SWITCHER,
+			]
+		);
+
+		$this->add_control('premium_carousel_space_btw_items',
+			[
+				'label' 		=> __( 'Slides\' Spacing', 'premium-addons-for-elementor' ),
+                'description'   => __('Set a spacing value in pixels (px)', 'premium-addons-for-elementor'),
+				'type'			=> Controls_Manager::NUMBER,
+				'default'		=> '15'
+			]
+		);
+        
+        $this->add_control('premium_carousel_tablet_breakpoint',
+			[
+				'label' 		=> __( 'Tablet Breakpoint', 'premium-addons-for-elementor' ),
+                'description'   => __('Sets the breakpoint between desktop and tablet devices. Below this breakpoint tablet layout will appear (Default: 1025px).', 'premium-addons-for-elementor'),
+				'type'			=> Controls_Manager::NUMBER,
+				'default'		=> 1025
+			]
+		);
+        
+        $this->add_control('premium_carousel_mobile_breakpoint',
+			[
+				'label' 		=> __( 'Mobile Breakpoint', 'premium-addons-for-elementor' ),
+                'description'   => __('Sets the breakpoint between tablet and mobile devices. Below this breakpoint mobile layout will appear (Default: 768px).', 'premium-addons-for-elementor'),
+				'type'			=> Controls_Manager::NUMBER,
+				'default'		=> 768
+			]
+		);
+        
+        $this->end_controls_section();
 
 		$this->start_controls_section('premium_carousel_navigation_arrows',
 			[
@@ -689,74 +778,6 @@ class Premium_Carousel extends Widget_Base {
 
 		$this->end_controls_section();
 
-		$this->start_controls_section('premium-carousel-advance-settings',
-			[
-				'label'         => __( 'Additional Settings' , 'premium-addons-for-elementor' ),
-				'tab' 			=> Controls_Manager::TAB_STYLE
-			]
-		);
-
-		$this->add_control('premium_carousel_draggable_effect',
-			[
-				'label' 		=> __( 'Draggable Effect', 'premium-addons-for-elementor' ),
-				'description'	=> __( 'Allow the slides to be dragged by mouse click', 'premium-addons-for-elementor' ),
-				'type'			=> Controls_Manager::SWITCHER,
-				'default'		=> 'yes'
-			]
-		);
-
-		$this->add_control('premium_carousel_touch_move',
-			[
-				'label' 		=> __( 'Touch Move', 'premium-addons-for-elementor' ),
-				'description'	=> __( 'Enable slide moving with touch', 'premium-addons-for-elementor' ),
-				'type'			=> Controls_Manager::SWITCHER,
-				'default'		=> 'yes'
-			]
-		);
-
-		$this->add_control('premium_carousel_RTL_Mode',
-			[
-				'label' 		=> __( 'RTL Mode', 'premium-addons-for-elementor' ),
-				'description'	=> __( 'Turn on RTL mode if your language starts from right to left', 'premium-addons-for-elementor' ),
-				'type'			=> Controls_Manager::SWITCHER,
-				'condition'		=> [
-					'premium_carousel_slider_type!' => 'vertical'
-				]
-			]
-		);
-
-		$this->add_control('premium_carousel_adaptive_height',
-			[
-				'label' 		=> __( 'Adaptive Height', 'premium-addons-for-elementor' ),
-				'description'	=> __( 'Adaptive height setting gives each slide a fixed height to avoid huge white space gaps', 'premium-addons-for-elementor' ),
-				'type'			=> Controls_Manager::SWITCHER,
-			]
-		);
-
-		$this->add_control('premium_carousel_pausehover',
-			[
-				'label' 		=> __( 'Pause on Hover', 'premium-addons-for-elementor' ),
-				'description'	=> __( 'Pause the slider when mouse hover', 'premium-addons-for-elementor' ),
-				'type'			=> Controls_Manager::SWITCHER,
-			]
-		);
-
-		$this->add_control('premium_carousel_center_mode',
-			[
-				'label' 		=> __( 'Center Mode', 'premium-addons-for-elementor' ),
-				'description'	=> __( 'Center mode enables a centered view with partial next/previous slides. Animations and all visible scroll type doesn\'t work with this mode', 'premium-addons-for-elementor' ),
-				'type'			=> Controls_Manager::SWITCHER,
-			]
-		);
-
-		$this->add_control('premium_carousel_space_btw_items',
-			[
-				'label' 		=> __( 'Slides\' Spacing', 'premium-addons-for-elementor' ),
-                'description'   => __('Set a spacing value in pixels (px)', 'premium-addons-for-elementor'),
-				'type'			=> Controls_Manager::NUMBER,
-				'default'		=> '15'
-			]
-		);
 	}
 
 	protected function render() {
@@ -768,7 +789,7 @@ class Premium_Carousel extends Widget_Base {
 
 		$slides_on_desk = $settings['premium_carousel_responsive_desktop'];
 		if( $settings['premium_carousel_slides_to_show'] == 'all' ) {
-			$slidesToScroll = !empty($slides_on_desk) ? $slides_on_desk : 1;
+			$slidesToScroll = ! empty( $slides_on_desk ) ? $slides_on_desk : 1;
 		} else {
 			$slidesToScroll = 1;
 		}
@@ -785,8 +806,6 @@ class Premium_Carousel extends Widget_Base {
 		if( empty ( $settings['premium_carousel_responsive_mobile'] ) ) {
 			$slides_on_mob = $slides_on_desk;
 		}
-
-		$responsive = '[{breakpoint: 1025,settings: {slidesToShow: ' . $slides_on_desk . ',slidesToScroll: ' . $slidesToScroll . '}},{breakpoint: 769,settings: {slidesToShow: ' . $slides_on_tabs . ',slidesToScroll: ' . $slides_on_tabs . '}},{breakpoint: 481,settings: {slidesToShow: ' . $slides_on_mob . ',slidesToScroll: ' . $slides_on_mob . '}}]';
 
         $infinite = $settings['premium_carousel_loop'] == 'yes' ? true : false;
 
@@ -946,18 +965,21 @@ class Premium_Carousel extends Widget_Base {
             $dot_icon = '';
             $customPaging = '';
         }
-		$extra_class = $settings['premium_carousel_extra_class'] !== '' ? ' '.$settings['premium_carousel_extra_class'] : '';
+		$extra_class = ! empty ( $settings['premium_carousel_extra_class'] ) ? ' ' . $settings['premium_carousel_extra_class'] : '';
 		
 		$animation_class = $settings['premium_carousel_animation_list'];
-		$animation = 'class="item-wrapper" data-animation="animated ' . $animation_class .'"';
+		$animation = ! empty( $animation_class ) ? 'animated ' . $animation_class : 'null';
         
         $dot_anim = $settings['premium_carousel_navigation_effect'] == 'yes' ? 'hvr-ripple-out' : '';
 
+        $tablet_breakpoint = ! empty ( $settings['premium_carousel_tablet_breakpoint'] ) ? $settings['premium_carousel_tablet_breakpoint'] : 1025;
+        
+        $mobile_breakpoint = ! empty ( $settings['premium_carousel_mobile_breakpoint'] ) ? $settings['premium_carousel_mobile_breakpoint'] : 768;
+        
         $carousel_settings = [
             'vertical'      => $vertical,
             'slidesToScroll'=> $slidesToScroll,
             'slidesToShow'  => $slidesToShow,
-            'responsive'    => $responsive,
             'infinite'      => $infinite,
             'speed'         => $speed,
             'fade'			=> $fade,
@@ -978,6 +1000,9 @@ class Premium_Carousel extends Widget_Base {
             'slidesDesk'    => $slides_on_desk,
             'slidesTab'     => $slides_on_tabs,
             'slidesMob'     => $slides_on_mob,
+            'animation'     => $animation,
+            'tabletBreak'   => $tablet_breakpoint,
+            'mobileBreak'   => $mobile_breakpoint
         ];
         
         $premium_elements_page_id = array();
@@ -1019,7 +1044,7 @@ class Premium_Carousel extends Widget_Base {
                 <?php 
                     foreach( $premium_elements_page_id as $elementor_post_id ) :
                  ?>
-                <div <?php echo $animation; ?>>
+                <div class="item-wrapper">
                     <?php echo $premium_elements_frontend->get_builder_content( $elementor_post_id, true ); ?>
                 </div>
                 <?php endforeach; ?>
@@ -1027,4 +1052,297 @@ class Premium_Carousel extends Widget_Base {
         </div>
 		<?php
 	}
+    
+    protected function _content_template() {
+        
+        ?>
+        
+        <#
+        
+            var vertical        = 'vertical' === settings.premium_carousel_slider_type ? true : false,
+                slidesOnDesk    = settings.premium_carousel_responsive_desktop,
+                slidesToScroll  = 1,
+                arrowClass      = '',
+                iconNextClass   = '',
+                iconPrevClass   = '',
+                dotIcon         = '',
+                verticalAlignment= '';
+                
+            if( 'all' === settings.premium_carousel_slides_to_show ) {
+                slidesToScroll = '' !== slidesOnDesk ? slidesOnDesk : 1;
+            } else {
+                slidesToScroll = 1;
+            }
+
+            var slidesToShow    = '' !== slidesOnDesk ? slidesOnDesk : 1,
+                slidesOnTabs    = settings.premium_carousel_responsive_tabs,
+                slidesOnMob     = settings.premium_carousel_responsive_mobile;
+
+            if( '' === settings.premium_carousel_responsive_tabs ) {
+                slidesOnTabs = slidesOnDesk;
+            }
+
+            if( '' === settings.premium_carousel_responsive_mobile ) {
+                slidesOnMob = slidesOnDesk;
+            }
+
+            var infinite    = settings.premium_carousel_loop === 'yes' ? true : false,
+                fade        = settings.premium_carousel_fade === 'yes' ? true : false,
+                speed       = '' !== settings.premium_carousel_speed ? settings.premium_carousel_speed : '',
+                autoplay    = settings.premium_carousel_autoplay === 'yes' ? true : false,
+                autoplaySpeed = '' !== settings.premium_carousel_autoplay_speed ? settings.premium_carousel_autoplay_speed : '',
+                draggable   = settings.premium_carousel_draggable_effect === 'yes' ? true  : false,
+                touchMove   = settings.premium_carousel_touch_move === 'yes' ? true : false,
+                dir         = '',
+                rtl         = false;
+
+            if( 'yes' === settings.premium_carousel_RTL_Mode ) {
+                rtl = true;
+                dir = 'dir="rtl"';
+            }
+
+            var adaptiveHeight  = 'yes' === settings.premium_carousel_adaptive_height ? true : false,
+                pauseOnHover    = 'yes' === settings.premium_carousel_pausehover ? true : false,
+                centerMode      = 'yes' === settings.premium_carousel_center_mode ? true : false,
+                centerPadding   = '' !== settings.premium_carousel_space_btw_items ? settings.premium_carousel_space_btw_items + "px" : '';
+                
+            // Navigation arrow setting setup
+            if( 'yes' === settings.premium_carousel_navigation_show ) {
+            
+                var arrows = true;
+
+                if( 'vertical' === settings.premium_carousel_slider_type ) {
+                    verticalAlignment = "ver-carousel-arrow";
+                } else {
+                    verticalAlignment = "carousel-arrow";
+                }
+                
+                if( 'circle-bg' === settings.premium_carousel_arrow_style ) {
+                    arrowClass = ' circle-bg';
+                }
+                if( 'square-bg' === settings.premium_carousel_arrow_style ) {
+                    arrowClass = ' square-bg';
+                }
+                if( 'square-border' === settings.premium_carousel_arrow_style ) {
+                    arrowClass = ' square-border';
+                }
+                if( 'circle-border' === settings.premium_carousel_arrow_style ) {
+                    arrowClass = ' circle-border';
+                }
+                if( 'default' === settings.premium_carousel_arrow_style ) {
+                    arrowClass = '';
+                }
+                
+                if( 'vertical' === settings.premium_carousel_slider_type ) {
+                
+                    var iconNext = settings.premium_carousel_arrow_icon_next_ver;
+                    
+                    if( iconNext === 'right_arrow_bold' ) {
+                        iconNextClass = 'fa fa-arrow-down';
+                    }
+                    if( iconNext === 'right_arrow_long' ) {
+                        iconNextClass = 'fa fa-long-arrow-down';
+                    }
+                    if( iconNext === 'right_arrow_long_circle' ) {
+                        iconNextClass = 'fa fa-arrow-circle-down';
+                    }
+                    if( iconNext === 'right_arrow_angle' ) {
+                        iconNextClass = 'fa fa-angle-down';
+                    }
+                    if( iconNext === 'right_arrow_chevron' ) {
+                        iconNextClass = 'fa fa-chevron-down';
+                    }
+                    
+                    var iconPrev = settings.premium_carousel_arrow_icon_prev_ver;
+
+                    if( iconPrev === 'left_arrow_bold' ) {
+                        iconPrevClass = 'fa fa-arrow-up';
+                    }
+                    if( iconPrev === 'left_arrow_long' ) {
+                        iconPrevClass  = 'fa fa-long-arrow-up';
+                    }
+                    if( iconPrev === 'left_arrow_long_circle' ) {
+                        iconPrevClass  = 'fa fa-arrow-circle-up';
+                    }
+                    if( iconPrev === 'left_arrow_angle' ) {
+                        iconPrevClass  = 'fa fa-angle-up';
+                    }
+                    if( iconPrev === 'left_arrow_chevron' ) {
+                        iconPrevClass  = 'fa fa-chevron-up';
+                    }
+                    
+                } else {
+                    var iconNext = settings.premium_carousel_arrow_icon_next;
+                    
+                    if( iconNext === 'right_arrow_bold' ) {
+                        iconNextClass = 'fa fa-arrow-right';
+                    }
+                    if( iconNext === 'right_arrow_long' ) {
+                        iconNextClass = 'fa fa-long-arrow-right';
+                    }
+                    if( iconNext === 'right_arrow_long_circle' ) {
+                        iconNextClass = 'fa fa-arrow-circle-right';
+                    }
+                    if( iconNext === 'right_arrow_angle' ) {
+                        iconNextClass = 'fa fa-angle-right';
+                    }
+                    if( iconNext === 'right_arrow_chevron' ) {
+                        iconNextClass = 'fa fa-chevron-right';
+                    }
+                    
+                    var iconPrev = settings.premium_carousel_arrow_icon_prev;
+
+                    if( iconPrev === 'left_arrow_bold' ) {
+                        iconPrevClass = 'fa fa-arrow-left';
+                    }
+                    if( iconPrev === 'left_arrow_long' ) {
+                        iconPrevClass = 'fa fa-long-arrow-left';
+                    }
+                    if( iconPrev === 'left_arrow_long_circle' ) {
+                        iconPrevClass = 'fa fa-arrow-circle-left';
+                    }
+                    if( iconPrev === 'left_arrow_angle' ) {
+                        iconPrevClass = 'fa fa-angle-left';
+                    }
+                    if( iconPrev === 'left_arrow_chevron' ) {
+                        iconPrevClass = 'fa fa-chevron-left';
+                    }
+                }
+
+                
+                var next_arrow = '<a type="button" data-role="none" class="'+ verticalAlignment +' carousel-next' + arrowClass + '" aria-label="Next" role="button" style=""><i class="' + iconNextClass + '" aria-hidden="true"></i></a>';
+
+                var left_arrow = '<a type="button" data-role="none" class="'+ verticalAlignment +' carousel-prev' + arrowClass + '" aria-label="Next" role="button" style=""><i class="' + iconPrevClass + '" aria-hidden="true"></i></a>';
+
+                var nextArrow = next_arrow,
+                    prevArrow = left_arrow;
+                    
+            } else {
+                var arrows = false,
+                    nextArrow = '',
+                    prevArrow = '';
+            }
+            
+            if( 'yes' === settings.premium_carousel_dot_navigation_show  ) {
+            
+                var dots =  true;
+                
+                if( 'square_white' === settings.premium_carousel_dot_icon ) {
+                    dotIcon = 'fa fa-square-o';
+                }
+                if( 'square_black' === settings.premium_carousel_dot_icon ) {
+                    dotIcon = 'fa fa-square';
+                }
+                if( 'circle_white' === settings.premium_carousel_dot_icon ) {
+                    dotIcon = 'fa fa-circle';
+                }
+                if( 'circle_thin' === settings.premium_carousel_dot_icon ) {
+                    dotIcon = 'fa fa-circle-thin';
+                }
+                if( 'circle_thin_bold' === settings.premium_carousel_dot_icon ) {
+                    dotIcon = 'fa fa-circle-o';
+                }
+                var customPaging = dotIcon;
+                
+            } else {
+            
+                var dots =  false,
+                    dotIcon = '',
+                    customPaging = '';
+                    
+            }
+            var extraClass = '' !== settings.premium_carousel_extra_class  ? ' ' + settings.premium_carousel_extra_class : '';
+
+            var animationClass  = settings.premium_carousel_animation_list;
+            var animation       = '' !== animationClass ? 'animated ' + animationClass : 'null';
+                
+            var dotAnim = settings.premium_carousel_navigation_effect === 'yes' ? 'hvr-ripple-out' : '';
+
+            var tabletBreakpoint = '' !== settings.premium_carousel_tablet_breakpoint ? settings.premium_carousel_tablet_breakpoint : 1025;
+
+            var mobileBreakpoint = '' !== settings.premium_carousel_mobile_breakpoint ? settings.premium_carousel_mobile_breakpoint : 768;
+            
+            var carouselSettings = {};
+            
+            carouselSettings.vertical       = vertical;
+            carouselSettings.slidesToScroll = slidesToScroll;
+            carouselSettings.slidesToShow   = slidesToShow;
+            carouselSettings.infinite       = infinite;
+            carouselSettings.speed          = speed;
+            carouselSettings.fade           = fade;
+            carouselSettings.autoplay       = autoplay;
+            carouselSettings.autoplaySpeed  = autoplaySpeed;
+            carouselSettings.draggable      = draggable;
+            carouselSettings.touchMove      = touchMove;
+            carouselSettings.rtl            = rtl;
+            carouselSettings.adaptiveHeight = adaptiveHeight;
+            carouselSettings.pauseOnHover   = pauseOnHover;
+            carouselSettings.centerMode     = centerMode;
+            carouselSettings.centerPadding  = centerPadding;
+            carouselSettings.arrows         = arrows;
+            carouselSettings.nextArrow      = nextArrow;
+            carouselSettings.prevArrow      = prevArrow;
+            carouselSettings.dots           = dots;
+            carouselSettings.customPaging   = customPaging;
+            carouselSettings.slidesDesk     = slidesOnDesk;
+            carouselSettings.slidesTab      = slidesOnTabs;
+            carouselSettings.slidesMob      = slidesOnMob;
+            carouselSettings.animation      = animation;
+            carouselSettings.tabletBreak    = tabletBreakpoint;
+            carouselSettings.mobileBreak    = mobileBreakpoint;
+            
+            var templates = [];
+            
+            if( 'select' === settings.premium_carousel_content_type ) {
+            
+                templates = settings.premium_carousel_slider_content;
+                
+            } else {
+            
+                _.each( settings.premium_carousel_templates_repeater, function( template ) {
+                
+                    templates.push( template.premium_carousel_repeater_item );
+                
+                } );
+            
+            }
+
+            view.addRenderAttribute( 'carousel', 'id', 'premium-carousel-wrapper-' + view.getID() );
+
+            view.addRenderAttribute( 'carousel', 'class', [
+                'premium-carousel-wrapper',
+                dotAnim,
+                'carousel-wrapper-' + view.getID(),
+                extraClass,
+                dir
+            ] );
+            
+            if( 'yes' === settings.premium_carousel_dot_navigation_show ) {
+                view.addRenderAttribute( 'carousel', 'class', 'premium-carousel-dots-' + settings.premium_carousel_dot_position );
+            }
+
+            if( 'yes' === settings.premium_carousel_fade && 'yes' === settings.premium_carousel_zoom ) {
+                view.addRenderAttribute( 'carousel', 'class', 'premium-carousel-scale' );
+            }
+        
+            view.addRenderAttribute( 'carousel', 'data-settings', JSON.stringify( carouselSettings ) );
+            
+            view.addRenderAttribute( 'carousel-inner', 'id', 'premium-carousel-' + view.getID() );
+            view.addRenderAttribute( 'carousel-inner', 'class', 'premium-carousel-inner' );
+            
+            
+        #>
+        
+        <div {{{ view.getRenderAttributeString('carousel') }}}>
+            <div {{{ view.getRenderAttributeString('carousel-inner') }}}>
+                <# _.each( templates, function( templateID ) { #>
+                    <div class="item-wrapper" data-template="{{templateID}}"></div>
+                <# } ); #>
+            </div>
+        </div>
+        
+        
+    <?php 
+    
+    }
 }

@@ -449,6 +449,17 @@ class Premium_Countdown extends Widget_Base {
 				]
 			]
 		);
+        
+        $this->add_control(
+			'premium_countdown_unit_backcolor',
+			[
+				'label' 		=> __( 'Background Color', 'premium-addons-for-elementor' ),
+				'type' 			=> Controls_Manager::COLOR,
+				'selectors'		=> [
+					'{{WRAPPER}} .countdown .pre_countdown-section .pre_countdown-period' => 'background-color: {{VALUE}};'
+				]
+			]
+		);
 
 		$this->add_group_control(
 			Group_Control_Typography::get_type(),

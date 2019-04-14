@@ -18,26 +18,37 @@ class Premium_Admin_Notices {
     * Constructor for the class
     */
     public function __construct() {
+        
         add_action('admin_init', array( $this, 'init') );
         
-        add_action('admin_notices', array( $this, 'check_admin_notices' ) );
+        add_action('admin_notices', array( $this, 'admin_notices' ) );
+        
     }
     
     /**
     * init required functions
     */
-    public function init(){
+    public function init() {
         $this->handle_review_notice();
-        $this->handle_pbg_notice();
+        //$this->handle_pbg_notice();
+//        $this->handle_image_scroll_notice();
     }
     
     /**
     * init notices check functions
     */
-    public function check_admin_notices() {
+    public function admin_notices() {
         $this->required_plugins_check();
-        $this->get_review_notice();
-        $this->get_pbg_notice();
+        
+        $cache_key = 'premium_notice_' . PREMIUM_ADDONS_VERSION;
+        
+        $response = get_transient( $cache_key );
+        
+        if ( false == $response ) {
+            $this->get_review_notice();
+        }
+        //$this->get_pbg_notice();
+//        $this->get_image_scroll_notice();
     }
 
     /**
@@ -80,6 +91,27 @@ class Premium_Admin_Notices {
         wp_redirect( remove_query_arg( 'pbg' ) );
         exit;
     }
+    
+    /**
+    * Checks if image scroll message is dismissed.
+    * @access public
+    * @return void
+    */
+    public function handle_image_scroll_notice() {
+        if ( ! isset( $_GET['image_scroll'] ) ) {
+            return;
+        }
+
+        if ( 'opt_out' === $_GET['image_scroll'] ) {
+            check_admin_referer( 'opt_out' );
+
+            update_option( 'image_scroll_notice', '1' );
+        }
+
+        wp_redirect( remove_query_arg( 'image_scroll' ) );
+        exit;
+    }
+
     
     /**
     * Shows an admin notice when Elementor is missing.
@@ -212,6 +244,35 @@ class Premium_Admin_Notices {
         }
         
     }
+    
+    /**
+    * Shows an admin notice for Image Scroll.
+    * @since 3.1.3
+    * @return void
+    */
+    public function get_image_scroll_notice() {
+        
+        $scroll_notice = get_option( 'image_scroll_notice' );
+        
+        $theme = self::get_installed_theme();
+    
+        $notice_url = sprintf( 'https://premiumaddons.com/elementor-image-scroll-widget?utm_source=imagescroll-notification&utm_medium=wp-dash&utm_campaign=get-pro&utm_term=%s', $theme );
+
+        if ( '1' === $scroll_notice ) {
+            return;
+        } else if ( '1' !== $scroll_notice ) {
+            $optout_url = wp_nonce_url( add_query_arg( 'image_scroll', 'opt_out' ), 'opt_out' );
+            
+            $scroll_message = sprintf( __('<p style="display: flex; align-items: center; padding:10px 10px 10px 0;"><img src="%s" style="margin-right: 0.8em; width: 40px;"><span>NEW!&nbsp</span><strong><span>Image Scroll Widget for Elementor&nbsp</strong>is Now Available in Premium Addons for Elementor.&nbsp</span><a href="%s" target="_blank" style="flex-grow: 2;"> Check it out now.</a>', 'premium-addons-for-elementor' ), PREMIUM_ADDONS_URL .'admin/images/premium-addons-logo.png', $notice_url );
+            
+            $scroll_message .= sprintf(__('<a href="%s" style="text-decoration: none; margin-left: 1em; float:right; "><span class="dashicons dashicons-dismiss"></span></a></p>', 'premium-addons-for-elementor'),  $optout_url );
+
+            $this->render_admin_notices( $scroll_message );
+
+        }
+        
+    }
+
     
     /**
     * Returns the active theme slug

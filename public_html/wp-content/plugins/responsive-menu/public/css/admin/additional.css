@@ -58,6 +58,11 @@
     float: left;
 }
 
+#responsive-menu-admin #upgrade-bottom-banner a,
+#responsive-menu-admin #upgrade-banner-title a {
+    color: #ffffff;
+}
+
 #responsive-menu-admin #upgrade-banner {
     color: #fff;
     border-radius: 2px;
@@ -75,7 +80,13 @@
 }
 
 #responsive-menu-admin #upgrade-banner .button {
-    background: #fab719;
+    background: #f80768;
+    color: #ffffff;
+}
+
+#responsive-menu-admin #upgrade-banner .button:hover {
+    background: #ffcf00;
+    color: #f80768;
 }
 
 #responsive-menu-admin #upgrade-banner i {

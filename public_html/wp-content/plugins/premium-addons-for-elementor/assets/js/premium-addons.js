@@ -66,31 +66,93 @@
   /****** Premium Grid Handler ******/
   var PremiumGridWidgetHandler = function($scope, $) {
     var galleryElement = $scope.find(".premium-gallery-container"),
-        isotopeOptions = galleryElement.data("settings"),
-        layout         = isotopeOptions['img_size'],
+        gridSettings = galleryElement.data("settings"),
+        layout         = gridSettings['img_size'],
+        deviceType     = $("body").data("elementor-device-mode"),
+        loadMore       = gridSettings['load_more'],
         columnWidth    = null;
-        
+    
     if( layout === 'metro' ) {
+        var suffix = "";
+        
+        if ( "tablet" === deviceType ) {
+            suffix = "_tablet";
+        } else if ( "mobile" === deviceType ) {
+            suffix = "_mobile";
+        }
+        var gridWidth = galleryElement.width(),
+            cellSize  = Math.floor( ( gridWidth / 12 ) );
+        galleryElement.find(".premium-gallery-item").each(function(index, item ) {
+            var cells = $(item).data("metro")[ "cells" + suffix],
+                vCells = $(item).data("metro")[ "vcells" + suffix];
+            if ( '' == cells || undefined == cells   ) {
+                var cells = $(item).data("metro")[ "cells" ];
+            }
+            if ( '' == vCells || undefined == vCells   ) {
+                var vCells = $(item).data("metro")[ "vcells" ];
+            }
+            $( item ).css({
+                "width": Math.ceil( cells * cellSize ),
+                "height": Math.ceil( vCells * cellSize )
+            } );
+        });
+        
         layout = 'masonry';
-        columnWidth = ".grid-sizer";
+        columnWidth = cellSize;
     }
-    var grid = galleryElement.imagesLoaded(function() {
-        grid.isotope({
+    
+    galleryElement.imagesLoaded( function() {} ).done( function() {
+        galleryElement.isotope({
             itemSelector: ".premium-gallery-item",
             percentPosition: true,
             animationOptions: {
                 duration: 750,
                 easing: "linear"
             },
-            filter: isotopeOptions["active_cat"],
+            filter: gridSettings["active_cat"],
             layoutMode: layout,
             masonry: {
                 columnWidth: columnWidth
             }
         });
     });
-
-    $scope.find(".premium-gallery-cats-container li a").click(function(e) {
+    
+    if ( loadMore ) {
+        
+        var minimum     = gridSettings['minimum'],
+            imageToShow = gridSettings['click_images'];
+        
+        galleryElement.parent().find('.premium-gallery-load-more div').hide();
+        if ( galleryElement.find(".premium-gallery-item").length > minimum ) {
+            galleryElement.parent().find('.premium-gallery-load-more').removeClass('premium-gallery-btn-hidden');
+            galleryElement.find(".premium-gallery-item:gt(" + ( minimum - 1 ) + ")").hide();
+            function appendItems() {
+                var itemsToShow = galleryElement.find(".premium-gallery-item").filter(':hidden').slice( 0, imageToShow );
+                if ( itemsToShow.length > 0 ) {
+                    itemsToShow.show();
+                    galleryElement.isotope('layout');
+                }
+            }
+            galleryElement.parent().on('click', '.premium-gallery-load-more-btn', function() {
+                $.ajax({
+                    url: appendItems(),
+                    beforeSend: function() {
+                        galleryElement.parent().find('.premium-gallery-load-more div').show();
+                    },
+                    success: function() {
+                        var itemsLeft = galleryElement.find(".premium-gallery-item").filter(':hidden').slice( 0, imageToShow );
+                        if ( itemsLeft.length > 0 ) {
+                            galleryElement.parent().find('.premium-gallery-load-more div').hide();
+                        } else {
+                            galleryElement.parent().find('.premium-gallery-load-more').hide();
+                        }
+                    }
+                });
+            });
+        } 
+    }
+ 
+   $scope.find(".premium-gallery-cats-container li a").click(function(e) {
       e.preventDefault();
       $scope
         .find(".premium-gallery-cats-container li .active")
@@ -101,13 +163,13 @@
       return false;
     });
 
-    $(".premium-img-gallery a[data-rel^='prettyPhoto']").prettyPhoto({
+    $scope.find(".premium-img-gallery a[data-rel^='prettyPhoto']").prettyPhoto({
       theme: "pp_default",
       hook: "data-rel",
       opacity: 0.7,
       show_title: false,
       deeplinking: false,
-      overlay_gallery: isotopeOptions['overlay_gallery'],
+      overlay_gallery: gridSettings['overlay_gallery'],
       custom_markup: "",
       default_width: 900,
       default_height: 506,
@@ -233,92 +295,129 @@
   };
 
   /****** Premium Carousel Handler ******/
-  var PremiumCarouselHandler = function($scope, $) {
-    var carouselElement = $scope
-      .find(".premium-carousel-wrapper")
-      .each(function() {
-        var carouselSettings = $(this).data("settings");
-        function slideToShow(slick) {
+  var PremiumCarouselHandler = function( $scope, $ ) {
+      
+    var isEdit    = elementorFrontend.isEditMode();
+    
+    var carouselElement = $scope.find(".premium-carousel-wrapper").each( function() {
+        var $carouselElement = $(this);
+        var carouselSettings = $( this ).data("settings");
+        
+        function slideToShow ( slick ) {
+            
           slidesToShow = slick.options.slidesToShow;
 
           windowWidth = jQuery(window).width();
-          if (windowWidth < 1025) {
+          
+          if ( windowWidth > carouselSettings["tabletBreak"] ) {
             slidesToShow = carouselSettings["slidesDesk"];
           }
-          if (windowWidth < 769) {
+          
+          if ( windowWidth <= carouselSettings["tabletBreak"] ) {
             slidesToShow = carouselSettings["slidesTab"];
           }
-          if (windowWidth < 481) {
+          
+          if ( windowWidth <= carouselSettings["mobileBreak"] ) {
             slidesToShow = carouselSettings["slidesMob"];
           }
+          
           return slidesToShow;
+          
         }
-        $(this).on("init", function(event, slick) {
+        
+        if ( isEdit ) {
+            
+            $( this ).find( '.item-wrapper' ).each( function( index, slide ) {
+                
+                var templateID = $( slide ).data('template');
+
+                if ( undefined !== templateID ) {
+                    $.ajax({
+                        type:   'GET',
+                        url:    PremiumProSettings.ajaxurl,
+                        dataType: 'html',
+                        data:   {
+                            action:     'get_elementor_template_content',
+                            templateID: templateID
+                        }
+                    }).success( function( response ) {
+                        
+                        var data = JSON.parse( response ).data;
+
+                        if ( undefined !== data.template_content ) {
+                            
+                            $( slide ).html( data.template_content );
+                            
+                            $carouselElement.find(".premium-carousel-inner").slick('refresh');
+                        }
+                        
+                    });
+                }
+            
+            });
+            
+            
+//            $( this ).find( ".premium-carousel-inner" ).slick( 'refresh' );
+        }
+        
+        $( this ).on("init", function( event ) {
+        
           event.preventDefault();
-          $(this)
-            .find("item-wrapper.slick-active")
-            .each(function(index, el) {
-              $this = $(this);
+          
+          $( this ).find("item-wrapper.slick-active").each(function() {
+              
+              $this = $( this );
               $this.addClass($this.data("animation"));
             });
+            
           $(".slick-track").addClass("translate");
+          
         });
-        $(this)
-          .find(".premium-carousel-inner")
-          .slick({
-            vertical: carouselSettings["vertical"],
+        
+        $( this ).find(".premium-carousel-inner").slick({
+            vertical:       carouselSettings["vertical"],
             slidesToScroll: carouselSettings["slidesToScroll"],
-            slidesToShow: carouselSettings["slidesToShow"],
-            responsive: [
+            slidesToShow:   carouselSettings["slidesToShow"],
+            responsive:     [
               {
-                breakpoint: 1025,
+                breakpoint: carouselSettings["tabletBreak"],
                 settings: {
-                  slidesToShow: carouselSettings["slidesDesk"],
-                  slidesToScroll: carouselSettings["slidesToScroll"]
+                  slidesToShow:     carouselSettings["slidesTab"],
+                  slidesToScroll:   carouselSettings["slidesTab"]
                 }
               },
               {
-                breakpoint: 769,
-                settings: {
-                  slidesToShow: carouselSettings["slidesTab"],
-                  slidesToScroll: carouselSettings["slidesTab"]
-                }
-              },
-              {
-                breakpoint: 481,
-                settings: {
-                  slidesToShow: carouselSettings["slidesMob"],
-                  slidesToScroll: carouselSettings["slidesMob"]
+                breakpoint: carouselSettings["mobileBreak"],
+                settings:   {
+                  slidesToShow:     carouselSettings["slidesMob"],
+                  slidesToScroll:   carouselSettings["slidesMob"]
                 }
               }
             ],
-            fade: carouselSettings["fade"],
-            infinite: carouselSettings["infinite"],
-            speed: carouselSettings["speed"],
-            autoplay: carouselSettings["autoplay"],
-            autoplaySpeed: carouselSettings["autoplaySpeed"],
-            draggable: carouselSettings["draggable"],
-            touchMove: carouselSettings["touchMove"],
-            rtl: carouselSettings["rtl"],
-            useTransform: false,
+            fade:           carouselSettings["fade"],
+            infinite:       carouselSettings["infinite"],
+            speed:          carouselSettings["speed"],
+            autoplay:       carouselSettings["autoplay"],
+            autoplaySpeed:  carouselSettings["autoplaySpeed"],
+            draggable:      carouselSettings["draggable"],
+            touchMove:      carouselSettings["touchMove"],
+            rtl:            carouselSettings["rtl"],
+            useTransform:   true,
             adaptiveHeight: carouselSettings["adaptiveHeight"],
-            pauseOnHover: carouselSettings["pauseOnHover"],
-            centerMode: carouselSettings["centerMode"],
-            centerPadding: carouselSettings["centerPadding"],
-            arrows: carouselSettings["arrows"],
-            nextArrow: carouselSettings["nextArrow"],
-            prevArrow: carouselSettings["prevArrow"],
-            dots: carouselSettings["dots"],
-            customPaging: function(slider, i) {
-              return '<i class="' + carouselSettings["customPaging"] + '"></i>';
+            pauseOnHover:   carouselSettings["pauseOnHover"],
+            centerMode:     carouselSettings["centerMode"],
+            centerPadding:  carouselSettings["centerPadding"],
+            arrows:         carouselSettings["arrows"],
+            nextArrow:      carouselSettings["nextArrow"],
+            prevArrow:      carouselSettings["prevArrow"],
+            dots:           carouselSettings["dots"],
+            customPaging:   function( slider, i ) {
+                return '<i class="' + carouselSettings["customPaging"] + '"></i>';
             }
           });
-        $(this).on("afterChange", function(
-          event,
-          slick,
-          currentSlide,
-          nextSlide
-        ) {
+          
+        $( this ).on("afterChange", function( event, slick, currentSlide, nextSlide ) {
+            
           slidesScrolled = slick.options.slidesToScroll;
           slidesToShow = slideToShow(slick);
           centerMode = slick.options.centerMode;
@@ -327,32 +426,31 @@
           if (slidesScrolled == 1) {
             if (centerMode == true) {
               animate = slideToAnimate - 2;
-              $inViewPort = $(
-                "#" + $currentParent + " [data-slick-index='" + animate + "']"
-              );
-              $inViewPort.addClass($inViewPort.data("animation"));
+              $inViewPort = $(this).find("[data-slick-index='" + animate + "']");
+              //$inViewPort.addClass($inViewPort.data("animation"));
             } else {
-              $inViewPort = $(
-                "#" +
-                  $currentParent +
-                  " [data-slick-index='" +
-                  slideToAnimate +
-                  "']"
-              );
-              $inViewPort.addClass($inViewPort.data("animation"));
+              $inViewPort = $(this).find("[data-slick-index='" +slideToAnimate +"']");
+              if( 'null' != carouselSettings["animation"] ) {
+                $inViewPort.find('p, h1, h2, h3, h4, h5, h6, span, a, img, i, button').addClass(carouselSettings["animation"]).removeClass("premium-carousel-content-hidden");
+              }
+              
             }
           } else {
             for (var i = slidesScrolled + currentSlide; i >= 0; i--) {
-              $inViewPort = $(
-                "#" + $currentParent + " [data-slick-index='" + i + "']"
+              $inViewPort = $(this).find("[data-slick-index='" + i + "']"
               );
-              $inViewPort.addClass($inViewPort.data("animation"));
+            if( 'null' != carouselSettings["animation"] ) {
+                $inViewPort.find('p, h1, h2, h3, h4, h5, h6, span, a, img, i, button').addClass(carouselSettings["animation"]).removeClass("premium-carousel-content-hidden");
+                }
             }
           }
         });
+        
         $(this).on("beforeChange", function(event, slick, currentSlide) {
-          $inViewPort = $("[data-slick-index='" + currentSlide + "']");
-          $inViewPort.siblings().removeClass($inViewPort.data("animation"));
+          $inViewPort = $(this).find("[data-slick-index='" + currentSlide + "']");
+          if( 'null' != carouselSettings["animation"] ) {
+            $inViewPort.siblings().find('p, h1, h2, h3, h4, h5, h6, span, a, img, i, button').removeClass(carouselSettings["animation"]).addClass("premium-carousel-content-hidden");
+            }
         });
         if (carouselSettings["vertical"]) {
           var maxHeight = -1;
@@ -389,6 +487,7 @@
         marginFix.element = $("a.carousel-arrow");
         marginFix.setWidth("horizontal");
       });
+      
   };
 
   /****** Premium Banner Handler ******/
@@ -504,15 +603,17 @@
             if ( direction == "vertical" ) {
                 scrollVertical.addClass("premium-image-scroll-ver");
             } else {
-                scrollOverlay.css( { "width": imageScroll.width(), "height": imageScroll.height() } );
+                scrollElement.imagesLoaded(function() {
+                  scrollOverlay.css( { "width": imageScroll.width(), "height": imageScroll.height() } );
+                });
             }
         } else {
             if ( reverse === 'yes' ) {
-                setTimeout( function() {
+                scrollElement.imagesLoaded(function() {
                     scrollElement.addClass("premium-container-scroll-instant");
                     setTransform();
                     startTransform();
-                }, 100 );
+                });
             }
             if ( direction == "vertical" ) {
                 scrollVertical.removeClass("premium-image-scroll-ver");

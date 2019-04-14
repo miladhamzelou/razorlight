@@ -2,9 +2,9 @@
 Contributors: fsheedy
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=9RPPQUY4M2AHL&lc=CA&item_name=Etsy%2dShop%20Wordpress%20Plugin&currency_code=CAD&bn=PP%2dDonationsBF%3abtn_donate_LG%2egif%3aNonHosted
 Tags: etsy, etsy listing, bracket, shortcode, shopping, shop, store, sell
-Tested up to: 4.9.4
+Tested up to: 5.1.1
 Requires at least: 3.4.2
-Stable tag: 2.0
+Stable tag: 2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -77,7 +77,12 @@ Use `<?php echo do_shortcode( '[etsy-shop shop_name="*your-etsy-shop-name*" sect
 
 == Changelog ==
 
-= 1.1 =
+= 2.1 =
+* Compatible with WP 5.1.1
+* Full item description for SEO better support
+* Remove trunk duplicate folder
+
+= 2.0 =
 * Compatible with WP 4.9.4
 * Now responsive design
 * New Quickstart form to generate short code

@@ -1,4 +1,54 @@
 <?php
+function afwp_add_main_menu() {
+	add_menu_page( __("ACF for WooCommerce Product", 'afwp'), __("ACF for WC Product", 'afwp'), 'manage_options', 'afwp', 'afwp_settings_help_page', 'dashicons-tag', 56);
+}
+add_action('admin_menu', 'afwp_add_main_menu' );
+
+function afwp_settings_help_page() {
+?>
+	<div class="wrap">
+		<h1 class="wp-heading-inline"><?php echo __("Featured Product First For WooCommerce", 'afwp');?></h1>				
+		<br/>
+		<a href="https://wordpress.org/plugins/email-tracker/" target="_blank"><?php echo __("Track Emails for view and click by Email Tracker free wordpress plugin", 'afwp');?></a>				
+		<div style="width:800px;">
+			<h2><?php echo __('Getting started', 'afwp'); ?></h2>
+						<p><?php echo __('Thank You for using ACF For WooCommerce Product!', 'afwp');?></p>
+			<p>
+				<?php _e('First Install WooCommerce & Advanced Custom Field plugins, If you have not installed it yet. Please Go To Admin Dashboard > Custom  Fields > Add New Field Group and add fields with selection as Post Type is Product. Then Go to Products > Edit/Add Product and add relevant information. All Custom fields displayes automatically on Single Product Page.', 'afwp'); ?>				
+			</p>
+		
+
+			<?php
+			if ( afwp()->is_not_paying() ) {
+			?>
+				<p>
+					<strong>
+				<?php
+				printf(__( 'To display Image, Date Picker, Color Picker File, Post, Relationships, True/False, Checknbox, Radio and many more fields properly, Please %sUpgrade Now!%s', 'afwp'),  '<a href="' . afwp()->get_upgrade_url() . '">', '</a>');
+				?>
+				</strong>
+			</p>
+			
+			<?php
+			}
+			?>
+			
+			
+			<p>
+				<strong>
+				<?php
+				printf(__('If you face any trouble, Please feel free to email me on %s any time. I am always happy to help you.', 'afwp'), '<a href="mailto:pmbaldha@gmail.com">pmbaldha@gmail.com</a>');
+				echo '<br/>';
+				printf(__('Please feel free to open support ticket on %s, If you found any issue.', 'afwp'), '<a href="https://wordpress.org/support/plugin/acf-for-woocommerce-product">'.__('Support Forum', 'afwp').'</a>');
+				?>
+				</strong>
+			</p>
+		</p>
+	</div>
+	
+<?php
+}
+
 /**
  * This file represents an example of the code that themes would use to register
  * the required plugins.

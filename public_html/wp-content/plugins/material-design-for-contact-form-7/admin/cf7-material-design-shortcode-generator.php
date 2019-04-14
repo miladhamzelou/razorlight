@@ -204,7 +204,7 @@ class CF7_Material_Design_Shortcode_Generator {
 		
 		// [md-radio]
 		$md_radio = array(
-			'name'        => /* translators: As in radio button form control */ __( 'Radio', 'material-design-for-contact-form-' ),
+			'name'        => /* translators: As in radio button form control */ __( 'Radio', 'material-design-for-contact-form-7' ),
 			'description' => sprintf(
 				/* translators: %s: form tag type */
 				__( 'Wraps your %s form tags.', 'material-design-for-contact-form-7' ),
@@ -223,7 +223,7 @@ class CF7_Material_Design_Shortcode_Generator {
 			'description' => sprintf(
 				/* translators: %s: form tag type */
 				__( 'Turn %s into switches.', 'material-design-for-contact-form-7' ),
-				'radio'
+				'checkboxes'
 			 ),
 			'type'        => 'md-switch',
 			'attributes'  => array(),

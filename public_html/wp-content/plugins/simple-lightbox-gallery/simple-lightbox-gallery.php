@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Simple Lightbox Gallery
- * Version: 1.6.6
+ * Version: 1.6.7
  * Description: Simple Lightbox Gallery plugin is allow users to view larger versions of images, simple slide shows and Gallery view with grid layout.
  * Author: Weblizar
  * Author URI: https://www.weblizar.com

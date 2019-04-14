@@ -410,7 +410,7 @@ msgstr "Merci pour l'installation!"
 #: admin/cf7-material-design-page.php:154
 msgid "%1$s lets you style your forms with Google's %2$s"
 msgstr ""
-"%1$s vous permet de styliser vos formulaires comme ceux de Google ! %1$s"
+"%1$s vous permet de styliser vos formulaires comme ceux de Google ! %2$s"
 
 #: admin/cf7-material-design-page.php:159
 msgid "Getting Started"
@@ -492,8 +492,8 @@ msgid ""
 "Confused? Something doesn't look right? Have a specific question? Make a "
 "post in the %s support forum %s and I'll help you out."
 msgstr ""
-"Une question? Quelque chose ne va pas? Postez un message sur le forum "
-"d'assistance et je vous aiderai."
+"Une question? Quelque chose ne va pas? Postez un message sur le %s forum "
+"d'assistance %s et je vous aiderai."
 
 #: admin/cf7-material-design-page.php:182
 msgid "Custom colors and fonts"
@@ -507,9 +507,9 @@ msgid ""
 "upgrade."
 msgstr ""
 "La personnalisation des couleurs et polices est une fonctionnalité Pro, mais "
-"vous pouvez toujours l'essayer gratuitement dans le personnalisateur %s. Vos "
-"modifications ne seront seulement pas sauvegardées avant que vous mettiez à "
-"niveau."
+"vous pouvez toujours l'essayer gratuitement dans le %s personnalisateur %s. "
+"Vos modifications ne seront seulement pas sauvegardées avant que vous "
+"mettiez à niveau."
 
 #: admin/cf7-material-design-page.php:184
 msgid "Like this plugin? Rate it!"
@@ -539,7 +539,7 @@ msgstr "Personnalisez les couleurs et police pour aller avec votre thème."
 #: admin/cf7-material-design-page.php:273,
 #: admin/cf7-material-design-page.php:309
 msgid "Turn checkboxes into %1$s switches %2$s using %3$s."
-msgstr "Changer les cases en %1$s interrupteur en utilisant %3$s."
+msgstr "Changer les cases en %1$s interrupteur %2$s en utilisant %3$s."
 
 #: admin/cf7-material-design-page.php:231
 msgid "Add icons to text and select fields."
@@ -931,7 +931,7 @@ msgstr "Grille"
 #. translators: %s: form tag type
 #: admin/cf7-material-design-shortcode-generator.php:409
 msgid "Fixes layout for non-immediate children of %s or %s."
-msgstr "Corrige la mise en page pour enfant (non-immediat) de %s ou %."
+msgstr "Corrige la mise en page pour enfant (non-immediat) de %s ou %s."
 
 #. translators: %s: form tag type
 #: admin/cf7-material-design-shortcode-generator.php:416

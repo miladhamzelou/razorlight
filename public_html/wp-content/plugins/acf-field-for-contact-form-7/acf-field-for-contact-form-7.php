@@ -7,7 +7,7 @@
  * Author URI:      https://www.krishaweb.com/
  * Text Domain:     acf-field-for-contact-form-7
  * Domain Path:     /languages
- * Version:         1.2
+ * Version:         1.3
  *
  * @package         Acf_Field_For_Contact_Form_7
  */

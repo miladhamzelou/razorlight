@@ -6,6 +6,7 @@ use Elementor\Modules\DynamicTags\Module as TagsModule;
 if ( ! defined( 'ABSPATH' ) ) exit; // If this file is called directly, abort.
 
 class Premium_Videobox extends Widget_Base {
+    
     public function get_name() {
         return 'premium-addon-video-box';
     }
@@ -648,8 +649,15 @@ class Premium_Videobox extends Widget_Base {
             if ('youtube' === $type ) {
                 $thumbnail_src = sprintf('https://i.ytimg.com/vi/%s/maxresdefault.jpg', $id );
             } elseif ('vimeo' === $type ) {
-                $vimeo = unserialize( file_get_contents( "https://vimeo.com/api/v2/video/$id.php" ) );
-				$thumbnail_src = str_replace( '_640', '_840', $vimeo[0]['thumbnail_large'] );
+//                $vimeo = unserialize( file_get_contents( "https://vimeo.com/api/v2/video/$id.php" ) );
+//				$thumbnail_src = str_replace( '_640', '_840', $vimeo[0]['thumbnail_large'] );
+                
+                $vimeo_data         = wp_remote_get( 'http://www.vimeo.com/api/v2/video/' . intval( $id ) . '.php' );
+                if ( isset( $vimeo_data['response']['code'] ) && '200' == $vimeo_data['response']['code'] ) {
+                    $response       = unserialize( $vimeo_data['body'] );
+                    $thumbnail_src  = isset( $response[0]['thumbnail_large'] ) ? $response[0]['thumbnail_large'] : false;
+                }
+                
             } else {
                 $thumbnail_src = 'transparent';
             }
@@ -660,6 +668,7 @@ class Premium_Videobox extends Widget_Base {
     }
     
     private function get_vidoe_params() {
+        
         $settings = $this->get_settings_for_display();
         
         $type = $settings['premium_video_box_video_type'];

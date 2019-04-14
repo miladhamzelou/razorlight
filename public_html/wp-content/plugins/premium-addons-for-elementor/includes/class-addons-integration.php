@@ -8,6 +8,8 @@ class Premium_Addons_Integration {
     
     private static $instance = null;
     
+    public static $frontend = null;
+    
     /**
     * Initialize integration hooks
     *
@@ -17,19 +19,26 @@ class Premium_Addons_Integration {
         
         add_action( 'elementor/editor/before_enqueue_styles', array( $this, 'premium_font_setup' ) );
         
-        add_action( 'elementor/widgets/widgets_registered', array( $this, 'premium_widgets_area' ) );
+        add_action( 'elementor/widgets/widgets_registered', array( $this, 'widgets_area' ) );
         
-        add_action('elementor/editor/before_enqueue_scripts', array( $this,'premium_maps_get_address') );
+        add_action( 'elementor/editor/before_enqueue_scripts', array( $this,'enqueue_editor_scripts') );
         
-        add_action( 'elementor/preview/enqueue_styles', array( $this, 'premium_enqueue_preview_styles' ) );
+        add_action( 'elementor/preview/enqueue_styles', array( $this, 'enqueue_preview_styles' ) );
         
-        add_action( 'elementor/frontend/after_register_styles', array( $this, 'premium_register_frontend_styles' ) );
+        add_action( 'elementor/frontend/after_register_styles', array( $this, 'register_frontend_styles' ) );
         
-        add_action( 'elementor/frontend/after_enqueue_styles', array( $this, 'premium_enqueue_frontend_styles' ) );
+        add_action( 'elementor/frontend/after_enqueue_styles', array( $this, 'enqueue_frontend_styles' ) );
         
-        add_action( 'elementor/frontend/after_register_scripts', array( $this, 'premium_register_frontend_scripts' ) );
+        add_action( 'elementor/frontend/after_register_scripts', array( $this, 'register_frontend_scripts' ) );
             
-        add_action('wp_enqueue_scripts', array($this, 'premium_maps_required_script'));
+        add_action( 'wp_enqueue_scripts', array( $this, 'premium_maps_required_script' ) );
+        
+        
+        add_action( 'wp_ajax_get_elementor_template_content', array( $this, 'get_template_content' ) );
+        
+        if( defined('ELEMENTOR_VERSION') ) {
+            self::$frontend = new \Elementor\Frontend;
+        }
     }
     
     /**
@@ -57,7 +66,7 @@ class Premium_Addons_Integration {
     * @since 2.9.0
     * @access public
     */
-    public function premium_register_frontend_styles() {
+    public function register_frontend_styles() {
         
         wp_register_style(
             'pa-prettyphoto',
@@ -74,7 +83,7 @@ class Premium_Addons_Integration {
     * @since 2.9.0
     * @access public
     */
-    public function premium_enqueue_preview_styles() {
+    public function enqueue_preview_styles() {
         
         wp_enqueue_style('pa-prettyphoto');
      
@@ -85,7 +94,7 @@ class Premium_Addons_Integration {
     * @since 2.9.0
     * @access public
     */
-    public function premium_enqueue_frontend_styles() {
+    public function enqueue_frontend_styles() {
         
         wp_enqueue_style(
             'premium-addons',
@@ -101,15 +110,15 @@ class Premium_Addons_Integration {
     * @since 1.0.0
     * @access public
     */
-    public function premium_widgets_area() {
-        $this->premium_widget_register();
+    public function widgets_area() {
+        $this->widgets_register();
     }
     
     /** Requires widgets files
     * @since 1.0.0
     * @access private
     */
-    private function premium_widget_register() {
+    private function widgets_register() {
 
         $check_component_active = PA_admin_settings::get_enabled_keys();
         
@@ -130,27 +139,13 @@ class Premium_Addons_Integration {
     * @since 1.0.0
     * @access public
     */
-    public function premium_register_frontend_scripts() {
+    public function register_frontend_scripts() {
+        
+        $premium_maps_api = PA_Gomaps::get_enabled_keys()['premium-map-api'];
         
         wp_register_script(
             'premium-addons-js',
             PREMIUM_ADDONS_URL . 'assets/js/premium-addons.js',
-            array('jquery'),
-            PREMIUM_ADDONS_VERSION,
-            true
-        );
-        
-//        wp_register_script(
-//            'counter-up-js',
-//            PREMIUM_ADDONS_URL . 'assets/js/lib/countUpmin.js',
-//            array('jquery'),
-//            PREMIUM_ADDONS_VERSION,
-//            true
-//        );
-        
-        wp_register_script(
-            'isotope-js', 
-            PREMIUM_ADDONS_URL . 'assets/js/lib/isotope.js',
             array('jquery'),
             PREMIUM_ADDONS_VERSION,
             true
@@ -202,11 +197,19 @@ class Premium_Addons_Integration {
             PREMIUM_ADDONS_VERSION,
             true
         );
+        
+        wp_register_script(
+            'premium-maps-api-js',
+            'https://maps.googleapis.com/maps/api/js?key=' . $premium_maps_api,
+            array(),
+            PREMIUM_ADDONS_VERSION,
+            false
+        );
 
         wp_register_script(
             'premium-maps-js',
             PREMIUM_ADDONS_URL . 'assets/js/premium-maps.js',
-            array('jquery'),
+            array( 'jquery', 'premium-maps-api-js' ),
             PREMIUM_ADDONS_VERSION,
             true
         );
@@ -218,6 +221,14 @@ class Premium_Addons_Integration {
             PREMIUM_ADDONS_VERSION,
             true
         );
+        
+//        wp_register_script( 
+//            'scrollify-js',
+//            PREMIUM_ADDONS_URL . 'assets/js/lib/scrollify.js',
+//            array('jquery'),
+//            PREMIUM_ADDONS_VERSION,
+//            true
+//        );
         
     }
     
@@ -234,7 +245,7 @@ class Premium_Addons_Integration {
 
         if( $premium_maps_disable_api ) {
             
-            wp_enqueue_script('premium-maps-api-js', 'https://maps.googleapis.com/maps/api/js?key=' . $premium_maps_api, array(), PREMIUM_ADDONS_VERSION, false);
+//            wp_enqueue_script('premium-maps-api-js', 'https://maps.googleapis.com/maps/api/js?key=' . $premium_maps_api, array(), PREMIUM_ADDONS_VERSION, false);
 
         }
 
@@ -246,7 +257,7 @@ class Premium_Addons_Integration {
 
     }
     
-    public function premium_maps_get_address() {
+    public function enqueue_editor_scripts() {
         
         $premium_maps_api = PA_Gomaps::get_enabled_keys()['premium-map-api'];
 
@@ -264,10 +275,47 @@ class Premium_Addons_Integration {
 
         if( $premium_maps_enabled ) {
 
-            wp_enqueue_script('premium-maps-address', PREMIUM_ADDONS_URL . 'assets/js/premium-maps-address.js', array('jquery'), PREMIUM_ADDONS_VERSION, true);
+            wp_enqueue_script(
+                'premium-maps-address',
+                PREMIUM_ADDONS_URL . 'assets/js/premium-maps-address.js',
+                array( 'jquery' ),
+                PREMIUM_ADDONS_VERSION,
+                true
+            );
 
         }
 
+    }
+    
+    /*
+     * Get Template Content
+     * 
+     * Get Elementor template HTML content.
+     * 
+     * @since 3.2.6
+     * @access public
+     * 
+     */
+    public function get_template_content() {
+        
+        $template_id = $_GET['templateID'];
+        
+        if( ! isset( $template_id ) ) {
+            return;
+        }
+        
+        $template_content = self::$frontend->get_builder_content( $template_id, true );
+        
+        if ( empty ( $template_content ) || ! isset( $template_content ) ) {
+            wp_send_json_error();
+        }
+        
+        $data = array(
+            'template_content'  => $template_content
+        );
+        
+        wp_send_json_success( $data );
+        
     }
     
     /**

@@ -1,8 +1,8 @@
-=== Material Design for Contact Form 7 ===
+=== Material Design for Contact Form 7 - Free ===
 Contributors: contactform7addons, gusruss89, freemius
 Tags: contact form 7, material design, contact form 7 addon, contact form 7 style, contact form 7 theme
 Requires at least: 4.4
-Tested up to: 5.0
+Tested up to: 5.1
 Stable tag: trunk
 Donate link: https://www.paypal.me/AngusRussell
 License: GPL-2.0+
@@ -78,7 +78,7 @@ Material Design is a set of guidelines, written by Google, that outline how your
 = Do I need a Material Design theme as well? =
 Not at all! The beauty of Material Design is that you can take as much or as little of it as you like. It's perfectly fine to just have your forms styled with Material Design and not the rest of your site.
 
-For more ways to add Material Design to your WordPress site (without changing your theme), see [WordPress Material Design](https://cf7materialdesign.com/wordpress-material-design/).
+For more ways to add Material Design to your WordPress site (without changing your theme), see [WordPress Material Design](https://cf7materialdesign.com/material-design-wordpress/).
 
 = How do I use this plugin? =
 All documentation can be found by clicking 'Help' (top right of the screen) and then 'Material Design' from the CF7 form editor screen.
@@ -103,6 +103,26 @@ OR go to 'Plugins' > 'Add new', and search for 'material design for contact form
 6. Shortcode generator
 
 == Changelog ==
+= 2.4.2 =
+* Fixed a bug with polyfilled dates in Safari
+
+= 2.4.1 =
+* Fixed an upgrade bug
+* Added some CSS to combat some themes overriding our styles
+* Fixed terminology for switches
+
+= 2.4.0 =
+* Exposed a JavaScript function to manually initialize the plugin scripts (for use on dynamically loaded forms).
+
+= 2.3.5 =
+* Improve file field display
+* Activated max-width fix from 2.3.4
+
+= 2.3.4 =
+* Added info about affiliate program in dashboard
+* Added a fix for some themes that set label's max-width to 100%
+* Security improvements
+
 = 2.3.2 =
 * Added translations! Russian, Japanese, French, German and Spanish
 

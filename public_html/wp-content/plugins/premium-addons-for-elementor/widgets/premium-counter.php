@@ -73,16 +73,6 @@ class Premium_Counter extends Widget_Base {
 			]
 		);
 
-//		$this->add_control('premium_counter_d_separator',
-//			[
-//				'label'			=> __( 'Decimal Point', 'premium-addons-for-elementor' ),
-//				'type'			=> Controls_Manager::TEXT,
-//                'dynamic'       => [ 'active' => true ],
-//				'description'	=> __( 'Set a decimal number (Eg - 12.76). The decimal point '.' will be replaced with the value that you will enter above', 'premium-addons-for-elementor' ),
-//				'default'		=> '.'
-//			]
-//		);
-//
 		$this->add_control('premium_counter_d_after',
 			[
 				'label'			=> __( 'Digits After Decimal Point', 'premium-addons-for-elementor' ),
@@ -394,9 +384,16 @@ class Premium_Counter extends Widget_Base {
 				'name'          => 'premium_counter_title_typho',
 				'scheme'        => Scheme_Typography::TYPOGRAPHY_1,
 				'selector'      => '{{WRAPPER}} .premium-counter-area .premium-counter-title',
-				'separator'		=> 'after'
 			]
 		);
+        
+        $this->add_group_control(
+            Group_Control_Text_Shadow::get_type(),
+            [
+                'name'          => 'premium_counter_title_shadow',
+                'selector'      => '{{WRAPPER}} .premium-counter-area .premium-counter-title',
+            ]
+        );
         
         $this->end_controls_section();
         

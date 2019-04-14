@@ -878,6 +878,9 @@ class CF7_Material_Design_Admin
 				<?php 
         ?>
 
+				<h4>Manual JavaScript Initialization</h4>
+				<p>If you dynamically add your form to a page (E.g. via a popup or something) then you will need to manually initialize the plugin's JavaScript by calling <code>window.cf7mdInit()</code> after your form has loaded.</p>
+
 				<h4>Integration with other plugins</h4>
 				<p><strong><a href="https://wordpress.org/plugins/mailchimp-for-wp/" target="_blank">Mailchimp for WordPress</a></strong> - you can add a "Subscribe to newsletter" checkbox like so. Change the label and terms to your liking.</p>
 				<pre style="margin-left: 20px;">[md-accept label="Mailchimp" terms="Subscribe me to emails"]

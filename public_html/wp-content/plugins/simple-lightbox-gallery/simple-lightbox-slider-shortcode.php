@@ -180,7 +180,7 @@ function slgf_ShortCode_load_function( $Id ) {
 								$Thummb_Url = $url;
 							}
 						}
-						if ( $SLGF_Gallery_Layout == "col-md-4" ) {// Three column
+						if ( $SLGF_Gallery_Layout == "col-md-4" ) { // Three column
 							if ( $SLGF_Thumbnail_Layout == "same-size" ) {
 								$Thummb_Url = $url4;
 							}

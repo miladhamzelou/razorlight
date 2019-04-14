@@ -1,9 +1,9 @@
 <?php
 /*
 Plugin Name: Premium Addons for Elementor
-Description: Premium Addons Plugin Includes 21+ premium widgets for Elementor Page Builder.
+Description: Premium Addons Plugin Includes 22+ premium widgets for Elementor Page Builder.
 Plugin URI: https://premiumaddons.com
-Version: 3.1.2
+Version: 3.2.6
 Author: Leap13
 Author URI: http://leap13.com/
 Text Domain: premium-addons-for-elementor
@@ -11,24 +11,15 @@ Domain Path: /languages
 License: GNU General Public License v3.0
 */
 
-
-/**
-* Checking if WordPress is installed
-*/
-if (! function_exists('add_action')) {
-    die('WordPress not Installed'); // if WordPress not installed kill the page.
-}
-
 if ( ! defined('ABSPATH') ) exit; // No access of directly access
 
-
 // Define Constants
-define('PREMIUM_ADDONS_VERSION', '3.1.2');
+define('PREMIUM_ADDONS_VERSION', '3.2.6');
 define('PREMIUM_ADDONS_URL', plugins_url('/', __FILE__));
 define('PREMIUM_ADDONS_PATH', plugin_dir_path(__FILE__));
 define('PREMIUM_ADDONS_FILE', __FILE__);
-define('PREMIUM_ADDONS_BASENAME', plugin_basename(__FILE__));
-define('PREMIUM_ADDONS_STABLE_VERSION', '3.1.1');
+define('PREMIUM_ADDONS_BASENAME', plugin_basename(PREMIUM_ADDONS_FILE));
+define('PREMIUM_ADDONS_STABLE_VERSION', '3.2.5');
 
 if( ! class_exists('Premium_Addons_Elementor') ) {
     /*
@@ -48,39 +39,14 @@ if( ! class_exists('Premium_Addons_Elementor') ) {
             
             add_action('plugins_loaded', array( $this, 'premium_addons_elementor_setup') );
             
-            register_activation_hook(__FILE__, array( $this, 'pa_activation') );
-            
-            add_action('admin_init', array( $this, 'pa_redirection' ) );
-            
-            add_action('elementor/init', array( $this, 'create_premium_category') );
+            add_action('elementor/init', array( $this, 'elementor_init') );
             
             add_action( 'init', array( $this, 'init_addons' ), -999 );
  
             add_action( 'admin_post_premium_addons_rollback', 'post_premium_addons_rollback' );
             
-        }
-        
-        public function pa_activation() {
-            add_option('pa_activation_redirect', true);
-        }
-
-        /*
-         * Redirects to Premium Widgets Settings settings after activation
-         * @since 1.0.0
-         * @return void
-         */
-        public function pa_redirection() {
-    
-            if ( get_option('pa_activation_redirect', false ) ) {
-                
-                delete_option('pa_activation_redirect');
-                
-                if ( ! is_network_admin() ) {
-                    
-                    wp_redirect("admin.php?page=premium-addons");
-                    
-                }
-            }   
+            register_activation_hook( PREMIUM_ADDONS_FILE, array( $this, 'set_transient' ) );
+            
         }
         
         /**
@@ -90,10 +56,26 @@ if( ! class_exists('Premium_Addons_Elementor') ) {
         * @return void
         */
         public function premium_addons_elementor_setup() {
+            
             $this->load_domain();
             
             $this->init_files(); 
         }
+        
+        /**
+        * Set transient for admin review notice
+        * @since 3.1.7
+        * @access public
+        * @return void
+        */
+        public function set_transient() {
+            $cache_key = 'premium_notice_' . PREMIUM_ADDONS_VERSION;
+            
+            $expiration = 3600 * 72;
+            
+            set_transient( $cache_key, true, $expiration );
+        }
+        
         
         /**
          * Require initial necessary files
@@ -130,17 +112,24 @@ if( ! class_exists('Premium_Addons_Elementor') ) {
          * @return void
          */
         public function load_domain() {
-            load_plugin_textdomain('premium-addons-for-elementor', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/');
+            
+            load_plugin_textdomain( 'premium-addons-for-elementor' );
+            
         }
         
         /**
-         * Creates Premium Widgets category
+         * Elementor Init
          * @since 2.6.8
          * @access public
          * @return void
          */
-        public function create_premium_category() {
+        public function elementor_init() {
+            
+            require_once ( PREMIUM_ADDONS_PATH . 'includes/compatibility/class-premium-addons-wpml.php' );
+            
             require_once ( PREMIUM_ADDONS_PATH . 'includes/class-addons-category.php' );
+            
+            
         }
         
         /**

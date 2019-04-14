@@ -85,7 +85,8 @@ class Premium_Vscroll extends Widget_Base {
                'fields'         => array_values( $temp_repeater->get_controls() ),
                'condition'      => [
                    'content_type'   => 'templates'
-               ]
+               ],
+               'title_field'    => '{{{ section_template }}}'
            ]
         );
         
@@ -106,7 +107,8 @@ class Premium_Vscroll extends Widget_Base {
                'fields'         => array_values( $id_repeater->get_controls() ),
                'condition'      => [
                    'content_type'   => 'ids'
-               ]
+               ],
+               'title_field'    => '{{{ section_id }}}'
            ]
         );
         
@@ -771,7 +773,7 @@ class Premium_Vscroll extends Widget_Base {
                             <div <?php echo $this->get_render_attribute_string('section_' . $index); ?>>
                                 <?php 
                                     $template_id = $section['section_template'];
-                                    echo $this->get_template_content($template_id);
+                                    echo $this->get_template_content( $template_id );
                                 ?>
                             </div>
                         <?php endforeach; ?>

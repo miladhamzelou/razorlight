@@ -67,9 +67,10 @@ class Premium_Button extends Widget_Base {
                 [
                     'label'         => __('Link', 'premium-addons-for-elementor'),
                     'type'          => Controls_Manager::URL,
+                    'dynamic'       => [ 'active' => true ],
                     'default'       => [
                         'url'   => '#',
-                        ],
+                    ],
                     'placeholder'   => 'https://premiumaddons.com/',
                     'label_block'   => true,
                     'separator'     => 'after',

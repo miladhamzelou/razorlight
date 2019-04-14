@@ -71,19 +71,19 @@
   content: "\e90a";
 }
 .pa-grid-icon:before {
-  content: "\e90b";
+  content: "\e90c";
 }
 .pa-image-button:before {
-  content: "\e90c";
+  content: "\e90d";
 }
 .pa-image-scroll:before {
   content: "\e900";
 }
 .pa-image-separator:before {
-  content: "\e90d";
+  content: "\e90e";
 }
 .pa-maps:before {
-  content: "\e90e";
+  content: "\e90b";
 }
 .pa-modal-box:before {
   content: "\e90f";

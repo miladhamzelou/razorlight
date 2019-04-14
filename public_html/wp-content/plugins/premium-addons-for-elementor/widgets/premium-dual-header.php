@@ -126,6 +126,7 @@ class Premium_Dual_Header extends Widget_Base {
             [
                 'label'         => __('Link', 'premium-addons-for-elementor'),
                 'type'          => Controls_Manager::URL,
+                'dynamic'       => [ 'active' => true ],
                 'default'       => [
                     'url'   => '#',
                 ],

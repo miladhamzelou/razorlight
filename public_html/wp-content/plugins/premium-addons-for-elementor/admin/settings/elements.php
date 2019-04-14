@@ -17,11 +17,32 @@ class PA_admin_settings {
     private $pa_get_settings;
    
     public function __construct() {
+        
         add_action( 'admin_menu', array( $this,'pa_admin_menu') );
+        
         add_action('admin_enqueue_scripts', array( $this, 'pa_admin_page_scripts' ) );
+        
         add_action( 'wp_ajax_pa_save_admin_addons_settings', array( $this, 'pa_save_settings_with_ajax' ) );
+        
         add_action('admin_enqueue_scripts',array( $this, 'localize_js_script' ) );
+        
+        add_filter( 'plugin_action_links_' . PREMIUM_ADDONS_BASENAME, array( $this, 'plugin_settings_page' ) );
+        
     }
+    
+    /*
+    * Creates `Settings` action link
+    * @since 1.0.0
+    * @return void
+    */
+   public function plugin_settings_page( $links ) {
+
+       $settings_link = sprintf( '<a href="%1$s">%2$s</a>', admin_url( 'admin.php?page=' . $this->page_slug ), __( 'Settings', 'premium-addons-for-elementor' ) );
+
+       array_unshift( $links, $settings_link );
+
+       return $links;
+   }
     
     public function localize_js_script(){
         wp_localize_script(

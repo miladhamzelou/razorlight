@@ -32,14 +32,15 @@ body {
 */
 .site-header {
   padding: 0;
-  background-color: #7c9298;
+  background-color: #8b593c;
 }
 
-.site-header .main-navigation {
-  letter-spacing: .24em;
+.site-header .main-navigation a:active {
+  border: none;
+  text-decoration: none;
 }
 
-.site-header .main-navigation a {
+.site-header a {
   color: #0F120F;
   font-family: Giorgio;
 }
@@ -51,13 +52,13 @@ body {
   background: #fff;
   color: #0F120F;
   padding-bottom: 25px;
-  background-color: #7c9298;
+  background-color: #8b593c;
 }
 
 .site-header .site-branding-container .site-branding {
   margin-top: 2rem;
   line-height: 1rem;
-  background-color: #7c9298;
+  background-color: #8b593c;
   padding-bottom: 3%;
 }
 
@@ -108,7 +109,7 @@ body {
   margin-top: -3px;
   margin-right: 400px;
   overflow: visible;
-  background: #7c9298;
+  background: #8b593c;
   border-radius: 0;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;

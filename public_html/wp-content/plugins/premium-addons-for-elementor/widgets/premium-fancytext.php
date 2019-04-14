@@ -271,16 +271,44 @@ class Premium_Fancytext extends Widget_Base {
         
         /*Pause on Hover*/
         $this->add_control('premium_slide_up_hover_pause',
-                [
-                    'label'         => __('Pause on Hover','premium-addons-for-elementor'),
-                    'type'          => Controls_Manager::SWITCHER,
-                    'description'   => __( 'If you enabled this option, the slide will be paused when mouseover.', 'premium-addons-for-elementor' ),
-                    'default'       => 'no',
-                    'condition'     => [
-                        'premium_fancy_text_effect' => 'slide',
+            [
+                'label'         => __('Pause on Hover','premium-addons-for-elementor'),
+                'type'          => Controls_Manager::SWITCHER,
+                'description'   => __( 'If you enabled this option, the slide will be paused when mouseover.', 'premium-addons-for-elementor' ),
+                'default'       => 'no',
+                'condition'     => [
+                    'premium_fancy_text_effect' => 'slide',
+                ],
+            ]
+        );
+        
+        $this->add_responsive_control('premium_fancy_slide_align',
+            [
+                'label'         => __( 'Fancy Text Alignment', 'premium-addons-for-elementor' ),
+                'type'          => Controls_Manager::CHOOSE,
+                'options'       => [
+                    'left'      => [
+                        'title'=> __( 'Left', 'premium-addons-for-elementor' ),
+                        'icon' => 'fa fa-align-left',
                         ],
-                    ]
-                );
+                    'center'    => [
+                        'title'=> __( 'Center', 'premium-addons-for-elementor' ),
+                        'icon' => 'fa fa-align-center',
+                        ],
+                    'right'     => [
+                        'title'=> __( 'Right', 'premium-addons-for-elementor' ),
+                        'icon' => 'fa fa-align-right',
+                        ],
+                    ],
+                'default'       => 'center',
+                'selectors'     => [
+                    '{{WRAPPER}} .premium-fancy-list-items' => 'text-align: {{VALUE}};',
+                ],
+                'condition'     => [
+                    'premium_fancy_text_effect' => 'slide',
+                ],
+            ]
+        );
        
         $this->end_controls_section();
         
@@ -327,6 +355,14 @@ class Premium_Fancytext extends Widget_Base {
                     ]
                 ]
                 );
+        
+        $this->add_group_control(
+            Group_Control_Text_Shadow::get_type(),
+            [
+                'name'          => 'text_shadow',
+                'selector'      => '{{WRAPPER}} .premium-fancy-text',
+            ]
+        );
       
         /*End Fancy Text Settings Tab*/
         $this->end_controls_section();

@@ -1,9 +1,11 @@
 <?php
+
 namespace Elementor;
 
 if ( ! defined( 'ABSPATH' ) ) exit; // If this file is called directly, abort.
 
 class Premium_Progressbar extends Widget_Base {
+    
     public function get_name() {
         return 'premium-addon-progressbar';
     }
@@ -94,24 +96,24 @@ class Premium_Progressbar extends Widget_Base {
         $repeater->add_control('number',
             [
                 'label'             => __( 'Percentage', 'premium-addons-for-elementor' ),
-                'type'              => Controls_Manager::NUMBER,
-                'label_block'       => true,
+                'dynamic'           => [ 'active' => true ],
+                'type'              => Controls_Manager::TEXT,
                 'default'           => 50,
             ]
         );
         
         $this->add_control('premium_progressbar_multiple_label',
-                [
-                    'label'     => __('Label','premium-addons-for-elementor'),
-                    'type'      => Controls_Manager::REPEATER,
-                    'default'   => [
-                        [
-                            'text' => __( 'Label','premium-addons-for-elementor' ),
-                            'number' => 50
-                        ]
-                        ],
-                    'fields'    => array_values( $repeater->get_controls() ),
-                    'condition' => [
+            [
+                'label'     => __('Label','premium-addons-for-elementor'),
+                'type'      => Controls_Manager::REPEATER,
+                'default'   => [
+                    [
+                        'text' => __( 'Label','premium-addons-for-elementor' ),
+                        'number' => 50
+                    ]
+                    ],
+                'fields'    => array_values( $repeater->get_controls() ),
+                'condition' => [
                     'premium_progressbar_select_label'  =>'more_labels'
                 ] 
             ]
@@ -175,11 +177,9 @@ class Premium_Progressbar extends Widget_Base {
         $this->add_control('premium_progressbar_progress_percentage',
             [
                 'label'             => __('Value', 'premium-addons-for-elementor'),
-                'type'              => Controls_Manager::SLIDER,
-                'default'           => [
-                    'size' => 50,
-                    'unit' =>  '%',
-                ],
+                'type'              => Controls_Manager::TEXT,
+                'dynamic'           => [ 'active' => true ],
+                'default'           => 50
             ]
         );
         
@@ -584,8 +584,10 @@ class Premium_Progressbar extends Widget_Base {
         $this->add_inline_editing_attributes('premium_progressbar_left_label');
         $this->add_inline_editing_attributes('premium_progressbar_right_label');
         
+        $length = isset ( $settings['premium_progressbar_progress_percentage']['size'] ) ? $settings['premium_progressbar_progress_percentage']['size'] : $settings['premium_progressbar_progress_percentage'];
+        
         $progressbar_settings = [
-            'progress_length'   => $settings['premium_progressbar_progress_percentage']['size'],
+            'progress_length'   => $length,
             'speed'             => !empty( $settings['premium_progressbar_speed'] ) ? $settings['premium_progressbar_speed'] : 1000
         ];
 ?>

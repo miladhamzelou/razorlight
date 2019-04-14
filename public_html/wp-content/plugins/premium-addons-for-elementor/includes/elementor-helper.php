@@ -68,7 +68,7 @@ class premium_Template_Tags {
 		return $this->options;
 	}
 
-	public function get_elementor_page_list(){
+	public function get_elementor_page_list() {
 		$pagelist = get_posts(array(
 			'post_type' => 'elementor_library',
 			'showposts' => 999,
