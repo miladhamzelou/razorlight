@@ -57,7 +57,7 @@ if( ! class_exists( 'ACF_Field_For_Contact_form_7_V5' ) ) {
 						if ( $contect_object ) {
 							return $form;
 						} else {
-							echo do_shortcode( '[contact-form-7 id="' . $form->id() . '" title="' . $form->title() . ']' );
+							return do_shortcode( '[contact-form-7 id="' . $form->id() . '" title="' . $form->title() . ']' );
 						}
 					}
 				}

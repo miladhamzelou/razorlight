@@ -4,6 +4,7 @@ namespace Elementor;
 if ( ! defined( 'ABSPATH' ) ) exit; // If this file is called directly, abort.
 
 class Premium_Person extends Widget_Base {
+    
     public function get_name() {
         return 'premium-addon-person';
     }
@@ -286,6 +287,16 @@ class Premium_Person extends Widget_Base {
         $this->add_control('premium_person_instagram',
                 [
                     'label'         => __('Instagram', 'premium-addons-for-elementor'),
+                    'type'          => Controls_Manager::TEXT,
+                    'dynamic'       => [ 'active' => true ],
+                    'label_block'   => true,
+                    ]
+                );
+        
+        /*Person Skype*/
+        $this->add_control('premium_person_skype',
+                [
+                    'label'         => __('Skype', 'premium-addons-for-elementor'),
                     'type'          => Controls_Manager::TEXT,
                     'dynamic'       => [ 'active' => true ],
                     'label_block'   => true,
@@ -595,6 +606,7 @@ class Premium_Person extends Widget_Base {
                     <?php if( !empty( $settings['premium_person_youtube'] ) ) : ?><li class="premium-person-list-item premium-person-youtube"><a href="<?php echo $settings['premium_person_youtube']; ?>" target="_blank"><i class="fa fa-youtube"></i></a></li><?php endif; ?>
                     
                     <?php if( !empty( $settings['premium_person_instagram'] ) ) : ?><li class="premium-person-list-item premium-person-instagram"><a href="<?php echo $settings['premium_person_instagram']; ?>" target="_blank"><i class="fa fa-instagram"></i></a></li><?php endif; ?>
+                    <?php if( !empty( $settings['premium_person_skype'] ) ) : ?><li class="premium-person-list-item premium-person-skype"><a href="<?php echo $settings['premium_person_skype']; ?>" target="_blank"><i class="fa fa-skype"></i></a></li><?php endif; ?>
                     <?php if( !empty( $settings['premium_person_pinterest'] ) ) : ?><li class="premium-person-list-item premium-person-pinterest"><a href="<?php echo $settings['premium_person_pinterest']; ?>" target="_blank"><i class="fa fa-pinterest"></i></a></li><?php endif; ?>
                     <?php if( !empty( $settings['premium_person_dribbble'] ) ) : ?><li class="premium-person-list-item premium-person-dribbble"><a href="<?php echo $settings['premium_person_dribbble']; ?>" target="_blank"><i class="fa fa-dribbble"></i></a></li><?php endif; ?>
                     <?php if( !empty( $settings['premium_person_behance'] ) ) : ?><li class="premium-person-list-item premium-person-behance"><a href="<?php echo $settings['premium_person_behance']; ?>" target="_blank"><i class="fa fa-behance"></i></a></li><?php endif; ?>
@@ -672,6 +684,10 @@ class Premium_Person extends Widget_Base {
                         
                         <# if( '' != settings.premium_person_instagram ) { #>
                             <li class="premium-person-list-item premium-person-instagram"><a href="{{ settings.premium_person_instagram }}" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                        <# } #>
+                        
+                        <# if( '' != settings.premium_person_skype) { #>
+                            <li class="premium-person-list-item premium-person-skype"><a href="{{ settings.premium_person_skype }}" target="_blank"><i class="fa fa-skype"></i></a></li>
                         <# } #>
                         
                         <# if( '' != settings.premium_person_pinterest  ) { #>

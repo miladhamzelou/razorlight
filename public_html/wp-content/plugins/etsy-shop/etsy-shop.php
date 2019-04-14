@@ -9,11 +9,11 @@ Description: Inserts Etsy products in page or post using bracket/shortcode metho
 Author: Frédéric Sheedy
 Text Domain: etsy-shop
 Domain Path: /languages
-Version: 2.0
+Version: 2.1
 */
 
 /*
- * Copyright 2011-2018  Frédéric Sheedy  (email : sheedf@gmail.com)
+ * Copyright 2011-2019  Frédéric Sheedy  (email : sheedf@gmail.com)
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License, version 2, as
@@ -37,7 +37,7 @@ Version: 2.0
  * TODO: Add MCE Button
  */
 
-define( 'ETSY_SHOP_VERSION',  '2.0');
+define( 'ETSY_SHOP_VERSION',  '2.1');
 
 // load translation
 add_action( 'init', 'etsy_shop_load_translation_file' );
@@ -397,11 +397,6 @@ function etsy_shop_api_request( $etsy_request, $args = NULL, $noDebug = NULL ) {
 }
 
 function etsy_shop_generateListing($listing_id, $title, $state, $price, $currency_code, $quantity, $url, $imgurl, $target, $show_available_tag, $width = "172px", $height = "135px") {
-    if ( strlen( $title ) > 18 ) {
-        $title = substr( $title, 0, 25 );
-        $title .= "...";
-    }
-
     // if the Shop Item is active
     if ( $state == 'active' ) {
 

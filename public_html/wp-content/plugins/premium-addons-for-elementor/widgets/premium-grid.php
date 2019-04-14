@@ -28,7 +28,7 @@ class Premium_Grid extends Widget_Base {
         ];
     }
     
-    public function get_script_depends(){
+    public function get_script_depends() {
         return [
             'prettyPhoto-js',
             'isotope-js',
@@ -93,15 +93,87 @@ class Premium_Grid extends Widget_Base {
 					'16.66%'    => __( '6 Columns', 'premium-addons-for-elementor' ),
                     '8.33%'     => __( '12 Columns', 'premium-addons-for-elementor' ),
 				],
-				'selectors' => [
-					'{{WRAPPER}} .premium-gallery-container div.premium-gallery-item' => 'width: {{VALUE}};',
-				],
                 'condition'             => [
-                    'premium_gallery_img_size_select!'   => 'metro'
+                    'premium_gallery_img_size_select!'  => 'metro'
                 ],
+				'selectors' => [
+					'{{WRAPPER}} .premium-img-gallery-masonry div.premium-gallery-item, {{WRAPPER}} .premium-img-gallery-fitRows div.premium-gallery-item' => 'width: {{VALUE}};',
+				],
 				'render_type' => 'template'
 			]
 		);
+        
+        $this->add_control( 'premium_gallery_load_more', 
+            [
+                'label'         => __( 'Load More Button', 'premium-addons-for-elementor' ),
+                'description'   => __('Requires number of images larger than 6', 'premium-addons-for-elementor'),
+                'type'          => Controls_Manager::SWITCHER
+            ]
+        );
+        
+        $this->add_control( 'premium_gallery_load_more_text', 
+            [
+                'label'     => __( 'Button Text', 'premium-addons-for-elementor' ),
+                'type'      => Controls_Manager::TEXT,
+                'default'   => __('Load More', 'premium-addons-for-elementor'),
+                'dynamic'   => [ 'active' => true ],
+                'condition' => [
+                    'premium_gallery_load_more'    => 'yes'
+                ]
+            ]
+        );
+        
+        $this->add_control( 'premium_gallery_load_minimum',
+            [
+                'label'         => __('Minimum Number of Images', 'premium-addons-for-elementor'),
+                'type'          => Controls_Manager::NUMBER,
+                'description'   => __('Set the minimum number of images before showing load more button', 'premium-addons-for-elementor'),
+                'default'       => 6,
+                'condition' => [
+                    'premium_gallery_load_more'    => 'yes'
+                ]
+            ]
+        );
+        
+        $this->add_control( 'premium_gallery_load_click_number',
+            [
+                'label'         => __('Images to Show', 'premium-addons-for-elementor'),
+                'type'          => Controls_Manager::NUMBER,
+                'description'   => __('Set the minimum number of images to show with each click', 'premium-addons-for-elementor'),
+                'default'       => 6,
+                'condition' => [
+                    'premium_gallery_load_more'    => 'yes'
+                ]
+            ]
+        );
+        
+        $this->add_responsive_control('premium_gallery_load_more_align',
+            [
+                'label'         => __( 'Button Alignment', 'premium-addons-for-elementor' ),
+                'type'          => Controls_Manager::CHOOSE,
+                'options'       => [
+                    'left'      => [
+                        'title'=> __( 'Left', 'premium-addons-for-elementor' ),
+                        'icon' => 'fa fa-align-left',
+                    ],
+                    'center'    => [
+                        'title'=> __( 'Center', 'premium-addons-for-elementor' ),
+                        'icon' => 'fa fa-align-center',
+                    ],
+                    'right'     => [
+                        'title'=> __( 'Right', 'premium-addons-for-elementor' ),
+                        'icon' => 'fa fa-align-right',
+                    ],
+                ],
+                'default'       => 'center',
+                'selectors'     => [
+                    '{{WRAPPER}} .premium-gallery-load-more' => 'text-align: {{VALUE}};',
+                ],
+                'condition' => [
+                    'premium_gallery_load_more'    => 'yes'
+                ]
+            ]
+        );
         
         $this->end_controls_section();
         
@@ -206,35 +278,49 @@ class Premium_Grid extends Widget_Base {
                 ],
             ]);
         
-        $img_repeater->add_responsive_control('premium_gallery_image_width',
+        $img_repeater->add_responsive_control('premium_gallery_image_cell',
 			[
   				'label'                 => __( 'Width', 'premium-addons-for-elementor' ),
                 'description'           => __('Works only when layout set to \'Metro\'', 'premium-addons-for-elementor'),
 				'label_block'           => true,
-				'type'                  => Controls_Manager::SELECT,				
-				'desktop_default'       => '50%',
-				'tablet_default'        => '100%',
-				'mobile_default'        => '100%',
-				'options'               => [
-					'100%'      => __( 'Full Column', 'premium-addons-for-elementor' ),
-                    '75%'       => __( '3/4 Column', 'premium-addons-for-elementor' ),
-					'50%'       => __( '1/2 Column', 'premium-addons-for-elementor' ),
-					'33.330%'   => __( '1/3 Column', 'premium-addons-for-elementor' ),
-					'25%'       => __( '1/4 Column', 'premium-addons-for-elementor' ),
-					'20%'       => __( '1/5 Column', 'premium-addons-for-elementor' ),
-					'16.66%'    => __( '1/6 Column', 'premium-addons-for-elementor' ),
-                    '8.33%'     => __( '1/12 Column', 'premium-addons-for-elementor' ),
-				],
-				'selectors' => [
-					'{{WRAPPER}} .premium-gallery-container {{CURRENT_ITEM}}' => 'width: {{VALUE}};',
-				],
+                'default'               => [
+                    'unit'  => 'px',
+                    'size'  => 4
+                ],
+				'type'                  => Controls_Manager::SLIDER,
+                'range'         => [
+                    'px'    => [
+                        'min'   => 1, 
+                        'max'   => 12,
+                    ],
+                ],
+				'render_type' => 'template'
+			]
+		);
+        
+        $img_repeater->add_responsive_control('premium_gallery_image_vcell',
+			[
+  				'label'                 => __( 'Height', 'premium-addons-for-elementor' ),
+                'description'           => __('Works only when layout set to \'Metro\'', 'premium-addons-for-elementor'),
+				'label_block'           => true,
+				'type'                  => Controls_Manager::SLIDER,
+                'default'               => [
+                    'unit'  => 'px',
+                    'size'  => 4
+                ],
+                'range'         => [
+                    'px'    => [
+                        'min'   => 1, 
+                        'max'   => 12,
+                    ],
+                ],
 				'render_type' => 'template'
 			]
 		);
         
         $img_repeater->add_control('premium_gallery_img_name', 
             [
-                'label' => __( 'Name', 'premium-addons-for-elementor' ),
+                'label' => __( 'Title', 'premium-addons-for-elementor' ),
                 'type' => Controls_Manager::TEXT,
                 'dynamic'       => [ 'active' => true ],
                 'label_block'   => true,
@@ -252,6 +338,7 @@ class Premium_Grid extends Widget_Base {
             [
                 'label' => __( 'Category', 'premium-addons-for-elementor' ),
                 'type' => Controls_Manager::TEXT,
+                'description'=> __('To assign for multiple categories, separate by a comma \',\'','premium-addons-for-elementor'),
                 'dynamic'       => [ 'active' => true ],
             ]);
         
@@ -271,6 +358,7 @@ class Premium_Grid extends Widget_Base {
             [
                 'label'         => __('Link', 'premium-addons-for-elementor'),
                 'type'          => Controls_Manager::URL,
+                'dynamic'       => [ 'active' => true ],
                 'placeholder'   => 'https://premiumaddons.com/',
                 'label_block'   => true,
                 'condition'     => [
@@ -982,6 +1070,10 @@ class Premium_Grid extends Widget_Base {
                     ]
                 ]);
         
+        $this->end_controls_tab();
+        
+        $this->end_controls_tabs();
+        
         $this->end_controls_section();
         
         $this->start_controls_section('premium_gallery_filter_style',
@@ -1119,6 +1211,223 @@ class Premium_Grid extends Widget_Base {
         
         $this->end_controls_section();
         
+        $this->start_controls_section('premium_gallery_button_style_settings',
+            [
+                'label'         => __('Load More Button', 'premium-addons-for-elementor'),
+                'tab'           => Controls_Manager::TAB_STYLE,
+                'condition'     => [
+                    'premium_gallery_load_more'  => 'yes',
+                ]
+            ]
+        );
+
+        $this->add_group_control(
+            Group_Control_Typography::get_type(),
+                [
+                    'name'          => 'premium_gallery_button_typo',
+                    'scheme'        => Scheme_Typography::TYPOGRAPHY_1,
+                    'selector'      => '{{WRAPPER}} .premium-gallery-load-more-btn',
+            ]
+        );
+
+        $this->start_controls_tabs('premium_gallery_button_style_tabs');
+
+        $this->start_controls_tab('premium_gallery_button_style_normal',
+            [
+                'label'         => __('Normal', 'premium-addons-for-elementor'),
+            ]
+        );
+
+        $this->add_control('premium_gallery_button_color',
+            [
+                'label'         => __('Text Color', 'premium-addons-for-elementor'),
+                'type'          => Controls_Manager::COLOR,
+                'scheme'        => [
+                    'type'  => Scheme_Color::get_type(),
+                    'value' => Scheme_Color::COLOR_2,
+                ],
+                'selectors'     => [
+                    '{{WRAPPER}} .premium-gallery-load-more-btn'  => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .premium-gallery-load-more-btn .premium-loader'  => 'border-color: {{VALUE}};',
+                    ]
+                ]
+            );
+        
+        $this->add_control('premium_gallery_button_spin_color',
+            [
+                'label'         => __('Spinner Color', 'premium-addons-for-elementor'),
+                'type'          => Controls_Manager::COLOR,
+                'scheme'        => [
+                    'type'  => Scheme_Color::get_type(),
+                    'value' => Scheme_Color::COLOR_2,
+                ],
+                'selectors'     => [
+                    '{{WRAPPER}} .premium-gallery-load-more-btn .premium-loader'  => 'border-top-color: {{VALUE}};'
+                    ]
+                ]
+            );
+
+        $this->add_group_control(
+            Group_Control_Text_Shadow::get_type(),
+            [
+                'name'          => 'premium_gallery_button_text_shadow',
+                'selector'      => '{{WRAPPER}} .premium-gallery-load-more-btn',
+            ]
+        );
+
+        $this->add_group_control(
+            Group_Control_Background::get_type(),
+            [
+                'name'              => 'premium_gallery_button_background',
+                'types'             => [ 'classic' , 'gradient' ],
+                'selector'          => '{{WRAPPER}} .premium-gallery-load-more-btn',
+            ]
+        );
+
+        $this->add_group_control(
+            Group_Control_Border::get_type(), 
+            [
+                'name'          => 'premium_gallery_button_border',
+                'selector'      => '{{WRAPPER}} .premium-gallery-load-more-btn',
+            ]
+        );
+
+        $this->add_control('premium_gallery_button_border_radius',
+            [
+                'label'         => __('Border Radius', 'premium-addons-for-elementor'),
+                'type'          => Controls_Manager::SLIDER,
+                'size_units'    => ['px', 'em' , '%'],
+                'selectors'     => [
+                    '{{WRAPPER}} .premium-gallery-load-more-btn' => 'border-radius: {{SIZE}}{{UNIT}};'
+                ]
+            ]
+        );
+
+        $this->add_group_control(
+            Group_Control_Box_Shadow::get_type(),
+            [
+                'name'          => 'premium_gallery_button_box_shadow',
+                'selector'      => '{{WRAPPER}} .premium-gallery-load-more-btn',
+            ]
+        );
+
+        $this->add_responsive_control('premium_gallery_button_margin',
+            [
+                'label'         => __('Margin', 'premium-addons-for-elementor'),
+                'type'          => Controls_Manager::DIMENSIONS,
+                'size_units'    => ['px', 'em', '%'],
+                'selectors'     => [
+                    '{{WRAPPER}} .premium-gallery-load-more-btn' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                ]
+            ]
+        );
+
+        $this->add_responsive_control('premium_gallery_button_padding',
+            [
+                'label'         => __('Padding', 'premium-addons-for-elementor'),
+                'type'          => Controls_Manager::DIMENSIONS,
+                'size_units'    => ['px', 'em', '%'],
+                'selectors'     => [
+                    '{{WRAPPER}} .premium-gallery-load-more-btn' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                ]
+            ]
+        );
+
+        $this->end_controls_tab();
+
+        $this->start_controls_tab('premium_gallery_button_style_hover',
+            [
+                'label'         => __('Hover', 'premium-addons-for-elementor'),
+            ]
+        );
+
+        $this->add_control('premium_gallery_button_hover_color',
+            [
+                'label'         => __('Text Hover Color', 'premium-addons-for-elementor'),
+                'type'          => Controls_Manager::COLOR,
+                'scheme'        => [
+                    'type'  => Scheme_Color::get_type(),
+                    'value' => Scheme_Color::COLOR_2,
+                ],
+                'selectors'     => [
+                    '{{WRAPPER}} .premium-gallery-load-more-btn:hover'  => 'color: {{VALUE}};'
+                ]
+            ]
+        );
+
+        $this->add_group_control(
+            Group_Control_Text_Shadow::get_type(),
+            [
+                'name'          => 'premium_gallery_button_text_shadow_hover',
+                'selector'      => '{{WRAPPER}} .premium-gallery-load-more-btn:hover',
+            ]
+        );
+
+        $this->add_group_control(
+            Group_Control_Background::get_type(),
+            [
+                'name'          => 'premium_gallery_button_background_hover',
+                'types'         => [ 'classic' , 'gradient' ],
+                'selector'      => '{{WRAPPER}} .premium-gallery-load-more-btn:hover',
+            ]
+        );
+
+        $this->add_group_control(
+            Group_Control_Border::get_type(), 
+            [
+                'name'          => 'premium_gallery_button_border_hover',
+                'selector'      => '{{WRAPPER}} .premium-gallery-load-more-btn:hover',
+            ]
+        );
+
+        $this->add_control('button_border_radius_hover',
+            [
+                'label'         => __('Border Radius', 'premium-addons-for-elementor'),
+                'type'          => Controls_Manager::SLIDER,
+                'size_units'    => ['px', 'em' , '%' ],                    
+                'selectors'     => [
+                    '{{WRAPPER}} .premium-gallery-load-more-btn:hover' => 'border-radius: {{SIZE}}{{UNIT}};'
+                ]
+            ]
+        );
+
+        $this->add_group_control(
+            Group_Control_Box_Shadow::get_type(),
+            [
+                'name'          => 'premium_gallery_button_shadow_hover',
+                'selector'      => '{{WRAPPER}} .premium-gallery-load-more-btn:hover',
+            ]
+        );
+
+        $this->add_responsive_control('button_margin_hover',
+            [
+                'label'         => __('Margin', 'premium-addons-for-elementor'),
+                'type'          => Controls_Manager::DIMENSIONS,
+                'size_units'    => ['px', 'em', '%'],
+                'selectors'     => [
+                    '{{WRAPPER}} .premium-gallery-load-more-btn:hover' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                ]
+            ]
+        );
+
+        $this->add_responsive_control('premium_gallery_button_padding_hover',
+            [
+                'label'         => __('Padding', 'premium-addons-for-elementor'),
+                'type'          => Controls_Manager::DIMENSIONS,
+                'size_units'    => ['px', 'em', '%'],
+                'selectors'     => [
+                    '{{WRAPPER}} .premium-gallery-load-more-btn:hover' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                ]
+            ]
+        );
+
+
+        $this->end_controls_tab();
+
+        $this->end_controls_tabs();
+
+        $this->end_controls_section();
+        
     }
     
     public function filter_cats( $string ) {
@@ -1139,7 +1448,7 @@ class Premium_Grid extends Widget_Base {
         $settings = $this->get_settings_for_display();
         $filter = $settings['premium_gallery_filter'];
         
-        $number_columns = str_replace(array('%','.'),'', 'premium-grid-'.$settings['premium_gallery_column_number'] );
+//        $number_columns = intval ( 100 / substr( $settings['premium_gallery_column_number'], 0, strpos( $settings['premium_gallery_column_number'], '%') ) );
         
         $layout = $settings['premium_gallery_img_style'];
         $min_size = $settings['premium_gallery_min_range'].'px';
@@ -1159,17 +1468,30 @@ class Premium_Grid extends Widget_Base {
             $settings['premium_gallery_img_size_select'] = 'fitRows';
         }
         
+        $load_more = 'yes' === $settings['premium_gallery_load_more'] ? true : false;
+        $minimum    = ! empty ( $settings['premium_gallery_load_minimum'] ) ? $settings['premium_gallery_load_minimum'] : 6;
+        $click_number = ! empty ( $settings['premium_gallery_load_click_number'] ) ? $settings['premium_gallery_load_click_number'] : 6;
+        
+        
         $grid_settings = [
-            'img_size'  => $settings['premium_gallery_img_size_select'],
-            'filter'    => $settings['premium_gallery_filter'],
-            'light_box' => $settings['premium_gallery_light_box'],
-            'overlay_gallery'   => 'yes' == $settings['premium_gallery_overlay_gallery'] ? true : false,
-            'active_cat'=> $category_formatted
+            'img_size'      => $settings['premium_gallery_img_size_select'],
+            'filter'        => $settings['premium_gallery_filter'],
+            'light_box'     => $settings['premium_gallery_light_box'],
+            'overlay_gallery'=> 'yes' === $settings['premium_gallery_overlay_gallery'] ? true : false,
+            'active_cat'    => $category_formatted,
+            'load_more'     => $load_more,
+            'minimum'       => $minimum,
+            'click_images'  => $click_number
         ];
 
-        $this->add_render_attribute( 'grid', 'id', 'premium-img-gallery-' . esc_attr( $this->get_id() ) );
-        
-        $this->add_render_attribute( 'grid', 'class', 'premium-img-gallery' );
+        $this->add_render_attribute( 'grid', [
+                'id'            => 'premium-img-gallery-' . esc_attr( $this->get_id() ),
+                'class'         => [
+                    'premium-img-gallery',
+                    'premium-img-gallery-' . $settings['premium_gallery_img_size_select']
+                ]
+            ]
+        ); 
         
         $active_category_index = $settings['premium_gallery_first_cat_switcher'] == 'yes' ? $settings['premium_gallery_active_cat'] - 1 : $settings['premium_gallery_active_cat'];
         
@@ -1217,7 +1539,7 @@ class Premium_Grid extends Widget_Base {
                 </div>
         <?php endif; ?>
         
-        <div class="premium-gallery-container js-isotope <?php echo esc_attr( $number_columns ); ?>" data-settings='<?php echo wp_json_encode($grid_settings); ?>'>
+        <div class="premium-gallery-container js-isotope" data-settings='<?php echo wp_json_encode($grid_settings); ?>'>
             <?php if ( 'metro' === $settings['premium_gallery_img_size_select'] ) : ?>
                 <div class="grid-sizer"></div>
             <?php endif;
@@ -1234,12 +1556,26 @@ class Premium_Grid extends Widget_Base {
                         ]
                     ]
                 );
+                
+                if ( 'metro' === $settings['premium_gallery_img_size_select'] ) {
+                    
+                    $cells = [
+                        'cells'         => $image['premium_gallery_image_cell']['size'],
+                        'vcells'         => $image['premium_gallery_image_vcell']['size'],
+                        'cells_tablet'  => $image['premium_gallery_image_cell_tablet']['size'],
+                        'vcells_tablet'  => $image['premium_gallery_image_vcell_tablet']['size'],
+                        'cells_mobile'  => $image['premium_gallery_image_cell_mobile']['size'],
+                        'vcells_mobile'  => $image['premium_gallery_image_vcell_mobile']['size'],
+                    ];
+                    
+                    $this->add_render_attribute( $key, 'data-metro', wp_json_encode( $cells )  );
+                }
             
             ?>
-            <div <?php echo $this->get_render_attribute_string($key); ?>>
-                <div class="pa-gallery-img <?php echo esc_attr($layout); ?>" onclick="">
-                    <div class="pa-gallery-img-container <?php echo esc_attr($settings['premium_gallery_img_effect']); ?>">
-                        <?php if($settings['premium_gallery_img_size_select'] == 'fitRows') :
+            <div <?php echo $this->get_render_attribute_string( $key ); ?>>
+                <div class="pa-gallery-img <?php echo esc_attr( $layout ); ?>" onclick="">
+                    <div class="pa-gallery-img-container <?php echo esc_attr( $settings['premium_gallery_img_effect'] ); ?>">
+                        <?php if( $settings['premium_gallery_img_size_select'] == 'fitRows' ) :
                             $image_src = $image['premium_gallery_img'];
                             $image_src_size = Group_Control_Image_Size::get_attachment_image_src( $image_src['id'], 'thumbnail', $settings );
                             if( empty( $image_src_size ) ) : $image_src_size = $image_src['url']; else: $image_src_size = $image_src_size; endif;
@@ -1264,19 +1600,19 @@ class Premium_Grid extends Widget_Base {
                                 $icon_link = get_permalink($image['premium_gallery_img_existing']);
                                 ?>
                             <a href="<?php echo esc_attr( $icon_link ); ?>" class="pa-gallery-img-link"><span><i class="fa fa-link"></i></span></a>
-                            <?php elseif( $image['premium_gallery_lightbox_whole'] == 'yes' && $settings['premium_gallery_light_box'] == 'yes' ) : ?>
-                            <a href="<?php echo esc_attr( $image['premium_gallery_img']['url'] ); ?>" class="pa-gallery-whole-link" data-rel="prettyPhoto[premium-grid-<?php echo esc_attr($this->get_id()); ?>]"></a>
-                            <?php endif; ?>                            
+                            <?php endif; ?>
                             </div>
                     </div>
-                    <div class="premium-gallery-caption">
-                                <?php if(!empty($image['premium_gallery_img_name'])):?>
+                    <?php if( ! empty( $image['premium_gallery_img_name'] ) || ! empty( $image['premium_gallery_img_desc'] ) ) : ?>
+                        <div class="premium-gallery-caption">
+                            <?php if( ! empty( $image['premium_gallery_img_name'] ) ) : ?>
                                 <span class="premium-gallery-img-name"><?php echo $image['premium_gallery_img_name']; ?></span>
-                                <?php endif; ?>
-                                <?php if(!empty($image['premium_gallery_img_desc'])):?>
+                            <?php endif; ?>
+                            <?php if( ! empty( $image['premium_gallery_img_desc'] ) ) : ?>
                                 <p class="premium-gallery-img-desc"><?php echo $image['premium_gallery_img_desc']; ?></p>
-                                <?php endif; ?>
-                    </div>
+                            <?php endif; ?>
+                        </div>
+                    <?php endif; ?>
                     <?php else: ?>
                     <div class="pa-gallery-icons-caption-container">
                         <div class="pa-gallery-icons-caption-cell">
@@ -1292,15 +1628,17 @@ class Premium_Grid extends Widget_Base {
                                 $icon_link = get_permalink($image['premium_gallery_img_existing']);
                                 ?>
                             <a href="<?php echo esc_attr( $icon_link ); ?>" class="pa-gallery-img-link"><span><i class="fa fa-link"></i></span></a>
-                            <?php endif; ?>                            
-                            <div class="premium-gallery-caption">    
-                            <?php if(!empty($image['premium_gallery_img_name'])):?>
-                                <span class="premium-gallery-img-name"><?php echo $image['premium_gallery_img_name']; ?></span>
                             <?php endif; ?>
-                            <?php if(!empty($image['premium_gallery_img_desc'])):?>
-                                <p class="premium-gallery-img-desc"><?php echo $image['premium_gallery_img_desc']; ?></p>
-                            <?php endif; ?>
+                            <?php if( ! empty( $image['premium_gallery_img_name'] ) || ! empty( $image['premium_gallery_img_desc'] ) ) : ?>
+                            <div class="premium-gallery-caption">
+                                <?php if( ! empty( $image['premium_gallery_img_name'] ) ) : ?>
+                                    <span class="premium-gallery-img-name"><?php echo $image['premium_gallery_img_name']; ?></span>
+                                <?php endif; ?>
+                                <?php if( ! empty( $image['premium_gallery_img_desc'] ) ) : ?>
+                                    <p class="premium-gallery-img-desc"><?php echo $image['premium_gallery_img_desc']; ?></p>
+                                <?php endif; ?>
                             </div>
+                            <?php endif; ?>
                         </div>
                     </div>
                     <?php endif; ?>
@@ -1320,8 +1658,13 @@ class Premium_Grid extends Widget_Base {
             </div>
             <?php endforeach; ?>
         </div>
+        <?php if ( $settings['premium_gallery_load_more'] === 'yes' ) : ?>
+        <div class="premium-gallery-load-more premium-gallery-btn-hidden">
+            <button class="premium-gallery-load-more-btn"><span><?php echo $settings['premium_gallery_load_more_text']; ?></span><div class="premium-loader" ></div></button>
+        </div>
+        <?php endif; ?>
     </div>
-        <?php if($settings['premium_gallery_responsive_switcher'] == 'yes') : ?>
+        <?php if($settings['premium_gallery_responsive_switcher'] === 'yes') : ?>
         <style>
             @media(min-width: <?php echo $min_size; ?> ) and (max-width:<?php echo $max_size; ?>){
                 #premium-img-gallery-<?php echo esc_attr($this->get_id()); ?> .premium-gallery-caption {

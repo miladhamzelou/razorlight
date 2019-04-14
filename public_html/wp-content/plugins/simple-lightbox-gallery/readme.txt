@@ -3,8 +3,8 @@ Contributors: weblizar
 Donate link: https://weblizar.com/lightbox-slider-pro/
 Tags: gallery, image, photo, lightbox, image gallery with lightbox, ligthbox gallery
 Requires at least: 4.0
-Tested up to: 5.0.3
-Stable tag: 1.6.6
+Tested up to: 5.1
+Stable tag: 1.6.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -148,6 +148,9 @@ Please use WordPress [support forum](http://wordpress.org/support/plugin/simple-
 == Changelog ==
 
 For more information, see [Weblizar](https://weblizar.com/).
+
+= 1.6.7 = 
+*  version update + compatible with wordpress 5.1
 
 = 1.6.6 = 
 *  version update + compatible with wordpress 5.0.3

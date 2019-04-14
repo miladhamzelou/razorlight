@@ -80,7 +80,6 @@ class Premium_Image_Separator extends Widget_Base {
                     'type'          => Controls_Manager::NUMBER,
                     'default'       => -50,
                     'description'   => __('-50% is default. Increase to push the image outside or decrease to pull the image inside.','premium-addons-for-elementor'),
-                    'label_block'   => true,
                     'selectors'     => [
                         '{{WRAPPER}} .premium-image-separator-container' => 'transform: translateY( {{VALUE}}% );'
                         
@@ -153,7 +152,6 @@ class Premium_Image_Separator extends Widget_Base {
                 ]
                 );
         
-         /*Link Below Image*/
         $this->add_control('premium_image_separator_image_link',
                 [
                     'label'         => __('URL', 'premium-addons-for-elementor'),
@@ -166,8 +164,6 @@ class Premium_Image_Separator extends Widget_Base {
                 ]
                 );
         
-        
-        /*Link Below Image*/
         $this->add_control('premium_image_separator_image_link_text',
                 [
                     'label'         => __('Image Hovering Title', 'premium-addons-for-elementor'),

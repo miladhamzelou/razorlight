@@ -12,7 +12,7 @@ class Premium_Modalbox extends Widget_Base {
         return 'premium-addon-modal-box';
     }
     
-    public function check_rtl(){
+    public function check_rtl() {
         return is_rtl();
     }
 
@@ -24,9 +24,11 @@ class Premium_Modalbox extends Widget_Base {
         return 'pa-modal-box';
     }
 
-    public function get_script_depends()
-    {
-        return ['premium-addons-js','modal-js'];
+    public function get_script_depends() {
+        return [
+            'premium-addons-js',
+            'modal-js'
+        ];
     }
     
     public function get_categories() {
@@ -312,7 +314,7 @@ class Premium_Modalbox extends Widget_Base {
                 ]
                 );
         
-        if( ! $this->check_rtl() ){
+        if( ! $this->check_rtl() ) {
         $this->add_control('premium_modal_box_icon_before_spacing',
                 [
                     'label'         => __('Icon Spacing', 'premium-addons-for-elementor'),
@@ -333,7 +335,7 @@ class Premium_Modalbox extends Widget_Base {
             );
         }
         
-        if( ! $this->check_rtl() ){
+        if( ! $this->check_rtl() ) {
         $this->add_control('premium_modal_box_icon_after_spacing',
                 [
                     'label'         => __('Icon Spacing', 'premium-addons-for-elementor'),
@@ -1313,11 +1315,30 @@ class Premium_Modalbox extends Widget_Base {
         
         $this->add_render_attribute('image', 'src', $settings['premium_modal_box_image_src']['url'] );
         
+        if ( 'image' === $settings['premium_modal_box_display_on'] ) {
+            
+            $alt = Control_Media::get_image_alt( $settings['premium_modal_box_image_src'] );
+            $this->add_render_attribute('image', 'alt', $alt );
+            
+        }
+        
         $this->add_render_attribute('text', 'class', 'premium-modal-box-text-selector' );
         
         $this->add_render_attribute('text', 'data-toggle', 'premium-modal' );
         
         $this->add_render_attribute('text', 'data-target', '#premium-modal-' . $this->get_id() );
+        
+        if (  'fonticon' === $settings['premium_modal_box_icon_selection'] ) {
+            
+            $this->add_render_attribute('title_icon', 'class', $settings['premium_modal_box_font_icon'] );
+            
+        } else { 
+            
+            $this->add_render_attribute('title_icon', 'src', $settings['premium_modal_box_image_icon']['url'] );
+            $alt = Control_Media::get_image_alt( $settings['premium_modal_box_image_icon'] );
+            $this->add_render_attribute('title_icon', 'alt', $alt );
+            
+        }
         
     ?>
 
@@ -1351,12 +1372,12 @@ class Premium_Modalbox extends Widget_Base {
                                 <button type="button" class="premium-modal-box-modal-close" data-dismiss="premium-modal">&times;</button>
                             </div>
                         <?php endif; ?>
-                        <?php if ( !empty( $settings['premium_modal_box_title'] ) ) : ?>
+                        <?php if ( ! empty( $settings['premium_modal_box_title'] ) ) : ?>
                             <h3 class="premium-modal-box-modal-title">
-                                <?php if( $settings['premium_modal_box_icon_selection'] === 'fonticon' ) : ?>
-                                    <i class="fa <?php echo $settings['premium_modal_box_font_icon'];?>"></i>
-                                <?php elseif( $settings['premium_modal_box_icon_selection'] === 'image' ) : ?>
-                                    <img src="<?php echo $settings['premium_modal_box_image_icon']['url'];?>">
+                                <?php if( 'fonticon' === $settings['premium_modal_box_icon_selection'] ) : ?>
+                                    <i <?php echo $this->get_render_attribute_string('title_icon'); ?>></i>
+                                <?php elseif( 'image' === $settings['premium_modal_box_icon_selection'] ) : ?>
+                                    <img <?php echo $this->get_render_attribute_string('title_icon'); ?>>
                                 <?php endif;
                                 echo $settings['premium_modal_box_title']; ?>
                             </h3>

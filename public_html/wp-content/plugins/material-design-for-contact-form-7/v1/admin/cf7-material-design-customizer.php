@@ -92,7 +92,7 @@ class CF7_Material_Design_Customizer
     {
         // Register a new section
         $wp_customize->add_section( 'cf7md_options', array(
-            'title'       => __( 'Material Design Forms' ),
+            'title'       => 'Material Design Forms',
             'description' => 'Customize your Material Design forms',
             'priority'    => 160,
             'capability'  => 'edit_theme_options',

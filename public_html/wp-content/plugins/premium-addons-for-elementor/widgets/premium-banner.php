@@ -78,6 +78,7 @@ class Premium_Banner extends Widget_Base {
 			[
 				'label'			=> __( 'Set custom Link', 'premium-addons-for-elementor' ),
 				'type'			=> Controls_Manager::URL,
+                'dynamic'       => [ 'active' => true ],
 				'description'	=> __( 'What custom link you want to set to banner?', 'premium-addons-for-elementor' ),
 				'condition'		=> [
 					'premium_banner_image_link_switcher' => 'yes',
@@ -324,6 +325,7 @@ class Premium_Banner extends Widget_Base {
             [
                 'label'         => __('Link', 'premium-addons-for-elementor'),
                 'type'          => Controls_Manager::URL,
+                'dynamic'       => [ 'active' => true ],
                 'default'       => [
                     'url'   => '#',
                 ],
@@ -762,9 +764,11 @@ class Premium_Banner extends Widget_Base {
 					<?php endif; ?>
 					<div class="premium_addons-banner-ib-desc">
 						<?php echo $full_title; ?>
-						<div class="premium_addons-banner-ib-content premium_banner_content">
-							<div <?php echo $this->get_render_attribute_string('premium_banner_description'); ?>><?php echo $settings[ 'premium_banner_description' ]; ?></div>
-						</div>
+                        <?php if( ! empty( $settings['premium_banner_description'] ) ) : ?>
+                            <div class="premium_addons-banner-ib-content premium_banner_content">
+                                <div <?php echo $this->get_render_attribute_string('premium_banner_description'); ?>><?php echo $settings[ 'premium_banner_description' ]; ?></div>
+                            </div>
+                        <?php endif; ?>
                     <?php if( 'yes' == $settings['premium_banner_link_switcher'] && !empty( $settings['premium_banner_more_text'] ) ) : ?>
                         
                             <div class ="premium-banner-read-more">

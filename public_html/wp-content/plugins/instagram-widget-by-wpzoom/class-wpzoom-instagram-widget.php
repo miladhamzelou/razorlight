@@ -33,6 +33,7 @@ class Wpzoom_Instagram_Widget extends WP_Widget {
 			'image-width'                   => 120,
 			'image-spacing'                 => 10,
 			'image-resolution'              => 'default_algorithm',
+			'username'                      => '',
 		);
 
 		$this->api = Wpzoom_Instagram_Widget_API::getInstance();
@@ -44,11 +45,8 @@ class Wpzoom_Instagram_Widget extends WP_Widget {
 	 * Widget specific scripts & styles
 	 */
 	public function scripts() {
-		wp_enqueue_style( 'zoom-instagram-widget', plugin_dir_url( dirname( __FILE__ ) . '/instagram-widget-by-wpzoom.php' ) . 'css/instagram-widget.css', array('dashicons'), '1.2.11' );
-		wp_enqueue_script( 'zoom-instagram-widget', plugin_dir_url( dirname( __FILE__ ) . '/instagram-widget-by-wpzoom.php' ) . 'js/instagram-widget.js', array( 'jquery' ), '1.2.10' );
-		wp_localize_script( 'zoom-instagram-widget', 'zoom_instagram_widget', array(
-			'client_id' => $this->api->get_access_token()
-		) );
+		wp_enqueue_style( 'zoom-instagram-widget', plugin_dir_url( dirname( __FILE__ ) . '/instagram-widget-by-wpzoom.php' ) . 'css/instagram-widget.css', array('dashicons'), '1.4.0' );
+		wp_enqueue_script( 'zoom-instagram-widget', plugin_dir_url( dirname( __FILE__ ) . '/instagram-widget-by-wpzoom.php' ) . 'js/instagram-widget.js', array( 'jquery' ), '1.4.0' );
 	}
 
 	/**
@@ -62,37 +60,21 @@ class Wpzoom_Instagram_Widget extends WP_Widget {
 	public function widget( $args, $instance ) {
 		$instance = wp_parse_args( (array) $instance, $this->defaults );
 
-		/**
-		 * Upgrade step from version 1.0.4 to 1.1.0
-		 *
-		 * This code will execute only for first widget that will be displayed.
-		 */
-		if ( false === get_option( 'wpzoom-instagram-widget-settings' ) ) {
-			if ( isset( $instance['access-token'] ) && '' !== $instance['access-token'] ) {
-				update_option(
-					'wpzoom-instagram-widget-settings',
-					array( 'access-token' => $instance['access-token'] )
-				);
-
-				$this->api->set_access_token( $instance['access-token'] );
-			}
-		}
-
 		echo $args['before_widget'];
 
 		if ( $instance['title'] ) {
 			echo $args['before_title'] . apply_filters( 'widget_title', $instance['title'] ) . $args['after_title'];
 		}
 
-		$items = $this->api->get_items( $instance['image-limit'], $instance['image-width'], $instance['image-resolution'] );
 
+		$items = $this->api->get_items( $instance['image-limit'], $instance['image-width'], $instance['image-resolution'], $instance['username'] );
 
 		if ( ! is_array( $items ) ) {
 			$this->display_errors();
 		} else {
 
 			if ( ! empty( $instance['show-user-info'] ) ) {
-				$user_info = $this->api->get_user_info();
+				$user_info = $this->api->get_user_info($instance['username']);
 
 				if (
 					is_object( $user_info ) &&
@@ -131,6 +113,7 @@ class Wpzoom_Instagram_Widget extends WP_Widget {
 		$instance['image-width'] = ( 0 !== (int) $new_instance['image-width'] ) ? (int) $new_instance['image-width'] : null;
 		$instance['image-spacing'] = ( 0 <= (int) $new_instance['image-spacing'] ) ? (int) $new_instance['image-spacing'] : null;
 		$instance['image-resolution'] = !empty($new_instance['image-resolution']) ?  $new_instance['image-resolution'] : $this->defaults['image-resolution'];
+		$instance['username'] = !empty($new_instance['username']) ?  $new_instance['username'] : $this->defaults['username'];
 
 		$instance['show-view-on-instagram-button'] = ! empty( $new_instance['show-view-on-instagram-button'] );
 		$instance['show-counts-on-hover']          = ! empty( $new_instance['show-counts-on-hover'] );
@@ -155,7 +138,7 @@ class Wpzoom_Instagram_Widget extends WP_Widget {
 		$instance = wp_parse_args( (array) $instance, $this->defaults );
 		?>
 
-		<?php if ( ! $this->api->is_configured() ) : ?>
+		<?php if ( empty($instance['username']) && ! $this->api->is_configured() ) : ?>
 
 			<p style="color: #d54e21">
 				<?php
@@ -192,15 +175,27 @@ class Wpzoom_Instagram_Widget extends WP_Widget {
 			<input class="widefat" id="<?php echo $this->get_field_id( 'image-spacing' ); ?>" name="<?php echo $this->get_field_name( 'image-spacing' ); ?>" type="number" min="0" max="50" value="<?php echo esc_attr( $instance['image-spacing'] ); ?>"/>
 		</p>
 
-		<p>
-			<small>
-				<?php
-				echo wp_kses_post(
-					__( 'Fields above do not influence directly widget appearance. Final number of images per row and image width is calculated depending on browser resolution. This ensures your photos look beautiful on all devices.', 'wpzoom-instagram-widget' )
-				);
-				?>
-			</small>
+		<p class="description">
+			<?php
+			echo wp_kses_post(
+				__( 'Fields above do not influence directly widget appearance. Final number of images per row and image width is calculated depending on browser resolution. This ensures your photos look beautiful on all devices.', 'wpzoom-instagram-widget' )
+			);
+			?>
 		</p>
+
+		<p>
+			<label for="<?php echo $this->get_field_id( 'username' ); ?>"><strong><?php esc_html_e( 'Instagram @username:', 'wpzoom-instagram-widget' ); ?></strong></label>
+			<input class="widefat" id="<?php echo $this->get_field_id( 'username' ); ?>" name="<?php echo $this->get_field_name( 'username' ); ?>" type="text" value="<?php echo esc_attr( $instance['username'] ); ?>"/>
+		</p>
+
+        <p class="description">
+
+            <?php
+            printf( __( 'If you have already connected your Instagram account in the <a href="%1$s">plugin settings</a>, leave this field empty. You can use this option if you want to display the feed of a different Instagram account.', 'wpzoom-instagram-widget' ),
+                menu_page_url( 'wpzoom-instagram-widget', false ) );
+             ?>
+
+        </p>
 
 		<p>
 			<label for="<?php echo $this->get_field_id( 'image-resolution' ); ?>"><?php esc_html_e( 'Set forced image resolution:', 'wpzoom-instagram-widget' ); ?></label>

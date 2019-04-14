@@ -2,7 +2,7 @@
 
 namespace PremiumAddons;
 
-if(!defined('ABSPATH')) exit;
+if( ! defined('ABSPATH') ) exit;
 
 class Helper_Functions {
     

@@ -32,6 +32,7 @@ if (isset($_POST['submit-uaf-font'])){
 			'fontfile' 		=> "@".$_FILES['font_file']['tmp_name'],
 			'fontfileext' 	=> pathinfo($_FILES['font_file']['name'], PATHINFO_EXTENSION),
 			'api_key' 		=> $uaf_api_key,
+			'url'			=> $_POST['url'],
 			'font_count'	=> $_POST['font_count']
 		);
 		curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
@@ -165,7 +166,14 @@ $fontsData		= json_decode($fontsRawData, true);
                 <td>&nbsp;
                 	
                 </td>
-                <td><input type="hidden" name="font_count" value="<?php echo count($fontsData); ?>" /><input type="submit" name="submit-uaf-font" class="button-primary" value="Upload" />
+                <td>
+                	
+                	<input type="hidden" name="url" value="<?php echo home_url(); ?>" />
+                	<input type="hidden" name="api_key" value="<?php echo $uaf_api_key; ?>" />
+                	<input type="hidden" name="font_count" value="<?php echo count($fontsData); ?>" />
+               		<input type="submit" name="submit-uaf-font" class="button-primary" value="Upload" />
+
+
                 <p>By clicking on Upload, you confirm that you have rights to use this font.</p>
                 </td>
             </tr>

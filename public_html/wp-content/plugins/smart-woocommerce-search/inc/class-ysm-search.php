@@ -48,6 +48,11 @@ class Ysm_Search
 	 */
 	protected static $display_opts = array();
 	/**
+	 * List of elements that should be displayed in the widget
+	 * @var array
+	 */
+	protected static $settings = array();
+	/**
 	 * Limitation of search results
 	 * @var int
 	 */
@@ -203,6 +208,7 @@ class Ysm_Search
 		}
 
 		$settings = $widgets[ self::$w_id ]['settings'];
+		self::$settings = $settings;
 
 		if (self::$w_id == 'product') {
 
@@ -353,10 +359,6 @@ class Ysm_Search
 
 			if ( $query->is_search() && isset( $_GET['search_id'] ) ) {
 
-				if ( defined( 'DOING_AJAX' ) && DOING_AJAX  ) {
-					return $query;
-				}
-
 				$wp_posts = array();
 				$w_id = $_GET['search_id'];
 				$s = $_GET['s'];
@@ -404,10 +406,7 @@ class Ysm_Search
 					$query->set('orderby' ,'post__in');
 				}
 
-				$query->set('meta_query' ,array());
-				$query->set('tax_query' ,array());
-
-				add_filter( 'posts_where',   array( __CLASS__, 'posts_where' ), 9999 );
+				add_filter( 'posts_where',   array( __CLASS__, 'posts_where' ), 999999 );
 			}
 
 		}
@@ -419,15 +418,8 @@ class Ysm_Search
 	 */
 	public static function remove_search_filter()
 	{
-		global $wp_the_query;
-		if ( ! ( defined( 'DOING_AJAX' ) && DOING_AJAX ) ) {
-
-			if (!empty( $wp_the_query->query_vars['s'] ) && isset($_GET['search_id'])) {
-				remove_filter( 'posts_where',   array( __CLASS__, 'posts_where' ), 9999 );
-				remove_action('pre_get_posts', array( __CLASS__, 'search_filter' ), 9999);
-			}
-
-		}
+		remove_filter( 'posts_where',   array( __CLASS__, 'posts_where' ), 999999 );
+		remove_action('pre_get_posts', array( __CLASS__, 'search_filter' ), 9999);
 	}
 
 	/**
@@ -506,15 +498,6 @@ class Ysm_Search
 			$s_post_types = implode(',', $s_post_types);
 			$where['and'][] = "p.post_type IN ({$s_post_types})";
 
-			/* search exclude */
-			if ( class_exists( 'SearchExclude' ) ) {
-				$search_exclude = get_option( 'sep_exclude', array() );
-				if ( ! empty( $search_exclude ) && is_array( $search_exclude ) ) {
-					$search_exclude = implode(',', $search_exclude);
-					$where['and'][] = "p.ID NOT IN ({$search_exclude})";
-				}
-			}
-
 			/* relevance part */
 			$relevance = array();
 
@@ -574,7 +557,8 @@ class Ysm_Search
 					$where['and'][] = sprintf( "p.ID NOT IN (
 						SELECT DISTINCT t_rel.object_id
 						FROM {$wpdb->term_relationships} t_rel
-						WHERE t_rel.term_taxonomy_id IN (%s)
+						LEFT JOIN {$wpdb->term_taxonomy} t_tax ON t_rel.term_taxonomy_id = t_tax.term_taxonomy_id
+						WHERE t_tax.term_id IN (%s)
 					)", implode( ",", $disallowed_product_cats_filtered ) );
 					$join['pmpv'] = "LEFT JOIN {$wpdb->postmeta} pmpv ON pmpv.post_id = p.ID";
 					$where['and'][] = "( p.post_type NOT IN ('product') OR (p.post_type = 'product' AND pmpv.meta_key = '_visibility' AND CAST(pmpv.meta_value AS CHAR) IN ('search','visible')) )";
@@ -588,11 +572,22 @@ class Ysm_Search
 						$exclude_terms = array_merge( $exclude_terms, $disallowed_product_cats_filtered );
 					}
 
-					$where['and'][] = sprintf( "p.ID NOT IN (
-						SELECT DISTINCT object_id
-						FROM {$wpdb->term_relationships}
-						WHERE term_taxonomy_id IN (%s)
-					)", implode( ",", $exclude_terms ) );
+					if ( $exclude_terms ) {
+						$where['and'][] = sprintf( "p.ID NOT IN (
+							SELECT DISTINCT object_id
+							FROM {$wpdb->term_relationships} t_rel
+							LEFT JOIN {$wpdb->term_taxonomy} t_tax ON t_rel.term_taxonomy_id = t_tax.term_taxonomy_id
+							WHERE t_tax.term_id IN (%s)
+						)", implode( ",", $exclude_terms ) );
+
+						$where['and'][] = sprintf( "( p.post_type NOT IN ('product_variation') OR 
+							( p.post_type = 'product_variation' AND p.post_parent NOT IN (
+								SELECT DISTINCT object_id
+								FROM {$wpdb->term_relationships} t_rel
+								LEFT JOIN {$wpdb->term_taxonomy} t_tax ON t_rel.term_taxonomy_id = t_tax.term_taxonomy_id
+								WHERE t_tax.term_id IN (%s)
+							) ) )", implode( ",", $exclude_terms ) );
+					}
 				}
 
 				if ( ! empty( self::$display_opts['exclude_out_of_stock_products'] ) ) {
@@ -609,9 +604,21 @@ class Ysm_Search
 
 					if ( ! empty( $allowed_product_cats_filtered ) ) {
 						$allowed_product_cats_filtered = implode( ",", $allowed_product_cats_filtered );
-						$where['and'][] = sprintf( "( p.post_type NOT IN ('product') OR ( p.post_type = 'product' AND t_tax.taxonomy = 'product_cat' AND t.term_id IN (%s) ) )", $allowed_product_cats_filtered );
+						$where['and'][] = sprintf( "( p.post_type NOT IN ('product') OR 
+													( p.post_type = 'product' AND p.ID IN (
+							SELECT DISTINCT object_id
+							FROM {$wpdb->term_relationships} t_rel
+							LEFT JOIN {$wpdb->term_taxonomy} t_tax ON t_rel.term_taxonomy_id = t_tax.term_taxonomy_id
+							WHERE t_tax.term_id IN (%s)
+						) ) )", $allowed_product_cats_filtered );
 						// product variations
-						//$where['and'][] = sprintf( "( p.post_type NOT IN ('product_variation') OR ( p.post_type = 'product_variation' AND t_tax.taxonomy = 'product_cat' AND t.term_id IN (%s) ) )", $allowed_product_cats_filtered );
+						$where['and'][] = sprintf( "( p.post_type NOT IN ('product_variation') OR 
+													( p.post_type = 'product_variation' AND p.post_parent IN (
+							SELECT DISTINCT object_id
+							FROM {$wpdb->term_relationships} t_rel
+							LEFT JOIN {$wpdb->term_taxonomy} t_tax ON t_rel.term_taxonomy_id = t_tax.term_taxonomy_id
+							WHERE t_tax.term_id IN (%s)
+						) ) )", $allowed_product_cats_filtered );
 					}
 
 				}
@@ -652,8 +659,8 @@ class Ysm_Search
 				$join['icl'] = $wpdb->prepare( "RIGHT JOIN {$wpdb->prefix}icl_translations icl ON (p.ID = icl.element_id AND icl.language_code = '%s')", ICL_LANGUAGE_CODE );
 			}
 
-			$join = apply_filters('smart_search_query_join', $join);
-			$where = apply_filters('smart_search_query_where', $where);
+			$join = apply_filters( 'smart_search_query_join', $join, self::$settings );
+			$where = apply_filters( 'smart_search_query_where', $where, self::$settings );
 			$orderby[] = "p.post_title ASC";
 
 			$query = "SELECT " . implode(' , ', $select) .
@@ -728,15 +735,6 @@ class Ysm_Search
 		$s_post_types = implode(',', $s_post_types);
 		$where['and'][] = "p.post_type IN ({$s_post_types})";
 
-		/* search exclude */
-		if ( class_exists( 'SearchExclude' ) ) {
-			$search_exclude = get_option( 'sep_exclude', array() );
-			if ( ! empty( $search_exclude ) && is_array( $search_exclude ) ) {
-				$search_exclude = implode(',', $search_exclude);
-				$where['and'][] = "p.ID NOT IN ({$search_exclude})";
-			}
-		}
-
 		/* product visibility */
 		if ( isset(self::$pt['product']) ) {
 
@@ -757,7 +755,8 @@ class Ysm_Search
 				$where['and'][] = sprintf( "p.ID NOT IN (
 						SELECT DISTINCT t_rel.object_id
 						FROM {$wpdb->term_relationships} t_rel
-						WHERE t_rel.term_taxonomy_id IN (%s)
+						LEFT JOIN {$wpdb->term_taxonomy} t_tax ON t_rel.term_taxonomy_id = t_tax.term_taxonomy_id
+						WHERE t_tax.term_id IN (%s)
 					)", implode( ",", $disallowed_product_cats_filtered ) );
 				$join['pmpv'] = "LEFT JOIN {$wpdb->postmeta} pmpv ON pmpv.post_id = p.ID";
 				$where['and'][] = "( p.post_type NOT IN ('product') OR (p.post_type = 'product' AND pmpv.meta_key = '_visibility' AND CAST(pmpv.meta_value AS CHAR) IN ('search','visible')) )";
@@ -771,11 +770,22 @@ class Ysm_Search
 					$exclude_terms = array_merge( $exclude_terms, $disallowed_product_cats_filtered );
 				}
 
-				$where['and'][] = sprintf( "p.ID NOT IN (
-						SELECT DISTINCT object_id
-						FROM {$wpdb->term_relationships}
-						WHERE term_taxonomy_id IN (%s)
-					)", implode( ",", $exclude_terms ) );
+				if ( $exclude_terms ) {
+					$where['and'][] = sprintf( "p.ID NOT IN (
+							SELECT DISTINCT object_id
+							FROM {$wpdb->term_relationships} t_rel
+							LEFT JOIN {$wpdb->term_taxonomy} t_tax ON t_rel.term_taxonomy_id = t_tax.term_taxonomy_id
+							WHERE t_tax.term_id IN (%s)
+						)", implode( ",", $exclude_terms ) );
+
+					$where['and'][] = sprintf( "( p.post_type NOT IN ('product_variation') OR 
+							( p.post_type = 'product_variation' AND p.post_parent NOT IN (
+								SELECT DISTINCT object_id
+								FROM {$wpdb->term_relationships} t_rel
+								LEFT JOIN {$wpdb->term_taxonomy} t_tax ON t_rel.term_taxonomy_id = t_tax.term_taxonomy_id
+								WHERE t_tax.term_id IN (%s)
+							) ) )", implode( ",", $exclude_terms ) );
+				}
 			}
 
 			if ( ! empty( self::$display_opts['exclude_out_of_stock_products'] ) ) {
@@ -826,6 +836,9 @@ class Ysm_Search
 		}
 
 		$orderby[] = "p.post_title ASC";
+
+		$join = apply_filters( 'smart_search_query_join', $join, self::$settings );
+		$where = apply_filters( 'smart_search_query_where', $where, self::$settings );
 
 		$query = "SELECT " . implode(' , ', $select) .
 			" FROM {$wpdb->posts} p
@@ -1064,6 +1077,11 @@ class Ysm_Search
 		$sorted = [];
 		foreach ( $res_posts as $res_post ) {
 			$sorted[ $res_post->ID ] = $res_post;
+			if ( ! isset( $sorted[ $res_post->ID ]->relevance ) ) {
+				$sorted[ $res_post->ID ]->relevance = 0;
+			} else {
+				$sorted[ $res_post->ID ]->relevance = (int) $sorted[ $res_post->ID ]->relevance;
+			}
 			foreach ( self::$s_words as $w ) {
 				$pos = strpos( mb_strtolower( trim( $res_post->post_title ) ), $w );
 				if ( false !== $pos ) {

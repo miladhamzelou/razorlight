@@ -623,6 +623,14 @@ class Premium_Blog extends Widget_Base {
             ]
         );
         
+        $this->add_group_control(
+            Group_Control_Css_Filter::get_type(),
+            [
+                'name' => 'css_filters',
+                'selector' => '{{WRAPPER}} .premium-blog-thumbnail-container img',
+            ]
+        );
+        
         $this->end_controls_section();
         
         $this->start_controls_section('premium_blog_title_style_section',

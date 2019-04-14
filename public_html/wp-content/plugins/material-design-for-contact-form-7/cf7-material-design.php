@@ -10,7 +10,7 @@
  * Plugin Name:       Material Design for Contact Form 7
  * Plugin URI:        https://cf7materialdesign.com
  * Description:       Add Google's Material Design to your Contact Form 7 forms
- * Version:           2.3.2
+ * Version:           2.4.2
  * Author:            Contact Form 7 Addons
  * Author URI:        https://profiles.wordpress.org/contactform7addons/
  * License:           GPL-2.0+
@@ -28,7 +28,7 @@ if ( !function_exists( 'cf7md_fs' ) ) {
     /**
      * Set constants
      */
-    define( 'CF7MD_VER', '2.3.2' );
+    define( 'CF7MD_VER', '2.4.2' );
     define( 'CF7MD_UPDATE_MESSAGE', '1' );
     // Increment this every time a release is made that has a 'new features' message on the plugin page
     define( 'CF7MD_PLUGIN_DIR', plugin_dir_url( __FILE__ ) );
@@ -43,23 +43,24 @@ if ( !function_exists( 'cf7md_fs' ) ) {
             // Include Freemius SDK.
             require_once dirname( __FILE__ ) . '/freemius/start.php';
             $cf7md_fs = fs_dynamic_init( array(
-                'id'             => '771',
-                'slug'           => 'material-design-for-contact-form-7',
-                'type'           => 'plugin',
-                'public_key'     => 'pk_cd33f9241475d1c70aadf00a1710b',
-                'is_premium'     => false,
-                'has_addons'     => false,
-                'has_paid_plans' => true,
-                'menu'           => array(
+                'id'              => '771',
+                'slug'            => 'material-design-for-contact-form-7',
+                'type'            => 'plugin',
+                'public_key'      => 'pk_cd33f9241475d1c70aadf00a1710b',
+                'is_premium'      => false,
+                'has_addons'      => false,
+                'has_paid_plans'  => true,
+                'has_affiliation' => 'all',
+                'menu'            => array(
                 'slug'       => 'cf7md',
                 'first-path' => 'admin.php?page=cf7md',
                 'contact'    => false,
-                'support'    => false,
+                'support'    => true,
                 'parent'     => array(
                 'slug' => 'wpcf7',
             ),
             ),
-                'is_live'        => true,
+                'is_live'         => true,
             ) );
         }
         
@@ -98,25 +99,25 @@ if ( !function_exists( 'cf7md_fs' ) ) {
             'is_automatic' => false,
             'message'      => '',
             'strings'      => array(
-            'page_title'                     => __( 'Install Required Plugins', 'cf7md' ),
-            'menu_title'                     => __( 'Install Plugins', 'cf7md' ),
+            'page_title'                     => __( 'Install Required Plugins', 'material-design-for-contact-form-7' ),
+            'menu_title'                     => __( 'Install Plugins', 'material-design-for-contact-form-7' ),
             'notice_can_install_required'    => _n_noop(
             /* translators: 1: plugin name(s). */
             'Material Design for Contact Form 7 requires the following plugin: %1$s.',
             'Material Design for Contact Form 7 requires the following plugins: %1$s.',
-            'cf7md'
+            'material-design-for-contact-form-7'
         ),
             'notice_can_install_recommended' => _n_noop(
             /* translators: 1: plugin name(s). */
             'Material Design for Contact Form 7 recommends the following plugin: %1$s.',
             'Material Design for Contact Form 7 recommends the following plugins: %1$s.',
-            'cf7md'
+            'material-design-for-contact-form-7'
         ),
             'notice_ask_to_update'           => _n_noop(
             /* translators: 1: plugin name(s). */
             'The following plugin needs to be updated to its latest version to ensure maximum compatibility with Material Design for Contact Form 7: %1$s.',
             'The following plugins need to be updated to their latest version to ensure maximum compatibility with this Material Design for Contact Form 7: %1$s.',
-            'cf7md'
+            'material-design-for-contact-form-7'
         ),
         ),
         );

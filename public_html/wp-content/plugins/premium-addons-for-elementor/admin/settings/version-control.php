@@ -79,7 +79,7 @@ class PA_Version_Control {
                <tr class="pa-roll-row">
                   <th>Rollback Version</th>
                   <td>
-                     <div><?php echo  sprintf( '<a target="_blank" href="%s" class="button pa-btn pa-rollback-button elementor-button-spinner">Reinstall Version 3.1.1</a>', wp_nonce_url( admin_url( 'admin-post.php?action=premium_addons_rollback' ), 'premium_addons_rollback' ) ); ?> </div>
+                     <div><?php echo  sprintf( '<a target="_blank" href="%s" class="button pa-btn pa-rollback-button elementor-button-spinner">Reinstall Version 3.2.5</a>', wp_nonce_url( admin_url( 'admin-post.php?action=premium_addons_rollback' ), 'premium_addons_rollback' ) ); ?> </div>
                      <p class="pa-roll-desc"><span>Warning: Please backup your database before making the rollback.</span></p>
                   </td>
                </tr>

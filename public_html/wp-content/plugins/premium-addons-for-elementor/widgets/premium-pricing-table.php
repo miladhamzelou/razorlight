@@ -64,7 +64,7 @@ class Premium_Pricing_Table extends Widget_Base {
         $this->add_control('premium_pricing_table_title_text',
                 [
                     'label'         => __('Text', 'premium-addons-for-elementor'),
-                    'default'       => 'Pricing Table',
+                    'default'       => __('Pricing Table', 'premium-addons-for-elementor'),
                     'type'          => Controls_Manager::TEXT,
                     'dynamic'       => [ 'active' => true ],
                     'label_block'   => true,

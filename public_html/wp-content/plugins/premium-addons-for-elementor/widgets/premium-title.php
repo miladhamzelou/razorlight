@@ -5,6 +5,7 @@ namespace Elementor;
 if ( ! defined( 'ABSPATH' ) ) exit; // If this file is called directly, abort.
 
 class Premium_Title extends Widget_Base {
+    
     public function get_name() {
         return 'premium-addon-title';
     }

@@ -13,6 +13,32 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+#: cf7-material-design.php:108
+msgid "Install Required Plugins"
+msgstr ""
+
+#: cf7-material-design.php:109
+msgid "Install Plugins"
+msgstr ""
+
+#: cf7-material-design.php:110
+msgid "Material Design for Contact Form 7 requires the following plugin: %1$s."
+msgid_plural "Material Design for Contact Form 7 requires the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: cf7-material-design.php:116
+msgid "Material Design for Contact Form 7 recommends the following plugin: %1$s."
+msgid_plural "Material Design for Contact Form 7 recommends the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: cf7-material-design.php:122
+msgid "The following plugin needs to be updated to its latest version to ensure maximum compatibility with Material Design for Contact Form 7: %1$s."
+msgid_plural "The following plugins need to be updated to their latest version to ensure maximum compatibility with this Material Design for Contact Form 7: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
 #. translators: close as in exit
 #: admin/cf7-material-design-admin.php:124, admin/cf7-material-design-admin.php:219
 msgid "Close"
@@ -625,6 +651,11 @@ msgstr ""
 
 #: admin/cf7-material-design-shortcode-generator.php:192
 msgid "Checkbox"
+msgstr ""
+
+#. translators: As in radio button form control
+#: admin/cf7-material-design-shortcode-generator.php:207
+msgid "Radio"
 msgstr ""
 
 #. translators: As in switch form control

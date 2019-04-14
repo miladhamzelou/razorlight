@@ -26,6 +26,9 @@
 		<header id="masthead" class="<?php echo is_singular() && twentynineteen_can_show_post_thumbnail() ? 'site-header featured-image' : 'site-header'; ?>">
 
 			<div class="site-branding-container">
+				<div class='smart-search'>
+					<?php echo do_shortcode( '[smart_search id="1"]' ); ?>
+				</div>
 				<?php get_template_part( 'template-parts/header/site', 'branding' ); ?>
 			</div><!-- .layout-wrap -->
 

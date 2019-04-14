@@ -1,12 +1,243 @@
-(function($) {
+// Works on mobile but needs enhancements
+
+( function( $ ) {
+    
   /****** Premium Vertical Scroll Handler ******/
   var PremiumVerticalScrollHandler = function($scope, $) {
-    var vScrollElem = $scope.find(".premium-vscroll-wrap"),
-      instance = null,
-      vScrollSettings = vScrollElem.data("settings");
+      
+    var vScrollElem     = $scope.find( ".premium-vscroll-wrap" ),
+        instance        = null,
+        vScrollSettings = vScrollElem.data( "settings" );
 
-    instance = new premiumVerticalScroll(vScrollElem, vScrollSettings);
-    instance.init();
+//    var touch = vScrollSettings.touch;
+
+        instance = new premiumVerticalScroll( vScrollElem, vScrollSettings );
+        instance.init();
+
+//        var isTouchDevice = navigator.userAgent.match(/(iPhone|iPod|iPad|Android|playbook|silk|BlackBerry|BB10|Windows Phone|Tizen|Bada|webOS|IEMobile|Opera Mini)/);
+//      var isTouch = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0) || (navigator.maxTouchPoints));
+//
+//
+//        if( touch ) {
+//            instance = new premiumVerticalScroll2( vScrollElem, vScrollSettings );
+//            instance.init();
+//        } else {
+//            if ( isTouchDevice || isTouch ) {
+//                instance = new premiumVerticalScroll( vScrollElem, vScrollSettings );
+//                instance.init();
+//            } else {
+//                instance = new premiumVerticalScroll2( vScrollElem, vScrollSettings );
+//                instance.init();
+//            }
+//        }
+        
+
+  };
+  
+  
+  window.premiumVerticalScroll2 = function( $selector, settings ) {
+      
+    var self            = this,
+        $instance       = $selector,
+        $window         = $( window ),
+        $htmlBody       = $("html, body"),
+        checkTemps      = $selector.find( ".premium-vscroll-sections-wrap" ).length,
+        deviceType      = $("body").data("elementor-device-mode"),
+        $itemsList      = $(".premium-vscroll-dot-item", $instance),
+        $menuItems      = $(".premium-vscroll-nav-item", $instance),
+        animated        = 0;
+        
+    
+    var $lastItem       = $itemsList.last(),
+        lastSectionId   = $lastItem.data("menuanchor"),
+        lastOffset      = Math.round( $( "#" + lastSectionId ).offset().top );
+    
+    self.init = function() {
+        
+        self.setSectionsData();
+        
+        $itemsList.on("click.premiumVerticalScroll", self.onNavDotChange);
+        $menuItems.on("click.premiumVerticalScroll", self.onNavDotChange);
+
+        $itemsList.on( "mouseenter.premiumVerticalScroll", self.onNavDotEnter );
+
+        $itemsList.on( "mouseleave.premiumVerticalScroll", self.onNavDotLeave );
+        
+        $.scrollify({
+            section:                ".premium-vscroll-section",
+            updateHash:             false,
+            standardScrollElements: "#" + lastSectionId,
+            scrollSpeed:            settings.speed,
+            overflowScroll:         settings.overflow,
+            setHeights:             settings.setHeight,
+            before: function( index ) {
+                
+                $menuItems.removeClass("active");
+                $itemsList.removeClass("active");
+
+                $( $itemsList[ index ] ).addClass( "active" );
+                $( $menuItems[ index ] ).addClass( "active" );
+                
+            },
+            after: function( index ) {
+                
+                if ( index === $lastItem.index() ) {
+//                    $.scrollify.disable();
+                }
+                
+            },
+            afterRender: function() {
+                
+                $( $itemsList[ 0 ] ).addClass( "active" );
+                $( $menuItems[ 0 ] ).addClass( "active" );
+                
+            }
+        });
+        
+        if ( deviceType === "desktop" ) {
+            
+            $window.on( "scroll.premiumVerticalScroll2", self.onWheel );
+            
+        }
+        
+        if ( settings.fullSection ) {
+            
+            var vSection = document.getElementById( $instance.attr("id") );
+            
+            if ( checkTemps ) {
+                
+                document.addEventListener
+                ? vSection.addEventListener("wheel", self.onWheel, !1)
+                : vSection.attachEvent("onmousewheel", self.onWheel);
+                
+            } else {
+                
+                document.addEventListener
+                ? document.addEventListener("wheel", self.onWheel, !1)
+                : document.attachEvent("onmousewheel", self.onWheel);
+                
+            }
+        }
+    
+    };
+    
+    self.onWheel = function( event ) {
+      
+        var $target         = $( event.target ),
+            sectionSelector = checkTemps ? ".premium-vscroll-temp" : ".elementor-top-section",
+            $section        = $target.closest( sectionSelector ),
+            sectionId       = $section.attr( "id" ),
+            $currentSection  = $.scrollify.current();
+        
+        //re-enable Scrollify
+        if ( sectionId !== lastSectionId && $section.hasClass("premium-vscroll-section") && $.scrollify.isDisabled() ) {
+            
+            $(".premium-vscroll-dots, .premium-vscroll-nav-menu").removeClass(
+                "premium-vscroll-dots-hide"
+            );
+            
+            $.scrollify.enable();
+            
+        } 
+        
+        if ( ! $section.hasClass("premium-vscroll-section") && $.scrollify.isDisabled() ) {
+            
+            $(".premium-vscroll-tooltip").hide();
+            
+            $(".premium-vscroll-dots, .premium-vscroll-nav-menu").addClass(
+                "premium-vscroll-dots-hide"
+            );
+            
+        } 
+        
+        
+        
+    };
+    
+    self.moveSectionDown = function() {
+        $.scrollify.next();
+    }
+    
+    self.moveSectionUp = function() {
+        $.scrollify.previous();
+    }
+    
+    self.moveToSection = function( index ) {
+        
+        $.scrollify.move( index );
+    }
+    
+    self.setSectionsData = function() {
+        
+      $itemsList.each( function() {
+          
+        var $this       = $( this ),
+            sectionId   = $this.data( "menuanchor" ),
+            $section    = $( "#" + sectionId );
+          
+        $section.addClass( "premium-vscroll-section" );
+        
+      });
+      
+    };
+    
+    self.onNavDotChange = function( event ) {
+        
+        var $this       = $( this ),
+            index       = $this.index(),
+            sectionId   = $this.data("menuanchor");
+
+//      if ( ! isScrolling ) {
+          
+        if ( $.scrollify.isDisabled() ) {
+            
+            $.scrollify.enable();
+            
+        }
+
+        $menuItems.removeClass("active");
+        $itemsList.removeClass("active");
+
+        if ( $this.hasClass( "premium-vscroll-nav-item") ) {
+            
+          $( $itemsList[ index ] ).addClass( "active" );
+          
+        } else {
+            
+          $( $menuItems[ index ] ).addClass( "active" );
+        }
+
+        $this.addClass( "active" );
+        
+        self.moveToSection( index );
+        
+//      }
+    };
+    
+    self.onNavDotEnter = function() {
+        
+        var $this = $( this ),
+            index = $this.data("index");
+    
+      if ( settings.tooltips ) {
+          
+        $('<div class="premium-vscroll-tooltip"><span>' + settings.dotsText[index] + "</span></div>" ).hide().appendTo( $this ).fadeIn( 200 );
+      }
+      
+    };
+
+    self.onNavDotLeave = function() {
+        
+      $( ".premium-vscroll-tooltip" ).fadeOut( 200, function() {
+          
+        $( this ).remove();
+        
+      });
+      
+    };
+
+    
+      
   };
 
   window.premiumVerticalScroll = function($selector, settings) {
@@ -482,4 +713,4 @@
       PremiumVerticalScrollHandler
     );
   });
-})(jQuery);
+})( jQuery );
