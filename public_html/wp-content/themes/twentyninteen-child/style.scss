@@ -103,31 +103,59 @@ $Hearing-The-Spirit-5-hsla: hsla(0, 96, 7, 1);
     padding-bottom: 25px;
     background-color: $Hearing-The-Spirit-4-hsla;
 
-    .site-branding {
-      margin-top: 2rem;
-      line-height: 1rem;
-      background-color: $Hearing-The-Spirit-4-hsla;
-      padding-bottom: 3%;
 
-      .site-title a {
-        font-size: 2em;
-        font-weight: lighter;
-        margin-left: 60px;
-        padding: 10px 0;
-        font-stretch: expanded;
-        color: #0F120F;
-        transition: opacity 110ms ease-in-out;
+    .ysm-search-widget-1 {
 
-        &:active {
-          text-decoration: none;
+      form {
+        .search-field[type="search"] {
+          color: #0F120F;
+          margin-left: 0; 
+          margin-top: 0; 
+          z-index: 8;
         }
 
-
-        @media only screen and (max-width: 768px) {
-          margin-left: 10px;
-          font-size: 40px;
+        .search-submit:before {
+          color: #0F120F;
         }
       }
+    }
+
+    .site-branding {
+      // margin-top: 2rem;
+      // line-height: 1rem;
+      background-color: transparent;
+      // padding-bottom: 3%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .site-title {
+        display: flex;
+        justify-content:  center;
+        
+        a {
+          font-size: 1.5em;
+          font-weight: lighter;
+          margin-left: 60px;
+          padding: 10px 0;
+          font-stretch: expanded;
+          color: #0F120F;
+          transition: opacity 110ms ease-in-out;
+          display: flex;
+          justify-content:  center;
+
+          &:active {
+            text-decoration: none;
+          }
+
+
+          @media only screen and (max-width: 768px) {
+            margin-left: 10px;
+            font-size: 40px;
+          }
+        }
+      }
+    
 
       .social-navigation {
         text-align: right;
@@ -152,19 +180,18 @@ $Hearing-The-Spirit-5-hsla: hsla(0, 96, 7, 1);
       }
 
       .site-logo .custom-logo-link {
-        margin-top: -3px;
-        margin-right: 400px;
         overflow: visible;
-        background: $Hearing-The-Spirit-4-hsla;
+        background: transparent;
         border-radius: 0;
         -webkit-border-radius: 0;
         -moz-border-radius: 0;
         -ms-border-radius: 0;
         -o-border-radius: 0;
+        width: 60px;
+        justify-content: center;
 
         img.custom-logo {
-          height: 200px;
-          width: 200px;
+          width: 60px;
 
           &:hover, &active {
             border: none;
@@ -172,17 +199,29 @@ $Hearing-The-Spirit-5-hsla: hsla(0, 96, 7, 1);
         }
 
         img {
-          max-width: inherit;
+          // max-width: inherit;
         }
       }
 
       @media only screen and (min-width: 768px) {
         .site-logo {
-          margin-bottom: 0;
-          position: absolute;
-          left: calc(80% + (.25 * 1rem));
-          right: 200px;
-          top: 0;
+          // margin-bottom: 0;
+          // position: absolute;
+          // left: calc(80% + (.25 * 1rem));
+          // right: 350px;
+          // top: 0;
+        margin-bottom: 0;
+        /* position: absolute; */
+        /* right: calc(100% + (.25 * 1rem)); */
+        /* top: 4px; */
+        z-index: 999;
+        /* margin: 0 auto; 
+        /* width: 100%;
+        /* display: block; */
+
+    img.custom-logo {
+
+    }
         }
       }
       @media only screen and (max-width: 768px) {
@@ -231,7 +270,6 @@ ul.main-menu > li,
 .author-description 
 .author-bio, 
 .nav-links {
-  line-height: 2;
   font-weight: lighter;
   color: #0F120F;
 }
@@ -254,8 +292,9 @@ ul.main-menu > li,
 }
 
 .main-navigation {
-  border-top: solid 1px #000;
-  margin-right: 20%;
+  margin-right: 0;
+  width: 100%;
+  font-size: 200%;
 
   .main-menu {
     margin-left: 20px;
@@ -312,8 +351,29 @@ ul.main-menu > li,
 
 .main-navigation .main-menu > li > a {
   color: #0F120F;
-  margin-top: -25px;
-  font-size: 15px;
+  font-size: 22px;
+
+  &:hover {
+    color: seashell;
+    cursor: pointer;
+  }
+
+  &::after {
+    color: #0F120F;
+    padding: 10px;
+    content: " |";
+
+    &:hover {
+      color: #0F120F;
+    }
+  }
+}
+
+.smart-search {
+  width: 10%;
+  position: absolute;
+  top: 100px;
+  left: 550px;
 }
 
 .image-filters-enabled .site-header.featured-image .site-featured-image:after {
@@ -355,7 +415,7 @@ h1.entry-title {
 }
 
 .ysm-search-widget-1 .search-field[type="search"] {
-  color: $Hearing-The-Spirit-1-hsla;
+  color: #0F120F;
   margin-left: -110px;
   margin-top: -420px;
   z-index: 8;
