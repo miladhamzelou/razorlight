@@ -78,63 +78,102 @@ $Hearing-The-Spirit-5-hsla: hsla(0, 96, 7, 1);
   background-color: $Hearing-The-Spirit-4-hsla;
 
   .site-title {
-    // letter-spacing: 5.90px;
+
   }
 
-  .main-navigation a:active {
+  .main-navigation {
+    margin-top: -60px;
+
+    a:active {
     border: none;
     text-decoration: none;
+    }
   }
 
-    a {
-      color: #0F120F;
-      font-family: Giorgio;
-    }
-  
+  a {
+    color: #0F120F;
+    font-family: Giorgio;
+  }
 
   .site-branding-container {
     position: fixed;
-    z-index: 10;
+    z-index: 999;
     width: 100%;
-    // margin-bottom: 50px;
-    background: #fff;
-    // margin-top: -50px;
+    height: 100px;
+    background: rgba(235, 232, 232, 0.6);
+    margin-top: 20px;
     color: #0F120F;
-    padding-bottom: 25px;
-    background-color: $Hearing-The-Spirit-4-hsla;
+    padding: 25px 0 0;
 
-    .site-branding {
-      margin-top: 2rem;
-      line-height: 1rem;
-      background-color: $Hearing-The-Spirit-4-hsla;
-      padding-bottom: 3%;
+    .smart-search {
+      width: 15%;
+      position: absolute;
+      right: 220px;
+      top: 50px;
+      z-index: 50px;
+    }
 
-      .site-title a {
-        font-size: 2em;
-        font-weight: lighter;
-        margin-left: 60px;
-        padding: 10px 0;
-        font-stretch: expanded;
-        color: #0F120F;
-        transition: opacity 110ms ease-in-out;
+    .ysm-search-widget-1 {
 
-        &:active {
-          text-decoration: none;
+      form {
+        .search-field[type="search"] {
+          color: #0F120F;
+          padding-left: 35px;
+          margin-left: 35px;   
+          margin-top: 0; 
+          z-index: 8;
+          line-height: 5px;
+          height: 30px;
         }
 
+        .search-submit {
+          left: 35px;
+          top: 0;
 
-        @media only screen and (max-width: 768px) {
-          margin-left: 10px;
-          font-size: 40px;
+          &:before {
+            color: #0F120F;
+          }
         }
       }
+    }
+
+    .site-branding {
+      background-color: transparent;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .site-title {
+        display: flex;
+        justify-content:  center;
+        
+        a {
+          font-size: 1.5em;
+          font-weight: lighter;
+          font-stretch: expanded;
+          color: #0F120F;
+          transition: opacity 110ms ease-in-out;
+
+          &:active {
+            text-decoration: none;
+          }
+
+          @media only screen and (max-width: 768px) {
+            margin-left: 10px;
+            font-size: 40px;
+          }
+        }
+      }
+    
 
       .social-navigation {
-        text-align: right;
-        position: relative;
-        right: 280px;
-        margin-top: -75px;
-        float: right;
+        position: absolute;
+        right: 0;
+        margin-top: -20px;
+
+        .social-links-menu > li > a {
+          color: #0F120F;
+        }
       }
 
       p.site-description {
@@ -152,10 +191,8 @@ $Hearing-The-Spirit-5-hsla: hsla(0, 96, 7, 1);
       }
 
       .site-logo .custom-logo-link {
-        margin-top: -3px;
-        margin-right: 400px;
         overflow: visible;
-        background: $Hearing-The-Spirit-4-hsla;
+        background: transparent;
         border-radius: 0;
         -webkit-border-radius: 0;
         -moz-border-radius: 0;
@@ -163,28 +200,22 @@ $Hearing-The-Spirit-5-hsla: hsla(0, 96, 7, 1);
         -o-border-radius: 0;
 
         img.custom-logo {
-          height: 200px;
-          width: 200px;
+          width: 60px;
 
           &:hover, &active {
             border: none;
           }
         }
-
-        img {
-          max-width: inherit;
-        }
       }
 
       @media only screen and (min-width: 768px) {
         .site-logo {
-          margin-bottom: 0;
           position: absolute;
-          left: calc(80% + (.25 * 1rem));
-          right: 200px;
-          top: 0;
+          right: calc(48%);
+          top: -20px;
         }
       }
+
       @media only screen and (max-width: 768px) {
         .site-logo {
           display: none;
@@ -193,7 +224,11 @@ $Hearing-The-Spirit-5-hsla: hsla(0, 96, 7, 1);
     }
   }
 
-  .feature-image .custom-logo-link {
+  &.featured-image .entry-title {
+      color: #0F120F!important;
+  }
+
+  .featured-image .custom-logo-link {
     background: $patter-geometric-textile-fashion-2-hsla;
   }
 
@@ -231,7 +266,6 @@ ul.main-menu > li,
 .author-description 
 .author-bio, 
 .nav-links {
-  line-height: 2;
   font-weight: lighter;
   color: #0F120F;
 }
@@ -254,8 +288,9 @@ ul.main-menu > li,
 }
 
 .main-navigation {
-  border-top: solid 1px #000;
-  margin-right: 20%;
+  margin-right: 0;
+  width: 100%;
+  font-size: 200%;
 
   .main-menu {
     margin-left: 20px;
@@ -306,14 +341,27 @@ ul.main-menu > li,
 }
 
 .site-header.featured-image .site-featured-image .post-thumbnail img {
-  left: 50%;
   height: auto;
 }
 
 .main-navigation .main-menu > li > a {
   color: #0F120F;
-  margin-top: -25px;
-  font-size: 15px;
+  font-size: 22px;
+
+  &:hover {
+    color: seashell;
+    cursor: pointer;
+  }
+
+  &::after {
+    color: #0F120F;
+    padding: 10px;
+    content: " |";
+
+    &:hover {
+      color: #0F120F;
+    }
+  }
 }
 
 .image-filters-enabled .site-header.featured-image .site-featured-image:after {
@@ -335,12 +383,13 @@ ul.main-menu > li,
 
 h1.entry-title {
   font-family: Giorgio, Sans-serif;
-  font-size: 1.6rem;
-  margin: -150px;
-  width: 90%;
+  // font-size: 1.6rem;
+  // margin: -150px;
+  // width: 90%;
   position: absolute;
-  top: 120px;
+  top: -250px;
   right: 270px;
+  font-weight: lighter;
 }
 
 .site-header.featured-image:after {
@@ -348,14 +397,13 @@ h1.entry-title {
 }
 
 .site-header.featured-image:after {
-  /* background: #000; */
   transition: opacity 1200ms ease-in-out;
   opacity: 0.2;
   z-index: 5;
 }
 
 .ysm-search-widget-1 .search-field[type="search"] {
-  color: $Hearing-The-Spirit-1-hsla;
+  color: #0F120F;
   margin-left: -110px;
   margin-top: -420px;
   z-index: 8;
