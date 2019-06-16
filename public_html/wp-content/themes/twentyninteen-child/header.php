@@ -31,7 +31,7 @@
 				</div>
 				<?php get_template_part( 'template-parts/header/site', 'branding' ); ?>
 				<div class="site-logo"><a href="<?php get_site_url(); ?>/">
-					<img src="../twentyninteen-child/assets/images/light-razor_logo.png" alt="Light Razor Logo"></a>
+					<img src="http://lightrazor.test/wp-content/uploads/2019/06/Light-Razor-1.png" alt="Light Razor Logo"></a>
 				</div>
 			</div><!-- .layout-wrap -->
 
