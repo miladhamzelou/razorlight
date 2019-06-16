@@ -43,7 +43,7 @@ body {
 }
 
 .site-header .main-navigation {
-  margin-top: -70px;
+  margin-top: -110px;
 }
 
 .site-header .main-navigation a:active {
@@ -156,7 +156,8 @@ body {
 }
 
 .site-header .site-branding-container .site-branding .site-logo .custom-logo-link {
-  width: 75px;
+  width: 550px;
+  height: 125px;
   overflow: visible;
   background: transparent;
   border-radius: 0;
@@ -172,10 +173,13 @@ body {
 
 @media only screen and (min-width: 768px) {
   .site-header .site-branding-container .site-branding .site-logo {
-    position: absolute;
-    left: calc(49%);
-    top: -13px;
-    margin-left: -7px;
+    position: relative;
+    left: calc(0%);
+    top: -25px;
+    border: 0;
+    cursor: pointer;
+    margin-left: 0;
+    width: 400px;
   }
 }
 

@@ -10,7 +10,10 @@
 <div class="site-branding">
 
 	<?php if ( has_custom_logo() ) : ?>
-		<div class="site-logo"><?php the_custom_logo(); ?></div>
+		<!-- <div class="site-logo"><?php the_custom_logo(); ?></div> -->
+		<div class="site-logo"><a href="<?php get_site_url() ?>/">
+			<img src="wp-content/themes/twentyninteen-child/assets/images/light-razor_logo.png" alt="Light Razor Logo"></a>
+		</div>
 	<?php endif; ?>
 	<?php $blog_info = get_bloginfo( 'name' ); ?>
 	<?php if ( ! empty( $blog_info ) ) : ?>
