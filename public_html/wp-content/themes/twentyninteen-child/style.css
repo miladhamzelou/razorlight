@@ -449,6 +449,10 @@ h1:not(.site-title):before, h2:before {
   margin: 4% calc(10% + 60px);
 }
 
+.woocommerce-breadcrumb {
+  display: none;
+}
+
 .woocommerce-breadcrumb a {
   font-family: Giorgio, Sans-serif;
   color: #333;
