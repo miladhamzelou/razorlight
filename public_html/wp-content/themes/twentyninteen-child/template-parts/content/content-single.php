@@ -18,6 +18,11 @@
 	</header>
 	<?php endif; ?>
 
+
+	<?php if ( is_active_sidebar( 'custom-side-bar' ) ) : ?>
+    <?php dynamic_sidebar( 'custom-side-bar' ); ?>
+	<?php endif; ?>
+
 	<div class="entry-content">
 		<?php
 		the_content(
