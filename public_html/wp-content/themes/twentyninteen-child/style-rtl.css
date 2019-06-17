@@ -109,12 +109,6 @@ body {
   }
 }
 
-@media only screen and (max-width: 1280px) {
-  .site-header .site-branding-container .smart-search {
-    margin-left: -170px;
-  }
-}
-
 .site-header .site-branding-container .ysm-search-widget-1 form .search-field[type="search"] {
   color: #0F120F;
   padding-right: 35px;
@@ -179,7 +173,7 @@ body {
 
 @media only screen and (min-width: 768px) {
   .site-header .site-branding-container .site-branding .social-navigation {
-    margin-left: -120px;
+    margin-left: -100px;
   }
 }
 
@@ -453,6 +447,10 @@ h1:not(.site-title):before, h2:before {
 
 .woocommerce .content-area {
   margin: 4% calc(10% + 60px);
+}
+
+.woocommerce-breadcrumb {
+  display: none;
 }
 
 .woocommerce-breadcrumb a {
