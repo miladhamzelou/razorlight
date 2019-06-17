@@ -17,6 +17,15 @@
   font-weight: thin;
 }
 
+:root {
+  --light-lavendar: #e3d5e3;
+  --purplish-grey: #6d5972;
+  --grape: #3a1d43;
+  --very-light-pink: #efefef;
+  --grey: #767676;
+  --black: #1b1c1d;
+}
+
 body {
   font-family: Giorgio, Sans-serif;
 }
@@ -51,6 +60,19 @@ body {
   text-decoration: none;
 }
 
+@media only screen and (min-width: 768px) {
+  .site-header .main-navigation {
+    margin-left: -185px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .site-header .main-navigation {
+    margin-left: -200px;
+    margin-top: -110px;
+  }
+}
+
 .site-header a {
   color: #0F120F;
   font-family: Giorgio;
@@ -68,11 +90,23 @@ body {
 }
 
 .site-header .site-branding-container .smart-search {
-  width: 200px;
+  width: 180px;
   position: absolute;
-  right: 220px;
+  right: 270px;
   top: 40px;
   z-index: 50;
+}
+
+@media only screen and (min-width: 768px) {
+  .site-header .site-branding-container .smart-search {
+    margin-right: -100px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .site-header .site-branding-container .smart-search {
+    margin-right: -170px;
+  }
 }
 
 .site-header .site-branding-container .ysm-search-widget-1 form .search-field[type="search"] {
@@ -119,7 +153,7 @@ body {
   text-decoration: none;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 768px) {
   .site-header .site-branding-container .site-branding .site-title a {
     margin-left: 10px;
     font-size: 40px;
@@ -128,13 +162,25 @@ body {
 
 .site-header .site-branding-container .site-branding .social-navigation {
   position: absolute;
-  right: 0;
+  right: 160px;
   margin-top: -35px;
   z-index: 2;
 }
 
 .site-header .site-branding-container .site-branding .social-navigation .social-links-menu > li > a {
   color: #0F120F;
+}
+
+@media only screen and (min-width: 768px) {
+  .site-header .site-branding-container .site-branding .social-navigation {
+    margin-right: -100px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .site-header .site-branding-container .site-branding .social-navigation {
+    margin-right: -130px;
+  }
 }
 
 .site-header .site-branding-container .site-branding li.wpmenucartli a.wpmenucart-contents span {
@@ -191,7 +237,8 @@ body {
 
 .site-header.featured-image .entry-title {
   color: #0F120F !important;
-  font-size: 2.5vw;
+  font-size: 3vw;
+  width: 80%;
 }
 
 .site-header .featured-image .custom-logo-link {
@@ -375,7 +422,8 @@ h1.entry-title {
 }
 
 .site-header.featured-image .site-featured-image .entry-header {
-  margin-top: -300px;
+  margin-top: -350px;
+  margin-left: 250px;
 }
 
 .elementor-button .elementor-button-text {
