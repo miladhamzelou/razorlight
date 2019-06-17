@@ -18,6 +18,15 @@
 	font-weight: thin;  
 }
 
+:root {
+  --light-lavendar: #e3d5e3;
+  --purplish-grey: #6d5972;
+  --grape: #3a1d43;
+  --very-light-pink: #efefef;
+  --grey: #767676;
+  --black: #1b1c1d;
+}
+
 body {  
   font-family: Giorgio, Sans-serif;
 }
@@ -87,11 +96,20 @@ $Hearing-The-Spirit-5-hsla: hsla(0, 96, 7, 1);
   }
 
   .main-navigation {
-    margin-top: -70px;
+    margin-top: -110px;
 
     a:active {
     border: none;
     text-decoration: none;
+    }
+
+    @media only screen and (min-width: 768px) {
+      margin-left: -185px;
+    }
+
+    @media only screen and (max-width: 1024px) {
+      margin-left: -200px;
+      margin-top: -110px;
     }
   }
 
@@ -111,11 +129,20 @@ $Hearing-The-Spirit-5-hsla: hsla(0, 96, 7, 1);
     padding: 25px 0 0;
 
     .smart-search {
-      width: 200px;
+      width: 180px;
       position: absolute;
-      right: 220px;
+      right: 270px;
       top: 40px;
       z-index: 50;
+
+      @media only screen and (min-width: 768px) {
+        margin-right: -100px;
+      }
+
+      @media only screen and (max-width: 1024px) {
+        margin-right: -170px;
+      }
+
     }
 
     .ysm-search-widget-1 {
@@ -164,7 +191,7 @@ $Hearing-The-Spirit-5-hsla: hsla(0, 96, 7, 1);
             text-decoration: none;
           }
 
-          @media only screen and (max-width: 768px) {
+          @media only screen and (min-width: 768px) {
             margin-left: 10px;
             font-size: 40px;
           }
@@ -174,12 +201,20 @@ $Hearing-The-Spirit-5-hsla: hsla(0, 96, 7, 1);
 
       .social-navigation {
         position: absolute;
-        right: 0;
+        right: 160px;
         margin-top: -35px;
         z-index: 2;
 
         .social-links-menu > li > a {
           color: #0F120F;
+        }
+
+        @media only screen and (min-width: 768px) {
+          margin-right: -100px;
+        }
+
+        @media only screen and (max-width: 1024px) {
+          margin-right: -130px;
         }
       }
 
@@ -202,7 +237,8 @@ $Hearing-The-Spirit-5-hsla: hsla(0, 96, 7, 1);
       }
 
       .site-logo .custom-logo-link {
-        width: 75px;
+        width: 550px;
+        height: 125px;
         overflow: visible;
         background: transparent;
         border-radius: 0;
@@ -221,10 +257,14 @@ $Hearing-The-Spirit-5-hsla: hsla(0, 96, 7, 1);
 
       @media only screen and (min-width: 768px) {
         .site-logo {
-          position: absolute;
-          right: calc(49%);
-          top: -13px;
-          margin-right: -7px;
+          position: relative;
+          right: calc(0%);
+          top: -25px;
+          border: 0;
+          cursor: pointer;
+          margin-right: 0;
+          width: 400px;
+
         }
       }
 
@@ -238,7 +278,8 @@ $Hearing-The-Spirit-5-hsla: hsla(0, 96, 7, 1);
 
   &.featured-image .entry-title {
       color: #0F120F!important;
-      font-size: 2.5vw;
+      font-size: 3vw;
+      width: 80%;
   }
 
   .featured-image .custom-logo-link {
@@ -422,7 +463,8 @@ h1.entry-title {
 }
 
 .site-header.featured-image .site-featured-image .entry-header {
-  margin-top: -300px;
+  margin-top: -350px;
+  margin-left: 250px;
 }
 
 .elementor-button .elementor-button-text {
