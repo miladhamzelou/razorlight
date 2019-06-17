@@ -449,6 +449,10 @@ h1:not(.site-title):before, h2:before {
   margin: 4% calc(10% + 60px);
 }
 
+.woocommerce-breadcrumb {
+  display: none;
+}
+
 .woocommerce-breadcrumb a {
   font-family: Giorgio, Sans-serif;
   color: #333;
@@ -456,6 +460,16 @@ h1:not(.site-title):before, h2:before {
 
 .woocommerce-products-header__title.page-title {
   display: none;
+}
+
+.wpf-search-container {
+  margin-top: -40px;
+}
+
+.wpf_layout_horizontal .wpf_item {
+  border-top: none;
+  border-bottom: none;
+  border-left: none;
 }
 
 ul.products li.product .button {
