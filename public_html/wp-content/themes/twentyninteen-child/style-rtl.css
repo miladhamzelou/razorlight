@@ -467,9 +467,9 @@ h1:not(.site-title):before, h2:before {
 }
 
 .wpf_layout_horizontal .wpf_item {
-  border-top: none;
-  border-bottom: none;
-  border-left: none;
+  border-top: none !important;
+  border-bottom: none !important;
+  border-left: none !important;
 }
 
 ul.products li.product .button {
