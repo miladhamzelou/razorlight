@@ -25,7 +25,7 @@ function add_google_fonts() {
 }
 
 /**
- * Advanced Custopm Fields Template Usage
+ * Advanced Custom Fields Template Usage
  */
 
 if( function_exists('acf_add_options_page') ) {
@@ -37,9 +37,9 @@ if( function_exists('acf_add_options_page') ) {
 function my_custom_sidebar() {
 	register_sidebar(
 			array (
-					'name' => __( 'Custom', 'your-theme-domain' ),
+					'name' => __( 'Custom', get_site_url()."/shop/" ),
 					'id' => 'custom-side-bar',
-					'description' => __( 'Custom Sidebar', 'your-theme-domain' ),
+					'description' => __( 'Custom Sidebar', get_site_url()."/shop/" ),
 					'before_widget' => '<div class="widget-content">',
 					'after_widget' => "</div>",
 					'before_title' => '<h3 class="widget-title">',
@@ -48,3 +48,24 @@ function my_custom_sidebar() {
 	);
 }
 add_action( 'widgets_init', 'my_custom_sidebar' );
+
+// if ( function_exists('register_sidebar') ) {
+// 	register_sidebar(array(
+// 	'before_widget' => '<li id="%1$s" class="widget %2$s">',
+// 	'after_widget' => '</li>',
+// 	'before_title' => '<h2 class="widgettitle">',
+// 	'after_title' => '</h2>',
+// 	));
+// }
+
+if ( function_exists('register_sidebar') ) {
+	register_sidebar(array(
+	'name' => 'Shop Sidebar',
+	'id' => 'shop-sidebar',
+	'description' => 'Appears as the sidebar on the shop page',
+	'before_widget' => '<div></div><li id="%1$s" class="widget %2$s">',
+	'after_widget' => '</li>',
+	'before_title' => '<h2 class="shop-sidebar">',
+	'after_title' => '</h2>',
+	));
+}
