@@ -462,6 +462,10 @@ h1:not(.site-title):before, h2:before {
   display: none;
 }
 
+.woocommerce-ordering {
+  display: none;
+}
+
 .wpf-search-container {
   margin-top: -40px;
 }
