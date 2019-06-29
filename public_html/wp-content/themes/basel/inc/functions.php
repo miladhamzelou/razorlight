@@ -1011,33 +1011,33 @@ if( ! function_exists( 'basel_pages_ids_from_template' ) ) {
 // **********************************************************************// 
 // ! Get content of the SVG icon located in images/svg folder
 // **********************************************************************// 
-if( ! function_exists( 'basel_get_svg_content' ) ) {
-	function basel_get_svg_content($name) {
-		$folder = BASEL_THEMEROOT . '/images/svg';
-		$file = $folder . '/' . $name . '.svg';
+// if( ! function_exists( 'basel_get_svg_content' ) ) {
+// 	function basel_get_svg_content($name) {
+// 		$folder = BASEL_THEMEROOT . '/images/svg';
+// 		$file = $folder . '/' . $name . '.svg';
 
-		return (file_exists( $file )) ? basel_get_any_svg( $file ) : false;
-	}
-}
+// 		return (file_exists( $file )) ? basel_get_any_svg( $file ) : false;
+// 	}
+// }
 
-if( ! function_exists( 'basel_get_any_svg' ) ) {
-	function basel_get_any_svg( $file, $id = false ) {
-		$content = basel_get_svg( $file );
-		$start_tag = '<svg';
-		if( $id ) {
-			$pattern = "/id=\"(\w)+\"/";
-			if( preg_match($pattern, $content) ) {
-				$content = preg_replace($pattern, "id=\"" . $id . "\"", $content, 1);
-			} else {
-				$content = preg_replace( "/<svg/", "<svg id=\"" . $id . "\"", $content);
-			}
-		}
-		// Strip doctype
-		$position = strpos($content, $start_tag);
-		$content = substr($content, $position);
-		return $content;
-	}
-}
+// if( ! function_exists( 'basel_get_any_svg' ) ) {
+// 	function basel_get_any_svg( $file, $id = false ) {
+// 		$content = basel_get_svg( $file );
+// 		$start_tag = '<svg';
+// 		if( $id ) {
+// 			$pattern = "/id=\"(\w)+\"/";
+// 			if( preg_match($pattern, $content) ) {
+// 				$content = preg_replace($pattern, "id=\"" . $id . "\"", $content, 1);
+// 			} else {
+// 				$content = preg_replace( "/<svg/", "<svg id=\"" . $id . "\"", $content);
+// 			}
+// 		}
+// 		// Strip doctype
+// 		$position = strpos($content, $start_tag);
+// 		$content = substr($content, $position);
+// 		return $content;
+// 	}
+// }
 
 // **********************************************************************// 
 // ! Get config file

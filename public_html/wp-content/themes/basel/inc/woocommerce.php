@@ -28,12 +28,12 @@ if( ! function_exists( 'basel_products_view_select' ) ) {
 		<div class="basel-products-shop-view <?php echo esc_attr( 'products-view-' . $shop_view ); ?>">
 			<a rel="nofollow" href="<?php echo add_query_arg('shop_view', 'list', basel_shop_page_link(true)); ?>" class="shop-view <?php echo ('list' == $current_view) ? 'current-view' : ''; ?>">
 				<?php
-					echo basel_get_svg_content('list-style');
+					// echo basel_get_svg_content('list-style');
 				?>
 			</a>
 			<a rel="nofollow" href="<?php echo add_query_arg('shop_view', 'grid', basel_shop_page_link(true)); ?>" class="shop-view <?php echo ('grid' == $current_view) ? 'current-view' : ''; ?>">
 				<?php
-					echo basel_get_svg_content('grid-style');
+					// echo basel_get_svg_content('grid-style');
 				?>
 			</a>
 		</div>
