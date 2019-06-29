@@ -33,7 +33,7 @@ if( ! function_exists( 'basel_products_view_select' ) ) {
 			</a>
 			<a rel="nofollow" href="<?php echo add_query_arg('shop_view', 'grid', basel_shop_page_link(true)); ?>" class="shop-view <?php echo ('grid' == $current_view) ? 'current-view' : ''; ?>">
 				<?php
-					// echo basel_get_svg_content('grid-style');
+					echo basel_get_svg_content('grid-style');
 				?>
 			</a>
 		</div>
