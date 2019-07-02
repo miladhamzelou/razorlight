@@ -3,3 +3,10 @@ CTC Separate Stylesheet
 Updated: 2019-06-29 19:27:47
 */
 
+.main-nav .menu > li >a {
+  font-size: 20px!important;
+}
+
+.main-menu > li:last-child > a {
+  border-left: none;
+}

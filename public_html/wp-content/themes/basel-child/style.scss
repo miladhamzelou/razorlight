@@ -1,0 +1,78 @@
+/*
+ Theme Name:   Light Razor Design
+ Theme URI:    http://lereiver.com/lightrazordesign/
+ Description:  Basel Child Theme
+ Author:       LeReiver
+ Author URI:   http://lereiver.com
+ Template:     basel
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+ Text Domain:  basel-child
+*/
+
+@font-face {
+	font-family: Giorgio;  
+  src: url(../basel/fonts/Giorgio.ttf);
+	font-weight: thin;  
+}
+
+:root {
+  --light-lavendar: #e3d5e3;
+  --purplish-grey: #6d5972;
+  --grape: #3a1d43;
+  --very-light-pink: #efefef;
+  --grey: #767676;
+  --black: #1b1c1d;
+}
+
+body {  
+  font-family: Giorgio, Sans-serif;
+}
+
+
+/* Color Theme Swatches in Hex */
+$patter-geometric-textile-fashion-1-hex: #9BBC9B;
+$patter-geometric-textile-fashion-2-hex: #7D949A;
+$patter-geometric-textile-fashion-3-hex: #3A4A52;
+$patter-geometric-textile-fashion-4-hex: #F2E4BB;
+$patter-geometric-textile-fashion-5-hex: #F7966D;
+
+/* Color Theme Swatches in RGBA */
+$patter-geometric-textile-fashion-1-rgba: rgba(154,188,154, 1);
+$patter-geometric-textile-fashion-2-rgba: rgba(124,147,154, 1);
+$patter-geometric-textile-fashion-3-rgba: rgba(58,73,82, 1);
+$patter-geometric-textile-fashion-4-rgba: rgba(242,228,186, 1);
+$patter-geometric-textile-fashion-5-rgba: rgba(246,149,109, 1);
+
+/* Color Theme Swatches in HSLA */
+$patter-geometric-textile-fashion-2-hsla: hsla(120, 19, 67, 1);
+$patter-geometric-textile-fashion-2-hsla: hsla(192, 12, 54, 1);
+$patter-geometric-textile-fashion-3-hsla: hsla(200, 17, 27, 1);
+$patter-geometric-textile-fashion-4-hsla: hsla(44, 67, 84, 1);
+$patter-geometric-textile-fashion-5-hsla: hsla(17, 89, 69, 1);
+
+
+/* Color Theme Swatches in Hex */
+$Hearing-The-Spirit-1-hex: #6FBFBF;
+$Hearing-The-Spirit-2-hex: #B0D9D1;
+$Hearing-The-Spirit-3-hex: #038C5A;
+$Hearing-The-Spirit-4-hex: #8C593B;
+$Hearing-The-Spirit-5-hex: #260101;
+
+/* Color Theme Swatches in RGBA */
+$Hearing-The-Spirit-1-rgba: rgba(110,191,191, 1);
+$Hearing-The-Spirit-2-rgba: rgba(175,216,209, 1);
+$Hearing-The-Spirit-3-rgba: rgba(2,140,89, 1);
+$Hearing-The-Spirit-4-rgba: rgba(140,88,58, 1);
+$Hearing-The-Spirit-5-rgba: rgba(38,0,0, 1);
+
+/* Color Theme Swatches in HSLA */
+$Hearing-The-Spirit-1-hsla: hsla(180, 38, 59, 1);
+$Hearing-The-Spirit-2-hsla: hsla(168, 34, 76, 1);
+$Hearing-The-Spirit-3-hsla: hsla(157, 96, 28, 1);
+$Hearing-The-Spirit-4-hsla: hsla(22, 40, 39, 1);
+$Hearing-The-Spirit-5-hsla: hsla(0, 96, 7, 1);
+
+
